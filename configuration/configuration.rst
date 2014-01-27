@@ -2,10 +2,10 @@
 Configuration
 *************
 
-Double click on the link in the start menu or the desktop icon (HLU GIS tool) to launch the application.
-
 Database Configuration
 ======================
+
+Double click on the link in the start menu or the desktop icon (HLU GIS tool) to launch the application.
 
 The first time the GIS tool is used, you will need to configure the database connection. Once the tool is running a Connection Type dialog will be displayed as shown in the figure :ref:`figCTD`.
 
@@ -28,6 +28,7 @@ For Microsoft Access, select OleDb from the drop-down list, then click OK. A dia
 
 .. figure:: ../images/figures/OleDbConnectionDialog.png
 	:align: center
+	:scale: 80
 
 	OleDb Connection dialog
 
@@ -42,10 +43,14 @@ Otherwise, click ‘New’ to define a new connection. The Provider tab of the D
 
 	Provider - Data Link Properties dialog
 
-=================	=====================================================================
+Select the relevant OLE DB Provider:
+==================	=====================================================================
+**Access version**
+==================	=====================================================================
 Access 2000-2003:	select ‘Microsoft Jet 4.0 OLE DB Provider’
 Access 2007:		select ‘Microsoft Office 12.0 Access Database Engine OLE DB Provider’
-=================	=====================================================================
+==================	=====================================================================
+
 
 Click ‘Next >>’ to display the Connection tab of the Data Link Properties dialog as shown in the figure :ref:`figDLPCD`.
 
@@ -81,6 +86,7 @@ Select the instance of SQL Server from the drop-down list as shown in the figure
 
 .. Note::
 	If the computer or server is listed but no services are listed e.g. P3000CA\, you can either:
+
 	* Select the computer or server, then press ‘End’ or use the arrow keys to move the cursor to the end, then type the name of the database service.
 	* Exit the HLU GIS Tool, then open the SQL Server Configuration Manager. Right-click on SQL Server Browser and set the start mode as Automatic or Manual. Start the service, then re launch the HLU GIS Tool and select the database service from the list.
 

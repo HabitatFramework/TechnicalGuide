@@ -9,11 +9,13 @@ Hardware
 --------
 
 **Minimum specification:**
+
 * 3 GHz Pentium PC
 * 2 Gb RAM
 * 3 Gb available hard disk space
 
 **Recommended specification:**
+
 * 3 GHz Dual Core PC
 * 3 Gb RAM
 * 10 Gb available hard disk space
@@ -26,11 +28,13 @@ Software
 --------
 
 **Minimum software specification:**
+
 * .NET framework 3.5 Service Pack 1
 * Microsoft Access 2000
 * ArcGIS 9.3 or MapInfo 8.0
 
 **Recommended software specification:**
+
 * .NET framework 3.5 Service Pack 1
 * Microsoft Access 2000 or later
 * Microsoft SQL Server 2008 Express Edition
@@ -43,7 +47,10 @@ Software
 Installing the HLU GIS Tool
 ===========================
 
-Double click on the Setup.exe and follow the instructions. By default this will install the HLU GIS Tool into **C:\Program Files\ESDM\HLU GIS Tool\** directory. The installer will also create shortcuts in the start menu and on the desktop.
+Double click on the Setup.exe and follow the instructions. By default this will install the HLU GIS Tool into **C:\\Program Files\\ESDM\\HLU GIS Tool\\** directory. The installer will also create shortcuts in the start menu and on the desktop.
+
+Enable HLU Extension
+--------------------
 
 .. Important::
 	For ArcGIS users, the tool must be enabled in ArcGIS prior to use. Open ArcMap and go to the ‘Tools’ menu and select ‘Extensions…’.

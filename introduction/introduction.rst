@@ -106,7 +106,7 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 
 	.. topic:: Example
 
-	**Exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.**
+		**Exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.**
 
 * For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 
