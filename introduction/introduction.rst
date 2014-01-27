@@ -104,9 +104,7 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 * For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in Tools > Extensions – see section ref:`?`.
 * For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. **The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.**
 
-	.. topic:: Example
-
-		**Exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.**
+	**e.g. exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.**
 
 * For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 

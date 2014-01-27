@@ -8,6 +8,9 @@ System Requirements
 Hardware
 --------
 
+.. Sidebar::
+	Hard disk space requirements are given as a guideline. The actual amount of disk space required will depend upon the size of the GIS and database files. In addition to these files, space is required for temporary files during processing.
+
 **Minimum specification:**
 
 * 3 GHz Pentium PC
@@ -21,8 +24,6 @@ Hardware
 * 10 Gb available hard disk space
 * *For increased performance a multiple core PC with as much RAM as possible is recommended.*
 
-.. Note::
-	Hard disk space requirements are given as a guideline. The actual amount of disk space required will depend upon the size of the GIS and database files. In addition to these files, space is required for temporary files during processing.
 
 Software
 --------
