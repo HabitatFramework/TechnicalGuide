@@ -9,6 +9,7 @@ Hardware
 --------
 
 .. sidebar:: System Requirements
+
 	Hard disk space requirements are given as a guideline. The actual amount of disk space required will depend upon the size of the GIS and database files. In addition to these files, space is required for temporary files during processing.
 
 **Minimum specification:**
