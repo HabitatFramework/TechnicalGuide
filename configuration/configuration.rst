@@ -46,8 +46,6 @@ Otherwise, click ‘New’ to define a new connection. The Provider tab of the D
 Select the relevant OLE DB Provider:
 
 ==================	=====================================================================
-**Access version**
-==================	=====================================================================
 Access 2000-2003:	select ‘Microsoft Jet 4.0 OLE DB Provider’
 Access 2007:		select ‘Microsoft Office 12.0 Access Database Engine OLE DB Provider’
 ==================	=====================================================================
