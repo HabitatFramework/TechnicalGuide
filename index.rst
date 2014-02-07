@@ -16,23 +16,17 @@ Contents
    :maxdepth: 2
    :numbered:
 
+   preface/preface
    introduction/introduction
    installation/installation
    configuration/configuration
+   database/database
 
 
 .. only:: html
 
-	Todo List
-	=========
-	.. todolist::
+   Index
+   =====
 
-.. only:: html
+   * :ref:`genindex`
 
-
-	Indices and Search
-	==================
-
-	* :ref:`genindex`
-	* :ref:`search`
-	.. * :ref:`modindex`
