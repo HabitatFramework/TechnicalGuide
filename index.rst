@@ -23,16 +23,8 @@ Contents
 
 .. only:: html
 
-	Todo List
-	=========
-	.. todolist::
 
-.. only:: html
-
-
-	Indices and Search
-	==================
+	Index
+	=====
 
 	* :ref:`genindex`
-	* :ref:`search`
-	.. * :ref:`modindex`
