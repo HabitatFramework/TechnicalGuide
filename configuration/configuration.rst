@@ -5,7 +5,7 @@ Configuration
 The first time the GIS tool is used you will need to configure the database and GIS connection details.
 
 .. index::
-	single: Configuration, Database Connection
+	single: Configuration; Database Connection
 
 .. _database_connection:
 
@@ -26,6 +26,10 @@ Database Connection
 3. Select the appropriate connection type from the drop-down list and click :guilabel:`OK`. For each dialog fields highlighted in red must be completed.
 
 
+.. raw:: latex
+
+	\newpage
+
 Connecting to Microsoft Access
 ------------------------------
 
@@ -35,7 +39,7 @@ Connecting to Microsoft Access
 
 .. figure:: ../images/figures/OleDbConnectionDialog.png
 	:align: center
-	:scale: 80
+	:scale: 90
 
 	OleDb Connection dialog
 
@@ -78,6 +82,10 @@ Access 2007:		select 'Microsoft Office 12.0 Access Database Engine OLE DB Provid
 7. Click :guilabel:`OK`, then click :guilabel:`OK` on the 'OleDb Connection' dialog.
 
 
+.. raw:: latex
+
+	\newpage
+
 Connecting to SQL Server
 ------------------------
 
@@ -91,13 +99,14 @@ Connecting to SQL Server
 
 .. figure:: ../images/figures/SQLServerConnectionDialog.png
 	:align: center
+	:scale: 90
 
 	SQL Server Connection dialog
 
 .. Note::
 	If the computer or server is listed but no services are listed e.g. P3000CA\, you can either:
 
-	* Select the computer or server, then press 'End' or use the arrow keys to move the cursor to the end, then type the name of the database service.
+	* Select the computer or server, then press 'End' or use the :kbd:`arrow` keys to move the cursor to the end, then type the name of the database service.
 	* Exit the HLU GIS Tool, then open the SQL Server Configuration Manager. Right-click on SQL Server Browser and set the start mode as Automatic or Manual. Start the service, then re launch the HLU GIS Tool and select the database service from the list.
 
 4. Select whether you wish to use Windows or SQL Server authentication. This will depend upon how your SQL Server database has been configured.
@@ -109,14 +118,17 @@ Connecting to SQL Server
 7. The **Default schema** defaults to 'dbo'. If you wish to use a different schema, select it from the drop-down list, then click :guilabel:`OK`.
 
 
+.. raw:: latex
+
+	\newpage
+
 Reconfiguring the Database Connection
 -------------------------------------
 
-To re-configure only the database connection the database configuration information must be cleared.
+To re-configure only the database connection the database configuration information must be reset. To reset the configuration:
 
-To reset the configuration:
-
-	1. Go to **Start Menu > Run…**.
+	1. In Windows, go to **Start Menu > Run…**.
+	
 	2. If you have installed the HLU GIS Tool in the default location, at the prompt type:
 
 		``"C:\Program Files\HLU\HLU GIS Tool\" /d``
@@ -135,7 +147,7 @@ To reset the configuration:
 	\newpage
 
 .. index::
-	single: Configuration, GIS Connection
+	single: Configuration; GIS Connection
 
 .. _gis_connection:
 
@@ -148,7 +160,7 @@ When the tool is first launched it will check your system to determine which GIS
 
 	.. figure:: ../images/figures/SelectGISDialog.png
 		:align: center
-		:scale: 80
+		:scale: 90
 
 		Select GIS Application dialog
 
@@ -162,11 +174,11 @@ Connecting to ArcGIS/MapInfo
 
 	.. figure:: ../images/figures/ArcGISDocumentSelectionDialog.png
 		:align: center
-		:scale: 85
+		:scale: 80
 
 		Map Document selection dialog (ArcGIS)
 
-	.. Note:: For ArcGIS users this dialog may not be visible - hold **Alt** and press **Tab** on your keyboard to switch windows.
+	.. Note:: For ArcGIS users this dialog may not be visible - hold :kbd:`Alt` and press :kbd:`Tab` on your keyboard to switch windows.
 
 2. If you have an existing map document or workspace which contains the HLU layer, browse to the file and click :guilabel:`Open`. The HLU GIS Tool will then be ready for use.
 
@@ -196,20 +208,22 @@ Connecting to ArcGIS/MapInfo
 	The GIS connection details can also be reconfigured if necessary through the **Tools menu**.
 
 
+.. raw:: latex
+
+	\newpage
+
 Reconfiguring the GIS Connection
 --------------------------------
 
-To re-configure only the GIS connection, the GIS configuration information must be cleared.
+To re-configure only the GIS connection, the GIS configuration information must be reset. To reset the configuration:
 
-To reset the configuration:
-
-	1. Go to **Start Menu > Run…**.
+	1. In Windows, go to **Start Menu > Run…**.
 	
 	2. If you have installed the HLU GIS Tool in the default location, at the prompt type:
 
 		``"C:\Program Files\HLU\HLU GIS Tool\" /g``
 
-		..note::
+		.. note::
 			If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/g**.
 
 	3. This will start the tool and prompt the user to enter new GIS connection details.
@@ -227,7 +241,7 @@ To reset the configuration:
 Configuring Lookup Tables
 =========================
 
-Tables in the database that are prefixed by 'lut_' are **lookup tables** and some of these can be tailored to the requirements of each organisation. Examples of configuration include:
+Tables in the database that are prefixed by 'lut\_' are **lookup tables** and some of these can be tailored to the requirements of each organisation. Examples of configuration include:
 
 	* Adding new users to enable edit capability.
 	* Adding new sources as reference datasets.
@@ -355,7 +369,7 @@ Export formats can be added or removed in the 'exports' table shown in the figur
 Once a new export format has been added to the 'exports' table the fields to be included in the export must be added to the 'export_fields' table.
 
 .. index::
-	single: Export Tables, Export Fields
+	single: Export Tables; Export Fields
 
 Adding fields to an export format
 ---------------------------------

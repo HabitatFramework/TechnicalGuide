@@ -16,15 +16,15 @@ Hardware
 
 **Minimum specification:**
 
-* 3 GHz Pentium PC
-* 2 Gb RAM
-* 3 Gb available hard disk space
+	* 3 GHz Pentium PC
+	* 2 Gb RAM
+	* 3 Gb available hard disk space
 
 **Recommended specification:**
 
-* 3 GHz Dual Core PC
-* 3 Gb RAM
-* 10 Gb available hard disk space
+	* 3 GHz Dual Core PC
+	* 3 Gb RAM
+	* 10 Gb available hard disk space
 
 .. Tip::
 	For increased performance a multiple core PC with as much RAM as possible is recommended.
@@ -33,13 +33,13 @@ Hardware
 Software
 --------
 
-Minimum software specification:
+**Minimum software specification:**
 
 	* .NET framework 3.5 Service Pack 1
 	* Microsoft Access 2000
 	* ArcGIS 10.1 or MapInfo 8.0
 
-Recommended software specification:
+**Recommended software specification:**
 
 	* .NET framework 3.5 Service Pack 1
 	* Microsoft Access 2000 or later
@@ -59,8 +59,8 @@ Latest Release
 
 The latest release of the tool can be downloaded from `GitHub <https://github.com/HabitatFramework/HLUTool/releases>`_. Two versions of the tool are available:
 
-	* For ArcGIS or ArcGIS/MapInfo systems (e.g. **v1.0.8**). Use when ArcGIS is installed or where ArcGIS and MapInfo are both installed.
-	* For MapInfo only systems (e.g. **v1.0.8m**). Use when only MapInfo is installed.
+	* For ArcGIS or ArcGIS/MapInfo systems (e.g. *v1.0.8*). Use when ArcGIS is installed or where ArcGIS and MapInfo are both installed.
+	* For MapInfo only systems (e.g. *v1.0.8m*). Use when only MapInfo is installed.
 
 
 .. raw:: latex
@@ -72,7 +72,7 @@ The latest release of the tool can be downloaded from `GitHub <https://github.co
 Installing the HLU GIS Tool
 ===========================
 
-To install the HLU Tool double-click on the Setup.exe and follow the instructions. By default this will install the HLU GIS Tool into :file:`C:\\Program Files\\HLU\\HLU GIS Tool\\` directory. The installer will also create shortcuts in the start menu and will display the ReadMe file.
+To install the HLU Tool `double-click` on the Setup.exe and follow the instructions. By default this will install the HLU GIS Tool into the :file:`C:\\Program Files\\HLU\\HLU GIS Tool\\` directory. The installer will also create shortcuts in the start menu and will display the ReadMe file.
 
 .. _enable_extension:
 
@@ -86,8 +86,9 @@ Enable HLU Extension
 
 .. figure:: ../images/figures/ArcGisExtensionsDialog.png
 	:align: center
+	:scale: 80
 
 	ArcMap Extensions dialog
 
-Tick the box next to HLU ArcGIS Extension as shown in the figure :Ref:`figAGED` then click :guilabel:`Close` and exit ArcMap.
+Tick the box next to 'HLU ArcGIS Extension' as shown in the figure :Ref:`figAGED` then click :guilabel:`Close` and exit ArcMap.
 

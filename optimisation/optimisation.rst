@@ -4,10 +4,10 @@ Optimisation
 
 The Habitat and Land Use (HLU) GIS Tool application design has been optimised as far as possible and there are no simple technological enhancements that can be made to significantly improve performance.
 
-It is important therefore to ensure performance is optimised wherever possible through user configuration and operation. The following suggestions show some simple approaches to improving performance.
+It is important therefore to ensure performance is optimised elsewhere wherever possible through user configuration and operation. The following suggestions show some simple approaches to improving performance.
 
 .. index::
-	single: Optimisation, GIS
+	single: Optimisation; GIS
 
 .. _gis_optimisation:
 
@@ -34,17 +34,17 @@ An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for us
 * Ensure that the .mxd or .wor is saved at a sensible view level such as 1:10,000 scale rather the full extent of the HLU dataset.
 * Add zoom layering to datasets so that detailed datasets such as the HLU layer and aerial photography are not displayed at smaller scales. Recommended maximum extents are shown in the table below):
 
-.. tabularcolumns:: |L|C|C|
+	.. tabularcolumns:: |L|C|C|
 
-.. table:: Recommended maximum GIS extents
+	.. table:: Recommended maximum GIS extents
 
-	+------------------------------------+-----------+--------------------+
-	|          GIS Application           | HLU layer | Aerial Photography |
-	+====================================+===========+====================+
-	| ArcGIS (Do not display out beyond) | 1:24,000  | 1:10,000           |
-	+------------------------------------+-----------+--------------------+
-	| MapInfo (Max Zoom)                 | 7.5 km    | 3 km               |
-	+------------------------------------+-----------+--------------------+
+		+------------------------------------+-----------+--------------------+
+		|          GIS Application           | HLU layer | Aerial Photography |
+		+====================================+===========+====================+
+		| ArcGIS (Do not display out beyond) | 1:24,000  | 1:10,000           |
+		+------------------------------------+-----------+--------------------+
+		| MapInfo (Max Zoom)                 | 7.5 km    | 3 km               |
+		+------------------------------------+-----------+--------------------+
 
 
 Tips for ArcGIS and MapInfo users
@@ -73,7 +73,7 @@ It takes a significant length of time for ArcGIS or MapInfo to draw or query an 
 	\newpage
 
 .. index::
-	single: Optimisation, Database
+	single: Optimisation; Database
 
 .. _database_optimisation:
 

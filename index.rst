@@ -26,8 +26,8 @@ Contents
 
 .. only:: html
 
-   Index
-   =====
+Index
+=====
 
-   * :ref:`genindex`
+* :ref:`genindex`
 
