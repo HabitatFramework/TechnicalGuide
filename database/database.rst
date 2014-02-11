@@ -252,7 +252,7 @@ source_date_type
 		+-----------+-------------------------------+---------------------------+
 		| D-        | Day start with no end date    | 15/10/2010 -              |
 		+-----------+-------------------------------+---------------------------+
-		| -D        | Day end with no start date    | - 18/10/2010              |
+		| -D        | Day end with no start date    | \- 18/10/2010             |
 		+-----------+-------------------------------+---------------------------+
 		| O         | Single month date             | Oct 2010                  |
 		+-----------+-------------------------------+---------------------------+
@@ -260,7 +260,7 @@ source_date_type
 		+-----------+-------------------------------+---------------------------+
 		| O-        | Month start with no end date  | Oct 2010 -                |
 		+-----------+-------------------------------+---------------------------+
-		| -O        | Month end with no start date  | - Nov 2010                |
+		| -O        | Month end with no start date  | \- Nov 2010               |
 		+-----------+-------------------------------+---------------------------+
 		| Y         | Single year date              | 2010                      |
 		+-----------+-------------------------------+---------------------------+
@@ -268,7 +268,7 @@ source_date_type
 		+-----------+-------------------------------+---------------------------+
 		| Y-        | Year start with no end date   | 2010 -                    |
 		+-----------+-------------------------------+---------------------------+
-		| -Y        | Year end with no start date   | - 2011                    |
+		| -Y        | Year end with no start date   | \- 2011                   |
 		+-----------+-------------------------------+---------------------------+
 		| P         | Single season date            | Autumn 2010               |
 		+-----------+-------------------------------+---------------------------+
@@ -276,7 +276,7 @@ source_date_type
 		+-----------+-------------------------------+---------------------------+
 		| P-        | Season start with no end date | Autumn 2010 -             |
 		+-----------+-------------------------------+---------------------------+
-		| -P        | Season end with no start date | - Winter 2010             |
+		| -P        | Season end with no start date | \- Winter 2010            |
 		+-----------+-------------------------------+---------------------------+
 		| U         | Unknown date                  | Unknown                   |
 		+-----------+-------------------------------+---------------------------+
@@ -305,7 +305,8 @@ sort_order
 Lookup Tables
 =============
 
-.. sidebar::
+.. sidebar:: Lookup table updates
+
 	Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
 
 Tables in the database prefixed by `lut_` are *lookup tables* and are used in many drop-down lists in the user interfaces to restrict choices to only valid values. Some of these lookup tables can be updated to tailor them to the requirements of each system but the remainder should be considered as 'system' tables that are configured centrally and shared between all HLU Tool installations.
@@ -328,12 +329,7 @@ The following lookup tables can be updated to tailor local requirements:
 lut_users
 ---------
 
-.. _figDTLU:
-
-.. figure:: ../images/figures/DatabaseTableLutUser.png
-	:align: center
-
-	Format of the lut_user table
+This table contains details of all the users that have editing capability with the HLU Tool and indicates if they are also able to perform 'bulk' updates.
 
 user_id
 	The user's *Windows* login ID. If the user logs in to a domain then the login should be entered in the format: *[Domain]\[LoginID]*. [4]_
@@ -353,6 +349,10 @@ sort_order
 .. [4] The 'user_id' of the current user is shown in the **Tools... --> About** window.
 
 
+.. seealso::
+	See :ref:`configuring_users` for more information.
+
+
 .. index::
 	single: Lookup Tables, Lut_Sources
 
@@ -361,12 +361,7 @@ sort_order
 lut_sources
 -----------
 
-.. _figDTLS:
-
-.. figure:: ../images/figures/DatabaseTableLutSources.png
-	:align: center
-
-	Format of the lut_sources table
+This table contains details of all the source datasets that can be referenced as a 'Source' by an INCID.
 
 source_id
 	A unique ID for each source.
@@ -381,6 +376,10 @@ sort_order
 	Determines the order source names are displayed in the 'Name' drop-down list in the 'Sources' tab.
 
 
+.. seealso::
+	See :ref:`configuring_sources` for more information.
+
+
 .. index::
 	single: Lookup Tables, Lut_Process
 
@@ -389,12 +388,7 @@ sort_order
 lut_process
 -----------
 
-.. _figDTLP:
-
-.. figure:: ../images/figures/DatabaseTableLutProcess.png
-	:align: center
-
-	Format of the lut_process table
+This table contains details of all the processes that can be referenced as the activity being undertaken when applying updates with the HLU Tool.
 
 code
 	A unique 3 character field for each source.
@@ -406,21 +400,19 @@ sort_order
 	Determines the order processes are displayed in the 'Process' drop-down list in the main window.
 
 
+.. seealso::
+	See :ref:`configuring_processes` for more information.
+
+
 .. index::
 	single: Lookup Tables, Lut_IHS_Habitats
 
-.. _configuring_habitats:
+.. _lut_ihs_habitats:
 
 lut_ihs_habitats
 ----------------
 
-.. _figDTLH:
-
-.. figure:: ../images/figures/DatabaseTableLutIHSHabitat.png
-	:align: center
-
-	Format of the lut_ihs_habitat table
-
+This table contains details of all the IHS Habitats that can be assigned to INCIDs using the HLU Tool and indicates which habitats are considered 'local' (and hence will appear in any drop-down lists).
 
 code
 	[Read only]. The unique 8 character field for each IHS Habitat. **Do not edit this value.**
@@ -435,33 +427,32 @@ sort_order
 	Determines the order IHS Habitats are displayed in the 'IHS Habitat' drop-down list in the main window.
 
 
+.. seealso::
+	See :ref:`configuring_habitats` for more information.
+
+
 .. raw:: latex
 
 	\newpage
 
-.. _configuring_exports:
-
-.. index::
-	single: Export Tables, Exports
+.. _export_tables:
 
 Export Tables
 =============
 
+.. _exports:
+
+.. index::
+	single: Export Tables, Exports
+
 exports
 -------
 
-Export formats can be added or removed in the 'exports' table shown in the figure :ref:`figDTE`.
-
-.. _figDTE:
-
-.. figure:: ../images/figures/DatabaseTableExportsFields.png
-	:align: center
-
-	Format of the exports table
-
+This table lists all the Export 'formats' that can be used when exporting data from the HLU Tool database and GIS layers to a new 'standalone' GIS layer.
 
 export_id
 	A unique identifier used to determines which fields are selected from the 'exports_fields' table.
+
 export_name
 	The name which will be displayed in the 'Export Format' drop-down list.
 
@@ -470,18 +461,15 @@ Once a new export format has been added to the 'exports' table the fields to be 
 .. index::
 	single: Export Tables, Export Fields
 
+.. _exports_fields:
+
+.. index::
+	single: Export Tables, Exports_Fields
+
 exports_fields
 --------------
 
-The 'exports_fields' table shown in the figure :ref:`figDTEF` defines which fields are exported for each export type in the 'exports' table.
-
-.. _figDTEF:
-
-.. figure:: ../images/figures/DatabaseTableExportsFields.png
-	:align: center
-
-	Format of the exports_fields table
-
+This table defines which fields are to be exported for each export format in the 'exports' table. It also defines what the export fields will be called, the order they will appear in the new GIS layer and the number of occurrences of each field (where fields can appear in multiple table records.)
 
 export_field_id
 	A unique identifier for the field.
@@ -510,7 +498,8 @@ fields_count
 
 .. [3] The 'column_name' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
 
-.. Note:: As shown in the example in the figure :ref:`figDTEF`, geometry fields should not be included. This includes: obj, shape, perimeter, area, x, y etc. These fields will be added automatically to the exported layer.
+.. note::
+	GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
 
 
 .. seealso::
@@ -520,7 +509,7 @@ fields_count
 Table Relationships
 ===================
 
-There are 37 tables in the HLU Tool relational database comprised of data tables, lookup tables and export tables. The relationships between the tables are too numerous and complex to display in a single diagram. The tables and relationships have there been separated into 7 logical groups, so of which connect and overlap with one another.
+There are 37 tables in the HLU Tool relational database comprised of data tables, lookup tables and export tables. The relationships between the tables are too numerous and complex to display in a single diagram so the tables and relationships have there been separated into 7 logical groups, some of which connect and overlap with one another.
 
 .. tip::
 	Bespoke relationship diagrams between the various HLU Tool tables can be created using SQL Server Management Studio.
@@ -573,7 +562,7 @@ Habitat Tables
 Sources Tables
 --------------
 
-.. _figDDDT:
+.. _figDDST:
 
 .. figure:: ../images/diagrams/DatabaseDiagramSourcesTables.png
 	:align: center
@@ -584,7 +573,7 @@ Sources Tables
 History Tables
 --------------
 
-.. _figDDDT:
+.. _figDDHT:
 
 .. figure:: ../images/diagrams/DatabaseDiagramHistoryTables.png
 	:align: center
@@ -595,7 +584,7 @@ History Tables
 Other Tables
 ------------
 
-.. _figDDDT:
+.. _figDDOT:
 
 .. figure:: ../images/diagrams/DatabaseDiagramOtherTables.png
 	:align: center

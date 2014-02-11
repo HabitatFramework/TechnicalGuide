@@ -2,6 +2,11 @@
 Configuration
 *************
 
+.. index::
+	single: Configuration, Database Connection
+
+.. _database_connection:
+
 Database Connection
 ===================
 
@@ -101,18 +106,29 @@ Select the HLU database from the 'Database' drop-down list.
 Reconfiguring the Database Connection
 -------------------------------------
 
-To re-configure the database connection, the HLU GIS Tool configuration must be cleared.
+To re-configure only the database connection the database configuration information must be cleared.
 
-To reset the configuration, go to Start Menu > Run… If you have installed the HLU GIS Tool in the default location, at the prompt type:
+To reset the configuration, go to **Start Menu > Run…**. If you have installed the HLU GIS Tool in the default location, at the prompt type:
 
-	``"C:\Program Files\ESDM\HLU GIS Tool\" /c``
+	``"C:\Program Files\ESDM\HLU GIS Tool\" /d``
 
-If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/c**.
+	.. note::
+		If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/d**.
+
+This will start the tool and prompt the user to enter new database connection details.
+
+..tip::
+	Using the **/c** switch will reset both the database and GIS configuration information.
 
 
 .. raw:: latex
 
 	\newpage
+
+.. index::
+	single: Configuration, GIS Connection
+
+.. _gis_connection:
 
 GIS Connection
 ==============
@@ -158,18 +174,38 @@ Browse to the location, enter a name for the map document or workspace and click
 The GIS connection details can be reconfigured through the Tools menu – see section 3.1.3.
 
 
-.. index::
-	single: Configuration
+Reconfiguring the GIS Connection
+--------------------------------
 
-.. _configuration:
+To re-configure only the GIS connection, the GIS configuration information must be cleared.
 
-Database Configuration
-======================
+To reset the configuration, go to **Start Menu > Run…**. If you have installed the HLU GIS Tool in the default location, at the prompt type:
 
-.. sidebar::
+	``"C:\Program Files\ESDM\HLU GIS Tool\" /g``
+
+	..note::
+		If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/g**.
+
+This will start the tool and prompt the user to enter new GIS connection details.
+
+..tip::
+	Using the **/c** switch will reset both the database and GIS configuration information.
+
+
+.. raw:: latex
+
+	\newpage
+
+.. _configuring_luts:
+
+Configuring Lookup Tables
+=========================
+
+.. sidebar:: Lookup table updates
+
 	Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
 
-Tables in the database that are prefixed by `lut_` are *lookup tables* and some of these can be tailored to the requirements of each organisation. Examples of configuration include:
+Tables in the database that are prefixed by `lut_` are **lookup tables** and some of these can be tailored to the requirements of each organisation. Examples of configuration include:
 	* Adding new users to enable edit capability.
 	* Adding new sources as reference datasets.
 	* Hiding 'non-local' habitats.
@@ -185,15 +221,22 @@ Configuring Users
 
 New users of the HLU GIS Tool can be added to the 'lut_user' table. The format of the table is shown in the figure :ref:`figDTLU`.
 
+.. _figDTLU:
+
+.. figure:: ../images/figures/DatabaseTableLutUser.png
+	:align: center
+
+	Format of the lut_user table
+
+
 .. note::
-	Users will be able to use the tool even if their user details have not been entered into the lut_user table. However, '[Read Only]' will appear in the user interface title bar and they will not be able to apply any changes.
+
+	* Users will be able to use the tool even if their user details have not been entered into the lut_user table. However, '[Read Only]' will appear in the user interface title bar and they will not be able to apply any changes.
+	* Users must also have edit access to the database and GIS feature layers in order to apply changes using the tool.
+	* Existing user records cannot be removed from the 'lut_user' table if they are referenced by any of the data records (i.e. if they have applied any changes to the data). This is because data integrity must be retained.
 
 .. caution::
 	Bulk update permission should only be assigned to **expert** users and should only be used with caution as mistakes can have major affects on the data.
-
-.. note::
-	Existing user records cannot be removed from the 'lut_user' table if they are referenced by any of the data records (i.e. if they have applied any changes to the data). This is because data integrity must be retained.
-
 
 
 .. index::
@@ -206,11 +249,16 @@ Configuring Sources
 
 Additional sources can be added to the 'lut_sources' table . The format of the table is shown in the figure :ref:`figDTLS`.
 
+.. _figDTLS:
+
+.. figure:: ../images/figures/DatabaseTableLutSources.png
+	:align: center
+
+	Format of the lut_sources table
+
+
 .. note::
 	Existing source records cannot be removed from the 'lut_sources' table if they are referenced by any of the data records (i.e. if they have been used in any incid data records). This is because data integrity must be retained.
-
-
-
 
 .. index::
 	single: Configuration; Processes
@@ -222,7 +270,12 @@ Configuring Processes
 
 New processes can be added to the 'lut_process' table. The format of the table is shown in the figure :ref:`figDTLP`.
 
+.. _figDTLP:
 
+.. figure:: ../images/figures/DatabaseTableLutProcess.png
+	:align: center
+
+	Format of the lut_process table
 
 
 .. index::
@@ -235,11 +288,16 @@ Configuring Habitats
 
 IHS Habitats can be flagged as **local** in the 'lut_ihs_habitat` table. The format of the table is shown in the figure :ref:`figDTLH`.
 
+.. _figDTLH:
+
+.. figure:: ../images/figures/DatabaseTableLutIHSHabitat.png
+	:align: center
+
+	Format of the lut_ihs_habitat table
+
+
 .. note::
 	Only IHS Habitats flagged as **local** will appear in the 'IHS Habitat' drop-down list in the main window. This enables habitats that are not found in the local area to be hidden to avoid being selected in error (e.g. coastal habitats in land-locked counties.)
-
-
-
 
 
 .. raw:: latex
@@ -266,17 +324,6 @@ Export formats can be added or removed in the 'exports' table shown in the figur
 
 	Format of the exports table
 
-.. tabularcolumns:: |L|L|
-
-.. table:: Table exports fields and descriptions
-
-	+-------------+---------------------------------------------------------------------------------------------------+
-	|    Field    |                                            Description                                            |
-	+=============+===================================================================================================+
-	| export_id   | A unique identifier used to determines which fields are selected from the 'exports_fields' table. |
-	+-------------+---------------------------------------------------------------------------------------------------+
-	| export_name | The name which will be displayed in the 'Export Format' drop-down. list                           |
-	+-------------+---------------------------------------------------------------------------------------------------+
 
 Once a new export format has been added to the 'exports' table the fields to be included in the export must be added to the 'export_fields' table.
 
@@ -295,35 +342,10 @@ The 'exports_fields' table shown in the figure :ref:`figDTEF` defines which fiel
 
 	Format of the exports_fields table
 
-.. tabularcolumns:: |L|L|
 
-.. table:: Table exports_fields fields and descriptions
-
-	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-	|      Field      |                                                             Description                                                             |
-	+=================+=====================================================================================================================================+
-	| export_field_id | A unique identifier for the field.                                                                                                  |
-	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-	| export_id       | The unique identifier for the export type in the 'exports' table (see :ref:`exports`)                                               |
-	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-	| table_name      | The name of the source table in the database containing the column to be exported.                                                  |
-	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-	| column_name     | The name of the column within the source table.                                                                                     |
-	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-	| column_ordinal  | The number of the column within the source table starting from 1. The export function does not require this column to be completed. |
-	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-	| field_name      | The name of the column in the exported GIS layer. [3]_                                                                              |
-	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-	| field_ordinal   | Sets the order of the fields in the exported GIS layer.                                                                             |
-	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-	| fields_count    | Allows users to determine the number of child records to be exported.                                                               |
-	+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
-
-.. [3] The 'column_name' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
-
-.. Note:: As shown in the example in the figure :ref:`figDTEF`, geometry fields should not be included. This includes: obj, shape, perimeter, area, x, y etc. These fields will be added automatically to the exported layer.
+.. Note:: As shown in the example in the figure :ref:`figDTEF`, geometry fields should not be included. This includes: obj, shape, perimeter, area, x, y etc. These fields will be automatically added to the exported layer.
 
 
 .. seealso::
-	See :ref:`export_window` for more information.
+	See :ref:`export_tables` for more information.
 

@@ -21,7 +21,7 @@ Contents
    configuration/configuration
    access/access
    database/database
-   appendix/appendix
+   optimisation/optimisation
 
 
 .. only:: html

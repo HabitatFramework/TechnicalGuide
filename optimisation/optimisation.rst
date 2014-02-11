@@ -1,16 +1,26 @@
-********
-Appendix
-********
+************
+Optimisation
+************
+
+The Habitat and Land Use (HLU) GIS Tool application design has been optimised as far as possible and there are no simple technological enhancements that can be made to significantly improve performance. It is important therefore to ensure performance is optimised wherever possible through user configuration and operation. The following suggestions show some simple approaches to improving performance.
 
 .. index::
-	single: Optimising performance
+	single: Optimisation, GIS
 
-.. _optimising_performance:
+.. _gis_optimisation:
 
-Optimising Performance
-======================
+GIS Optimisation
+================
 
-The Habitat and Land Use (HLU) GIS Tool has been optimised as far as possible and there are no simple technological enhancements that can be made to significantly improve performance. It is important therefore to ensure performance is optimised wherever possible through user configuration and operation. The following suggestions show some simple approaches to improving performance.
+GIS Layer Indexing
+------------------
+
+Attribute indexes
+
+
+
+Spatial Indexes
+
 
 
 Creation of ArcGIS Map Document or MapInfo Workspace
@@ -55,14 +65,22 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 * For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 
 
-Selection of Database Type
---------------------------
+.. index::
+	single: Optimisation, Database
 
-The HLU GIS Tool is supplied with both Microsoft Access 2000 and SQL Server 2008 databases.
+.. _database_optimisation:
+
+Database Optimisation
+=====================
+
+Database Type
+-------------
+
+The HLU GIS Tool is designed to work with both Microsoft Access and SQL Server databases (other databases are supported but have not been tested).
 
 Microsoft Access is a versatile desktop database application, but does not have the same performance as other database systems. Database management systems such as SQL Server are optimised to handle large data volumes and complex queries, and can be significantly faster.
 
-We therefore recommend using the HLU GIS Tool with SQL Server or a similar database management system, as this will improve performance when filtering the database records and updating attribute data.
+It is therefore recommend that the HLU GIS Tool is used with SQL Server or a similar database management system as this will improve performance when filtering the database records and updating attribute data.
 
 
 Local vs. Network Storage
@@ -84,9 +102,4 @@ However, if additional entries are required in the lookup tables, these may be a
 .. raw:: latex
 
 	\newpage
-
-.. index::
-	single: Known Issues
-
-.. _known_issues:
 

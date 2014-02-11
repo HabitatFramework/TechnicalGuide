@@ -16,7 +16,8 @@ Linking a new Access database
 
 The process of linking an Access database to a SQL Server database can be complex and necessitates that you know the connection settings for the target database. The following instructions describe how to link to an existing installation of the HLU Tool database running on SQL Server. It should not matter which version (i.e. SQL Server or SQL Server Express) is installed or which release (as long as it is meets the :ref:`requirements`.
 
-.. sidebar::
+.. sidebar:: Versions of Access
+
 	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
 
 1. Make sure your SQL Server service is running and the HLU Tool database is attached.
@@ -88,7 +89,8 @@ Creating a new DSN file
 
 The following instructions describe how to create a new .dsn file for the HLU Tool database:
 
-.. sidebar::
+.. sidebar:: Versions of Access
+
 	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
 
 1. Click **New** to create a new data source name (DSN) file. The 'Create New Data Source' wizard will start.
@@ -116,7 +118,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 4. Click **Next** and then choose a suitable file path and file name for your new DSN. Then click **Save**.
 5. The file path and file name of the select DSN will be displayed. Click **Next**.
 
-	.. _figALSDSD:
+	.. _figALSDSD2:
 
 	.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
 		:align: center
@@ -190,7 +192,8 @@ Updating a linked table
 
 Each time you open a linked table you will see the latest data displayed in it. However, structural changes made to a SQL Server table are not automatically reflected in a linked table. In this case you will need to update the linked table by applying the latest SQL Server object structure.
 
-.. sidebar::
+.. sidebar:: Versions of Access
+
 	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
 
 1. Make sure your SQL Server service is running and the HLU Tool database is attached.
@@ -216,7 +219,7 @@ Each time you open a linked table you will see the latest data displayed in it. 
 5. Select the **Always prompt for new location** check box.
 6. Click the tables that you wish to update or click the **Select All** button and then click **OK**.
 
-	.. _figARTMD:
+	.. _figARTMSD:
 
 	.. figure:: ../images/figures/AccessRelinkTableManagerSelectedDialog.png
 		:align: center
