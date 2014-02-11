@@ -3,20 +3,25 @@
 Linking to SQL Server
 *********************
 
-If your HLU Tool is configured to use SQL Server but some users don't have access to SQL Server's Management Studio (SSMS), or aren't familiar with using SSMS, then one solution is to create an Access data and link it to the HLU Tool database in SQL Server. Many users will be more familiar with Access and linking Access to SQL Server in this way allows users to view and edit the HLU Tool data without any risk of altering the database structure. Using Access as a front-end to the database in this way allows users to create and share Access queries, forms and reports specific to their needs.
+If your HLU Tool is configured to use SQL Server but some users don't have access to SQL Server's Management Studio (SSMS), or aren't familiar with using SSMS, then one solution is to create an Access data and link it to the HLU Tool database in SQL Server.
+
+Many users will be more familiar with Access and linking Access to SQL Server in this way allows users to view and edit the HLU Tool data without any risk of altering the database structure. Using Access as a front-end to the database in this way allows users to create and share Access queries, forms and reports specific to their needs.
 
 .. note::
 	Database administrators need to ensure that users of the Access database have the necessary permissions to view, add and edit the target SQL Server database.
 
+
+.. index::
+	single: Linking to SQL
 
 .. _new_link:
 
 Linking a new Access database
 =============================
 
-The process of linking an Access database to a SQL Server database can be complex and necessitates that you know the connection settings for the target database. The following instructions describe how to link to an existing installation of the HLU Tool database running on SQL Server. It should not matter which version (i.e. SQL Server or SQL Server Express) is installed or which release (as long as it is meets the :ref:`requirements`.
+The process of linking an Access database to a SQL Server database can be complex and necessitates that you know the connection settings for the target database. The following instructions describe how to link to an existing installation of the HLU Tool database running on SQL Server. It should not matter which version (i.e. SQL Server or SQL Server Express) is installed or which release, as long as it is meets the :ref:`requirements`.
 
-.. sidebar:: Versions of Access
+.. sidebar:: Other Access versions
 
 	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
 
@@ -28,6 +33,7 @@ The process of linking an Access database to a SQL Server database can be comple
 
 	.. figure:: ../images/figures/AccessLinkExternalDataTab.png
 		:align: center
+		:scale: 90
 
 		External Data tab
 
@@ -38,6 +44,7 @@ The process of linking an Access database to a SQL Server database can be comple
 
 	.. figure:: ../images/figures/AccessLinkODBCDataDialog.png
 		:align: center
+		:scale: 85
 
 		Get External Data - OBDC Database dialog
 
@@ -47,6 +54,7 @@ The process of linking an Access database to a SQL Server database can be comple
 
 	.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
 		:align: center
+		:scale: 85
 
 		Select Data Source dialog
 
@@ -59,6 +67,7 @@ The process of linking an Access database to a SQL Server database can be comple
 
 	.. figure:: ../images/figures/AccessLinkSelectTablesDialog.png
 		:align: center
+		:scale: 85
 
 		Select Link Tables dialog
 
@@ -74,6 +83,7 @@ The process of linking an Access database to a SQL Server database can be comple
 
 	.. figure:: ../images/figures/AccessLinkObjectsNavigationPane.png
 		:align: center
+		:scale: 85
 
 		Access Objects Navigation Pane
 
@@ -82,6 +92,9 @@ The process of linking an Access database to a SQL Server database can be comple
 
 	\newpage
 
+.. index::
+	single: Linking to SQL, Creating a DSN
+
 .. _create_dsn:
 
 Creating a new DSN file
@@ -89,7 +102,7 @@ Creating a new DSN file
 
 The following instructions describe how to create a new .dsn file for the HLU Tool database:
 
-.. sidebar:: Versions of Access
+.. sidebar:: Other Access versions
 
 	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
 
@@ -100,6 +113,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	.. figure:: ../images/figures/AccessLinkSelectDriverDialog.png
 		:align: center
+		:scale: 85
 
 		Create New Data Source - Select Driver dialog
 
@@ -109,6 +123,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	.. figure:: ../images/figures/AccessLinkAdvancedDSNDialog.png
 		:align: center
+		:scale: 90
 
 		Create New Data Source - Advanced DSN dialog
 
@@ -122,6 +137,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
 		:align: center
+		:scale: 85
 
 		Select Data Source dialog
 
@@ -131,6 +147,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	.. figure:: ../images/figures/AccessLinkSummaryODBCDialog.png
 		:align: center
+		:scale: 90
 
 		ODBC Setup Summary dialog
 
@@ -140,6 +157,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	.. figure:: ../images/figures/AccessLinkSelectServerDialog.png
 		:align: center
+		:scale: 85
 
 		Create New Data Source - Select Server dialog
 
@@ -149,6 +167,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	.. figure:: ../images/figures/AccessLinkSQLAuthenticationDialog.png
 		:align: center
+		:scale: 85
 
 		Create New Data Source - Authentication dialog
 
@@ -158,6 +177,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	.. figure:: ../images/figures/AccessLinkSelectDatabaseDialog.png
 		:align: center
+		:scale: 85
 
 		Create New Data Source - Select Database dialog
 
@@ -168,6 +188,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	.. figure:: ../images/figures/AccessLinkSummaryDialog.png
 		:align: center
+		:scale: 85
 
 		Create New Data Source - Summary dialog
 
@@ -185,6 +206,9 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	\newpage
 
+.. index::
+	single: Linking to SQL, Updating Linked Tables
+
 .. _update_link:
 
 Updating a linked table
@@ -192,7 +216,7 @@ Updating a linked table
 
 Each time you open a linked table you will see the latest data displayed in it. However, structural changes made to a SQL Server table are not automatically reflected in a linked table. In this case you will need to update the linked table by applying the latest SQL Server object structure.
 
-.. sidebar:: Versions of Access
+.. sidebar:: Other Access versions
 
 	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
 
@@ -204,6 +228,7 @@ Each time you open a linked table you will see the latest data displayed in it. 
 
 	.. figure:: ../images/figures/AccessRelinkExternalDataTab.png
 		:align: center
+		:scale: 90
 
 		External Data tab
 
@@ -213,6 +238,7 @@ Each time you open a linked table you will see the latest data displayed in it. 
 
 	.. figure:: ../images/figures/AccessRelinkTableManagerDialog.png
 		:align: center
+		:scale: 90
 
 		Linked Table Manager dialog
 
@@ -223,12 +249,13 @@ Each time you open a linked table you will see the latest data displayed in it. 
 
 	.. figure:: ../images/figures/AccessRelinkTableManagerSelectedDialog.png
 		:align: center
+		:scale: 90
 
 		Linked Table Manager selected tables
 
 7. If the update if successful Access will display a message to that effect. Otherwise Access will display an error message.
 
-	.. _figARTMSD:
+	.. _figARSD:
 
 	.. figure:: ../images/figures/AccessRelinkSuccessDialog.png
 		:align: center

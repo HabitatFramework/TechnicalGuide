@@ -9,10 +9,10 @@ The database consists of 3 types of tables as follows:
 	3. Export tables
 
 
-.. _data_tables:
-
 .. index::
 	single: Data Tables
+
+.. _data_tables:
 
 Data Tables
 ===========
@@ -30,8 +30,8 @@ incid
 
 This is the main data table with only one record per INCID.
 
-incid
-	Char(12) - A unique **Inc**\ remental **id**\ entifier for each logical group of features.
+	incid
+		Char(12) - A unique **Inc**\ remental **id**\ entifier for each logical group of features.
 
 legacy_habitat
 	Char(50) - The primary pre-IHS habitat code carried over from the 'legacy' habitat data.
@@ -239,7 +239,7 @@ source_date_end
 source_date_type
 	Char(2) - String that describes the format of the date range covering the source dataset.
 
-	.. tabularcolumns:: |C|C|C|
+	.. tabularcolumns:: |L|L|L|
 
 	.. table:: Vague date types
 
@@ -297,19 +297,21 @@ sort_order
 	Integer - Determines the (ascending) order the sources for each INCID will be displayed in the 'Sources' tab of the main window.
 
 
-.. _lookup_tables:
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Lookup Tables
 
+.. _lookup_tables:
+
 Lookup Tables
 =============
 
-.. sidebar:: Lookup table updates
+Tables in the database prefixed by `lut_` are *lookup tables* and are used in many drop-down lists in the user interfaces to restrict choices to only valid values.
 
-	Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
-
-Tables in the database prefixed by `lut_` are *lookup tables* and are used in many drop-down lists in the user interfaces to restrict choices to only valid values. Some of these lookup tables can be updated to tailor them to the requirements of each system but the remainder should be considered as 'system' tables that are configured centrally and shared between all HLU Tool installations.
+Some of the lookup tables can be updated to tailor them to the requirements of each system but the remainder should be considered as 'system' tables that are configured centrally and shared between all HLU Tool installations.
 
 	.. note::
 		There is currently no automated method for updating these 'system' tables. However, a change request is planned to develop a new 'Database upgrade kit' in the future. See `CR42 <https://github.com/HabitatFramework/HLUTool/issues/67>`_ for details.)
@@ -317,7 +319,10 @@ Tables in the database prefixed by `lut_` are *lookup tables* and are used in ma
 Many lookup tables contain a 'sort_order' field that will determine the order that the values appear in any drop-down lists. **All** records in these tables must have a 'sort_order' value or they may not appear in the relevant drop-down lists.
 
 .. note::
-	Lookup table values are relevant to the **whole** database system and hence any changes will affect **all** users of that database.
+
+	* Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
+	* Lookup table values are relevant to the **whole** database system and hence any changes will affect **all** users of that database.
+
 
 The following lookup tables can be updated to tailor local requirements:
 
@@ -440,10 +445,10 @@ sort_order
 Export Tables
 =============
 
-.. _exports:
-
 .. index::
 	single: Export Tables, Exports
+
+.. _exports:
 
 exports
 -------
@@ -462,9 +467,6 @@ Once a new export format has been added to the 'exports' table the fields to be 
 	single: Export Tables, Export Fields
 
 .. _exports_fields:
-
-.. index::
-	single: Export Tables, Exports_Fields
 
 exports_fields
 --------------
@@ -506,6 +508,15 @@ fields_count
 	See :ref:`configuring_exports` for more information.
 
 
+.. raw:: latex
+
+	\newpage
+
+.. index::
+	single: Data Tables, Relationships
+
+.. _table_relationships:
+
 Table Relationships
 ===================
 
@@ -522,6 +533,7 @@ Data Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramDataTables.png
 	:align: center
+	:scale: 80
 
 	Database Relationships - Data Tables
 
@@ -533,6 +545,7 @@ IHSLookup Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramIHSLookupTables.png
 	:align: center
+	:scale: 80
 
 	Database Relationships - IHS Lookup Tables
 
@@ -544,6 +557,7 @@ BAP Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramBAPTables.png
 	:align: center
+	:scale: 80
 
 	Database Relationships - BAP Tables
 
@@ -551,10 +565,11 @@ BAP Tables
 Habitat Tables
 --------------
 
-.. _figDDHT:
+.. _figDDHaT:
 
 .. figure:: ../images/diagrams/DatabaseDiagramHabitatTables.png
 	:align: center
+	:scale: 80
 
 	Database Relationships - Habitat Tables
 
@@ -566,6 +581,7 @@ Sources Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramSourcesTables.png
 	:align: center
+	:scale: 80
 
 	Database Relationships - Sources Tables
 
@@ -573,10 +589,11 @@ Sources Tables
 History Tables
 --------------
 
-.. _figDDHT:
+.. _figDDHiT:
 
 .. figure:: ../images/diagrams/DatabaseDiagramHistoryTables.png
 	:align: center
+	:scale: 80
 
 	Database Relationships - History Tables
 
@@ -588,6 +605,7 @@ Other Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramOtherTables.png
 	:align: center
+	:scale: 80
 
 	Database Relationships - Other Tables
 

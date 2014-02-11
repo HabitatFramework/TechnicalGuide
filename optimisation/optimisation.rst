@@ -2,7 +2,9 @@
 Optimisation
 ************
 
-The Habitat and Land Use (HLU) GIS Tool application design has been optimised as far as possible and there are no simple technological enhancements that can be made to significantly improve performance. It is important therefore to ensure performance is optimised wherever possible through user configuration and operation. The following suggestions show some simple approaches to improving performance.
+The Habitat and Land Use (HLU) GIS Tool application design has been optimised as far as possible and there are no simple technological enhancements that can be made to significantly improve performance.
+
+It is important therefore to ensure performance is optimised wherever possible through user configuration and operation. The following suggestions show some simple approaches to improving performance.
 
 .. index::
 	single: Optimisation, GIS
@@ -64,6 +66,10 @@ It takes a significant length of time for ArcGIS or MapInfo to draw an entire HL
 
 * For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 
+
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Optimisation, Database

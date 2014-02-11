@@ -31,7 +31,7 @@ This Preface explains a little about the HLU Tool, the community of people who d
 
 :doc:`../configuration/configuration` describes how to connect to HLU Tool database and GIS application.
 
-:doc:`Access <../access/access>` provides instructions on how to link an Access front-end to a SQL Server database.
+:doc:`../access/access` provides instructions on how to link an Access front-end to a SQL Server database.
 
 :doc:`../database/database` outlines the database structure and how to adapt the data for local requirements.
 

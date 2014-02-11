@@ -45,8 +45,9 @@ Otherwise, click 'New' to define a new connection. The Provider tab of the Data 
 
 .. figure:: ../images/figures/DataLinkPropertiesProviderDialog.png
 	:align: center
+	:scale: 90
 
-	Provider - Data Link Properties dialog
+	Data Link Properties Provider dialog
 
 Select the relevant OLE DB Provider:
 
@@ -62,8 +63,9 @@ Click 'Next >>' to display the Connection tab of the Data Link Properties dialog
 
 .. figure:: ../images/figures/DataLinkPropertiesConnectionDialog.png
 	:align: center
+	:scale: 90
 
-	Connection - Data Link Properties dialog
+	Data Link Properties Connection dialog
 
 .. |selectdb| image:: ../images/icons/SelectDatabase.png
 	:height: 16px
@@ -110,14 +112,14 @@ To re-configure only the database connection the database configuration informat
 
 To reset the configuration, go to **Start Menu > Run…**. If you have installed the HLU GIS Tool in the default location, at the prompt type:
 
-	``"C:\Program Files\ESDM\HLU GIS Tool\" /d``
+	``"C:\Program Files\HLU\HLU GIS Tool\" /d``
 
 	.. note::
 		If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/d**.
 
 This will start the tool and prompt the user to enter new database connection details.
 
-..tip::
+.. tip::
 	Using the **/c** switch will reset both the database and GIS configuration information.
 
 
@@ -144,6 +146,7 @@ A dialog will then be displayed which allows you to open an existing ArcGIS map 
 
 .. figure:: ../images/figures/ArcGISDocumentSelectionDialog.png
 	:align: center
+	:scale: 85
 
 	Map Document selection dialog (ArcGIS)
 
@@ -157,6 +160,7 @@ If you do not have an existing map document or workspace, click Cancel. A dialog
 
 .. figure:: ../images/figures/ArcGISLayerSelectionDialog.png
 	:align: center
+	:scale: 85
 
 	HLU layer selection dialog (ArcGIS)
 
@@ -166,6 +170,7 @@ Browse to the HLU layer file and click 'Open'. You will then be prompted to sele
 
 .. figure:: ../images/figures/ArcGISSaveDocumentDialog.png
 	:align: center
+	:scale: 85
 
 	Save New Map Document dialog (ArcGIS)
 
@@ -181,14 +186,14 @@ To re-configure only the GIS connection, the GIS configuration information must 
 
 To reset the configuration, go to **Start Menu > Run…**. If you have installed the HLU GIS Tool in the default location, at the prompt type:
 
-	``"C:\Program Files\ESDM\HLU GIS Tool\" /g``
+	``"C:\Program Files\HLU\HLU GIS Tool\" /g``
 
 	..note::
 		If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/g**.
 
 This will start the tool and prompt the user to enter new GIS connection details.
 
-..tip::
+.. tip::
 	Using the **/c** switch will reset both the database and GIS configuration information.
 
 
@@ -201,15 +206,16 @@ This will start the tool and prompt the user to enter new GIS connection details
 Configuring Lookup Tables
 =========================
 
-.. sidebar:: Lookup table updates
-
-	Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
-
 Tables in the database that are prefixed by `lut_` are **lookup tables** and some of these can be tailored to the requirements of each organisation. Examples of configuration include:
+
 	* Adding new users to enable edit capability.
 	* Adding new sources as reference datasets.
 	* Hiding 'non-local' habitats.
 	* Changing the order that the values appear in drop-down lists.
+
+.. note::
+	Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
+
 
 .. index::
 	single: Configuration; Users
@@ -304,10 +310,10 @@ IHS Habitats can be flagged as **local** in the 'lut_ihs_habitat` table. The for
 
 	\newpage
 
-.. _configuring_exports:
-
 .. index::
 	single: Configuration; Exports
+
+.. _configuring_exports:
 
 Configuring Exports
 ===================

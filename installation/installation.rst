@@ -12,7 +12,7 @@ Hardware
 
 .. sidebar:: System Requirements
 
-	Hard disk space requirements are given as a guideline. The actual amount of disk space required will depend upon the size of the GIS and database files. In addition to these files, space is required for temporary files during processing.
+	Hard disk space requirements are given as a guideline. The actual amount of disk space required will depend upon the size of the GIS layers and database files. In addition to these files space is required for temporary files during processing.
 
 **Minimum specification:**
 
@@ -45,19 +45,23 @@ Software
 * Microsoft Access 2000 or later
 * Microsoft SQL Server 2008 R2 Express, OR
 * Microsoft SQL Server 2008 R2 Service Pack 2 or later
-* ArcGIS 10.1 or MapInfo 10.0.1
+* ArcGIS 10.1 or MapInfo 10.0.1 or later
 
 
 .. raw:: latex
 
 	\newpage
 
-.. _latest_version:
+.. _latest_release:
 
-Latest Version
+Latest Release
 ==============
 
-The latest version of the tool can be found at 
+The latest release of the tool can be downloaded from `GitHub <https://github.com/HabitatFramework/HLUTool/releases>`_. Two versions of the tool are available:
+
+	* For ArcGIS or ArcGIS/MapInfo systems (e.g. **v1.0.8**). Use when ArcGIS is installed or where ArcGIS and MapInfo are both installed.
+	* For MapInfo only systems (e.g. **v1.0.8m**). Use when only MapInfo is installed.
+
 
 .. raw:: latex
 
@@ -68,7 +72,7 @@ The latest version of the tool can be found at
 Installing the HLU GIS Tool
 ===========================
 
-Double click on the Setup.exe and follow the instructions. By default this will install the HLU GIS Tool into **C:\\Program Files\\ESDM\\HLU GIS Tool\\** directory. The installer will also create shortcuts in the start menu and on the desktop.
+Double click on the Setup.exe and follow the instructions. By default this will install the HLU GIS Tool into **C:\\Program Files\\HLU\\HLU GIS Tool\\** directory. The installer will also create shortcuts in the start menu and will display the ReadMe file.
 
 Enable HLU Extension
 --------------------
