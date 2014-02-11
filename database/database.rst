@@ -537,7 +537,7 @@ Data Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramDataTables.png
 	:align: center
-	:scale: 75
+	:scale: 85
 
 	Database Relationships - Data Tables
 
@@ -553,7 +553,7 @@ IHSLookup Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramIHSLookupTables.png
 	:align: center
-	:scale: 75
+	:scale: 85
 
 	Database Relationships - IHS Lookup Tables
 
@@ -569,7 +569,7 @@ BAP Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramBAPTables.png
 	:align: center
-	:scale: 80
+	:scale: 85
 
 	Database Relationships - BAP Tables
 
@@ -585,7 +585,7 @@ Habitat Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramHabitatTables.png
 	:align: center
-	:scale: 80
+	:scale: 85
 
 	Database Relationships - Habitat Tables
 
@@ -601,7 +601,7 @@ Sources Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramSourcesTables.png
 	:align: center
-	:scale: 80
+	:scale: 85
 
 	Database Relationships - Sources Tables
 
@@ -617,7 +617,7 @@ History Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramHistoryTables.png
 	:align: center
-	:scale: 80
+	:scale: 85
 
 	Database Relationships - History Tables
 
@@ -633,7 +633,7 @@ Other Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramOtherTables.png
 	:align: center
-	:scale: 80
+	:scale: 85
 
 	Database Relationships - Other Tables
 

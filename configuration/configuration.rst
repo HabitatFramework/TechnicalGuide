@@ -20,6 +20,7 @@ Database Connection
 
 .. figure:: ../images/figures/ConnectionTypeDialog.png
 	:align: center
+	:scale: 90
 
 	Connection Type dialog
 
@@ -160,7 +161,7 @@ When the tool is first launched it will check your system to determine which GIS
 
 	.. figure:: ../images/figures/SelectGISDialog.png
 		:align: center
-		:scale: 90
+		:scale: 85
 
 		Select GIS Application dialog
 
@@ -188,7 +189,7 @@ Connecting to ArcGIS/MapInfo
 
 	.. figure:: ../images/figures/ArcGISLayerSelectionDialog.png
 		:align: center
-		:scale: 85
+		:scale: 80
 
 		HLU layer selection dialog (ArcGIS)
 
@@ -198,7 +199,7 @@ Connecting to ArcGIS/MapInfo
 
 	.. figure:: ../images/figures/ArcGISSaveDocumentDialog.png
 		:align: center
-		:scale: 85
+		:scale: 80
 
 		Save New Map Document dialog (ArcGIS)
 

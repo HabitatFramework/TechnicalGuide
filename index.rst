@@ -8,9 +8,9 @@ Contents
 
 .. raw:: latex
 
-..	\addcontentsline{toc}{chapter}{\listfigurename}
-..	\listoffigures
-..	\renewcommand\contentsname{Table of Contents}
+	\addcontentsline{toc}{chapter}{\listfigurename}
+	\listoffigures
+	\renewcommand\contentsname{Table of Contents}
 
 .. toctree::
    :maxdepth: 2
@@ -26,8 +26,8 @@ Contents
 
 .. only:: html
 
-Index
-=====
+   Index
+   =====
 
-* :ref:`genindex`
+   * :ref:`genindex`
 
