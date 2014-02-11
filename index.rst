@@ -17,10 +17,11 @@ Contents
    :numbered:
 
    preface/preface
-   introduction/introduction
    installation/installation
    configuration/configuration
+   access/access
    database/database
+   appendix/appendix
 
 
 .. only:: html

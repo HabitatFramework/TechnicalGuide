@@ -2,6 +2,8 @@
 Installation
 ************
 
+.. _requirements:
+
 System Requirements
 ===================
 
@@ -25,7 +27,6 @@ Hardware
 * 10 Gb available hard disk space
 
 .. Tip::
-
 	For increased performance a multiple core PC with as much RAM as possible is recommended.
 
 
@@ -36,18 +37,33 @@ Software
 
 * .NET framework 3.5 Service Pack 1
 * Microsoft Access 2000
-* ArcGIS 9.3 or MapInfo 8.0
+* ArcGIS 10.1 or MapInfo 8.0
 
 **Recommended software specification:**
 
 * .NET framework 3.5 Service Pack 1
 * Microsoft Access 2000 or later
-* Microsoft SQL Server 2008 Express Edition
-* ArcGIS 9.3.1 or MapInfo 10.0.1
+* Microsoft SQL Server 2008 R2 Express, OR
+* Microsoft SQL Server 2008 R2 Service Pack 2 or later
+* ArcGIS 10.1 or MapInfo 10.0.1
+
 
 .. raw:: latex
 
 	\newpage
+
+.. _latest_version:
+
+Latest Version
+==============
+
+The latest version of the tool can be found at 
+
+.. raw:: latex
+
+	\newpage
+
+.. _installing:
 
 Installing the HLU GIS Tool
 ===========================
@@ -58,7 +74,7 @@ Enable HLU Extension
 --------------------
 
 .. Important::
-	For ArcGIS users, the tool must be enabled in ArcGIS prior to use. Open ArcMap and go to the ‘Tools’ menu and select ‘Extensions…’.
+	For ArcGIS users, the tool must be enabled in ArcGIS prior to use. Open ArcMap and go to the 'Tools' menu and select 'Extensions…'.
 
 .. _figAGED:
 
@@ -67,4 +83,5 @@ Enable HLU Extension
 
 	ArcMap Extensions dialog
 
-Tick the box next to HLU ArcGIS Extension as shown in the figure :Ref:`figAGED` then click ‘Close’ and exit ArcMap.
+Tick the box next to HLU ArcGIS Extension as shown in the figure :Ref:`figAGED` then click 'Close' and exit ArcMap.
+
