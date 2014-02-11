@@ -33,19 +33,19 @@ Hardware
 Software
 --------
 
-**Minimum software specification:**
+Minimum software specification:
 
-* .NET framework 3.5 Service Pack 1
-* Microsoft Access 2000
-* ArcGIS 10.1 or MapInfo 8.0
+	* .NET framework 3.5 Service Pack 1
+	* Microsoft Access 2000
+	* ArcGIS 10.1 or MapInfo 8.0
 
-**Recommended software specification:**
+Recommended software specification:
 
-* .NET framework 3.5 Service Pack 1
-* Microsoft Access 2000 or later
-* Microsoft SQL Server 2008 R2 Express, OR
-* Microsoft SQL Server 2008 R2 Service Pack 2 or later
-* ArcGIS 10.1 or MapInfo 10.0.1 or later
+	* .NET framework 3.5 Service Pack 1
+	* Microsoft Access 2000 or later
+	* Microsoft SQL Server 2008 R2 Express, OR
+	* Microsoft SQL Server 2008 R2 Service Pack 2 or later
+	* ArcGIS 10.1 or MapInfo 10.0.1 or later
 
 
 .. raw:: latex
@@ -72,13 +72,15 @@ The latest release of the tool can be downloaded from `GitHub <https://github.co
 Installing the HLU GIS Tool
 ===========================
 
-Double click on the Setup.exe and follow the instructions. By default this will install the HLU GIS Tool into **C:\\Program Files\\HLU\\HLU GIS Tool\\** directory. The installer will also create shortcuts in the start menu and will display the ReadMe file.
+To install the HLU Tool double-click on the Setup.exe and follow the instructions. By default this will install the HLU GIS Tool into :file:`C:\\Program Files\\HLU\\HLU GIS Tool\\` directory. The installer will also create shortcuts in the start menu and will display the ReadMe file.
+
+.. _enable_extension:
 
 Enable HLU Extension
 --------------------
 
 .. Important::
-	For ArcGIS users, the tool must be enabled in ArcGIS prior to use. Open ArcMap and go to the 'Tools' menu and select 'Extensions…'.
+	For ArcGIS users, the tool must be enabled in ArcGIS prior to use. Open ArcMap and go to the **Tools** menu and select **Extensions…**.
 
 .. _figAGED:
 
@@ -87,5 +89,5 @@ Enable HLU Extension
 
 	ArcMap Extensions dialog
 
-Tick the box next to HLU ArcGIS Extension as shown in the figure :Ref:`figAGED` then click 'Close' and exit ArcMap.
+Tick the box next to HLU ArcGIS Extension as shown in the figure :Ref:`figAGED` then click :guilabel:`Close` and exit ArcMap.
 

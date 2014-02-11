@@ -47,24 +47,25 @@ An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for us
 	+------------------------------------+-----------+--------------------+
 
 
-Use of HLU GIS Tool with ArcGIS or MapInfo
-------------------------------------------
+Tips for ArcGIS and MapInfo users
+---------------------------------
 
-It takes a significant length of time for ArcGIS or MapInfo to draw an entire HLU GIS layer, therefore care should be taken when using certain tools to avoid this issue.
+It takes a significant length of time for ArcGIS or MapInfo to draw or query an entire HLU GIS layer, therefore care should be taken when using certain functions. The following tips may help avoid some performance issues:
 
-* 'Zoom to Selection' is useful for identifying the habitat polygons on the map, however if zoom layering is not used it may take a significant length of time to display the result depending upon the number of polygons selected and their geographical distribution.
-* 'Select by Attributes' performs complex queries and selects the results in the GIS window. If a large number of results are returned, it could take a long time to select the spatial polygons in the GIS.
-* If the layer is taking a long time to draw, pause or cancel the drawing using:
+	* 'Zoom to Selection' is useful for identifying the habitat polygons on the map, however if zoom layering is not used it may take a significant length of time to display the result depending upon the number of polygons selected and their geographical distribution.
+	* 'Select by Attributes' performs complex queries and selects the results in the GIS window. If a large number of results are returned, it could take a long time to select the spatial polygons in the GIS.
+	* If the GIS layer is taking a long time to draw, pause or cancel the drawing using:
 
-	* ArcGIS - Click the :guilabel:`Pause` button in the bottom left corner of the map window
-	* MapInfo – Press the keyboard :kbd:`Esc` key
+		* ArcGIS - Click the :guilabel:`Pause` button in the bottom left corner of the map window
+		* MapInfo – Press the keyboard :kbd:`Esc` key
 
-* For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in ArcGIS via :menuselection:`Tools --> Extensions`.  See `HLUTool-TechnicalGuide <https://readthedocs.org/projects/hlugistool-technicalguide/>`_ for more details.
-* For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase. **The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.**
+	* For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in ArcGIS via **Tools --> Extensions**.  See :ref:`enable_extension` for more details.
+	* For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase.
 
-	e.g. exporting 152 features takes 18 minutes from a shapefile but takes under 3 minutes from a file geodatabase.
+		.. caution::
+			The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.
 
-* For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
+	* For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 
 
 .. raw:: latex

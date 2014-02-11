@@ -27,7 +27,7 @@ The process of linking an Access database to a SQL Server database can be comple
 
 1. Make sure your SQL Server service is running and the HLU Tool database is attached.
 2. Open the destination Access database in which you wish to create the linked tables.
-3. On the 'External Data' tab, in the 'Import & Link' group, click **ODBC Database**.
+3. On the 'External Data' tab, in the 'Import & Link' group, click :guilabel:`ODBC Database`.
 
 	.. _figALED:
 
@@ -38,7 +38,7 @@ The process of linking an Access database to a SQL Server database can be comple
 		External Data tab
 
 
-5. Click **Link to the data source by creating a linked table** and then click **OK**.
+5. Select :guilabel:`Link to the data source by creating a linked table` and then click :guilabel:`OK`.
 
 	.. _figALODD:
 
@@ -61,7 +61,7 @@ The process of linking an Access database to a SQL Server database can be comple
 	.. note:: Creating a new .dsn file
 		If have haven't already created a data source name (DSN) file for the HLU Tool database see :ref:`create_dsn`.
 
-6. Click **OK**. Access will display the 'Link Tables' dialog box.
+6. Click :guilabel:`OK`. Access will display the 'Link Tables' dialog box.
 
 	.. _figALSLTD:
 
@@ -71,12 +71,12 @@ The process of linking an Access database to a SQL Server database can be comple
 
 		Select Link Tables dialog
 
-7. Under 'Tables', click each table that you want to link to, and then click **OK**.
+7. Under 'Tables', click each table that you want to link to, and then click :guilabel:`OK`.
 
 .. note::
 	Many of the tables in the list are internal SQL Server tables. Do not select these - only select the HLU Tool export, data and lookup tables.
 
-8. If the 'Select Unique Record Identifier' dialog box appears, Access was unable to determine which field or fields uniquely identify each row of the source data. In this case, select the field or combination of fields that is unique for each row, and then click **OK**. If you are not sure, check with the SQL Server database administrator.
+8. If the 'Select Unique Record Identifier' dialog box appears, Access was unable to determine which field or fields uniquely identify each row of the source data. In this case, select the field or combination of fields that is unique for each row, and then click :guilabel:`OK`. If you are not sure, check with the SQL Server database administrator.
 9. If the link is successful Access will display the new linked tables in the Objects Navigation Pane.
 
 	.. _figALATD:
@@ -106,8 +106,8 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
 
-1. Click **New** to create a new data source name (DSN) file. The 'Create New Data Source' wizard will start.
-2. Select **SQL Server** in the list of drivers and then click **Next**. If you are connecting to a different database then select the relevant driver.
+1. Click :guilabel:`New` to create a new data source name (DSN) file. The 'Create New Data Source' wizard will start.
+2. Select **SQL Server** in the list of drivers and then click :guilabel:`Next`. If you are connecting to a different database then select the relevant driver.
 
 	.. _figALSDD:
 
@@ -117,7 +117,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		Create New Data Source - Select Driver dialog
 
-3. If you wish to enter the 'Server Name' and 'Database Name' at this stage click on **Advanced...** and enter them under the DRIVER keyword (see below for example). Then click *OK** to return to the 'Create New Data Source' wizard.
+3. If you wish to enter the 'Server Name' and 'Database Name' at this stage click on :guilabel:`Advanced...` and enter them under the DRIVER keyword (see below for example). Then click :guilabel:`OK` to return to the 'Create New Data Source' wizard.
 	
 	.. _figALADD:
 
@@ -130,8 +130,8 @@ The following instructions describe how to create a new .dsn file for the HLU To
 	.. note::
 		If you don't enter the 'Server Name' and 'Database Name' here you will be prompted for them later.
 
-4. Click **Next** and then choose a suitable file path and file name for your new DSN. Then click **Save**.
-5. The file path and file name of the select DSN will be displayed. Click **Next**.
+4. Click :guilabel:`Next` and then choose a suitable file path and file name for your new DSN. Then click :guilabel:`Save`.
+5. The file path and file name of the select DSN will be displayed. Click :guilabel:`Next`.
 
 	.. _figALSDSD2:
 
@@ -141,7 +141,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		Select Data Source dialog
 
-6. A summary of the DSN settings will be shown. Click **Finish**.
+6. A summary of the DSN settings will be shown. Click :guilabel:`Finish`.
 
 	.. _figALOSSD:
 
@@ -151,7 +151,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		ODBC Setup Summary dialog
 
-7. If you didn't enter the server and database names earlier you will be prompted for them now. Enter a description for the data source and then from the list choose which server you want to connect to (if the server doesn't appear in the list then manually type the server name it into the Server field). Then click **Next**.
+7. If you didn't enter the server and database names earlier you will be prompted for them now. Enter a description for the data source and then from the list choose which server you want to connect to (if the server doesn't appear in the list then manually type the server name it into the Server field). Then click :guilabel:`Next`.
 
 	.. _figALSSD:
 
@@ -161,7 +161,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		Create New Data Source - Select Server dialog
 
-8.	Choose either **Windows NT authentication** or **SQL Server authentication** depending on how the security settings have been defined in the SQL Server database then click **Next**. If you are not sure, check with the SQL Server database administrator.
+8.	Choose either **Windows NT authentication** or **SQL Server authentication** depending on how the security settings have been defined in the SQL Server database then click :guilabel:`Next`. If you are not sure, check with the SQL Server database administrator.
 
 	.. _figALAD:
 
@@ -171,7 +171,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		Create New Data Source - Authentication dialog
 
-9.	Select the 'Change the default database to' check box and then from the list select which database to connect to. Then click *Next**.
+9.	Select the 'Change the default database to' check box and then from the list select which database to connect to. Then click :guilabel:`Next`.
 
 	.. _figALSDBD:
 
@@ -181,8 +181,8 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		Create New Data Source - Select Database dialog
 
-10.	Leave all the settings as the default values and click **Finish**.
-11.	A summary of the ODBC Setup will be displayed. Click *Test Data Source ...** to ensure the settings are correct and the connection works and then click **OK** to close the test window.
+10.	Leave all the settings as the default values and click :guilabel:`Finish`.
+11.	A summary of the ODBC Setup will be displayed. Click :guilabel:`Test Data Source ...` to ensure the settings are correct and the connection works and then click :guilabel:`OK` to close the test window.
 
 	.. _figALSD:
 
@@ -192,7 +192,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		Create New Data Source - Summary dialog
 
-12.	Click **OK** to save the DSN. You will then be returned to the 'Select Data Source' window to continue linking a new database (see :ref:`new_link`).
+12.	Click :guilabel:`OK` to save the DSN. You will then be returned to the 'Select Data Source' window to continue linking a new database (see :ref:`new_link`).
  
 
 .. note::
@@ -242,8 +242,8 @@ Each time you open a linked table you will see the latest data displayed in it. 
 
 		Linked Table Manager dialog
 
-5. Select the **Always prompt for new location** check box.
-6. Click the tables that you wish to update or click the **Select All** button and then click **OK**.
+5. Select the :guilabel:`Always prompt for new location` check box.
+6. Click the tables that you wish to update or click the :guilabel:`Select All` button and then click :guilabel:`OK`.
 
 	.. _figARTMSD:
 
@@ -262,5 +262,5 @@ Each time you open a linked table you will see the latest data displayed in it. 
 
 		Linked Table Manager Success dialog
 
-8. Click **OK** to close the Linked Table Manager.
+8. Click :guilabel:`OK` to close the Linked Table Manager.
 
