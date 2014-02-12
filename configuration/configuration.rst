@@ -140,7 +140,7 @@ To re-configure only the database connection the database configuration informat
 
 
 .. tip::
-	Using the **/c** switch will reset both the database and GIS configuration information.
+	Using the **/c** switch will reset **both** the database and GIS configuration information.
 
 
 .. raw:: latex
@@ -234,7 +234,7 @@ To re-configure only the GIS connection, the GIS configuration information must 
 
 
 .. tip::
-	Using the **/c** switch will reset both the database and GIS configuration information.
+	Using the **/c** switch will reset **both** the database and GIS configuration information.
 
 
 .. raw:: latex

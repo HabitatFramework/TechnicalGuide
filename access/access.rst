@@ -80,6 +80,10 @@ The following instructions describe how to link an Access database to a SQL Serv
 	.. note::
 		If have haven't already created a data source name (DSN) file for the HLU Tool database see :ref:`create_dsn`.
 
+	.. raw:: latex
+
+		\newpage
+
 	6. Click :guilabel:`OK`. Access will display the 'Link Tables' dialog box as shown in :ref:`figALSLTD`.
 
 		.. _figALSLTD:
@@ -157,6 +161,10 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	4. Click :guilabel:`Next` and then choose a suitable file path and file name for your new DSN. Then click :guilabel:`Save`.
 
+	.. raw:: latex
+
+		\newpage
+
 	5. The file path and file name of the select DSN will be displayed (see :ref:`figALSDSD2` for example). Click :guilabel:`Next`.
 
 		.. _figALSDSD2:
@@ -177,9 +185,13 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		.. figure:: ../images/figures/AccessLinkSummaryODBCDialog.png
 			:align: center
-			:scale: 90
+			:scale: 85
 
 			ODBC Setup Summary dialog
+
+	.. raw:: latex
+
+		\newpage
 
 	7. If you didn't enter the server and database names earlier you will be prompted for them now. Enter a description for the data source and then from the list choose which server you want to connect to (see :ref:`figALSSD` for example). Then click :guilabel:`Next`.
 
@@ -194,10 +206,6 @@ The following instructions describe how to create a new .dsn file for the HLU To
 		.. tip::
 			If the server doesn't appear in the list then manually type the server name it into the Server field
 
-	.. raw:: latex
-
-		\newpage
-
 	8.	Choose either **Windows NT authentication** or **SQL Server authentication**, as shown in see :ref:`figALAD`, depending on how the security settings have been defined in the SQL Server database then click :guilabel:`Next`. If you are not sure, check with the SQL Server database administrator.
 
 		.. _figALAD:
@@ -207,6 +215,10 @@ The following instructions describe how to create a new .dsn file for the HLU To
 			:scale: 85
 
 			Create New Data Source - Authentication dialog
+
+	.. raw:: latex
+
+		\newpage
 
 	9.	Select the 'Change the default database to' checkbox and then from the list select which database to connect to (see :ref:`figALSDBD` for example). Then click :guilabel:`Next`.
 
@@ -219,10 +231,6 @@ The following instructions describe how to create a new .dsn file for the HLU To
 			Create New Data Source - Select Database dialog
 
 	10.	Leave all the settings as the default values and click :guilabel:`Finish`.
-
-	.. raw:: latex
-
-		\newpage
 
 	11.	A summary of the ODBC Setup will be displayed (see :ref:`figALSD` for example). Click :guilabel:`Test Data Source ...` to ensure the settings are correct and the connection works and then click :guilabel:`OK` to close the test window.
 
@@ -285,11 +293,11 @@ The following instructions describe how to update the links from an Access datab
 
 			Linked Table Manager dialog
 
-	5. Select the :guilabel:`Always prompt for new location` check box.
-
 	.. raw:: latex
 
 		\newpage
+
+	5. Select the :guilabel:`Always prompt for new location` check box.
 
 	6. Click the tables that you wish to update or click the :guilabel:`Select All` button (see :ref:`figARTMSD` for example) and then click :guilabel:`OK`.
 
