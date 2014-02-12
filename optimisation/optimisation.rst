@@ -29,9 +29,9 @@ Creation of ArcGIS Map Document or MapInfo Workspace
 
 An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for use with the HLU Tool. This should be optimised to ensure maximum performance, which should include the following:
 
-* Ensure that the .mxd or .wor file only contains one copy of the HLU layer.
-* Ensure that the .mxd or .wor is saved at a sensible view level such as 1:10,000 scale rather the full extent of the HLU dataset.
-* Add zoom layering to datasets so that detailed datasets such as the HLU layer and aerial photography are not displayed at smaller scales. Recommended maximum extents are shown in the table below):
+	* Ensure that the .mxd or .wor file only contains one copy of the HLU layer.
+	* Ensure that the .mxd or .wor is saved at a sensible view level such as 1:10,000 scale rather the full extent of the HLU dataset.
+	* Add zoom layering to datasets so that detailed datasets such as the HLU layer and aerial photography are not displayed at smaller scales. Recommended maximum extents are shown in the table below):
 
 	.. tabularcolumns:: |L|C|C|
 
@@ -82,11 +82,11 @@ Database Optimisation
 Database Type
 -------------
 
-The HLU GIS Tool is designed to work with both Microsoft Access and SQL Server databases (other databases are supported but have not been tested).
+The HLU Tool is designed to work with both Microsoft Access and SQL Server databases (other databases are supported but have not been tested).
 
 Microsoft Access is a versatile desktop database application, but does not have the same performance as other database systems. Database management systems such as SQL Server are optimised to handle large data volumes and complex queries, and can be significantly faster.
 
-It is therefore recommend that the HLU GIS Tool is used with SQL Server or a similar database management system as this will improve performance when filtering the database records and updating attribute data.
+It is therefore recommend that the HLU Tool is used with SQL Server or a similar database management system as this will improve performance when filtering the database records and updating attribute data.
 
 
 Local vs. Network Storage
@@ -100,7 +100,7 @@ Data Management
 
 Only one copy of the database and the GIS layer should be used to avoid data becoming corrupted. If multiple copies are used e.g. an ArcGIS layer and a MapInfo layer or an Access database and a SQL Server database, changes to one GIS layer or database will not be present on the other, causing a mismatch between the attribute and spatial data.
 
-Habitat data must not be edited directly in either the database or the GIS layer. Any modifications made outside the HLU GIS Tool could cause data corruption particularly if unique identifiers are altered.
+Habitat data must not be edited directly in either the database or the GIS layer. Any modifications made outside the HLU Tool could cause data corruption particularly if unique identifiers are altered.
 
 However, if additional entries are required in the lookup tables, these may be added to the database directly. It is essential that the structure of these tables is not altered and we recommend that any updates to the data in these tables are carried out solely by the database administrator.
 

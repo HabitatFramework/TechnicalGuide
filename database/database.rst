@@ -17,7 +17,7 @@ The database consists of 3 types of tables as follows:
 Data Tables
 ===========
 
-Tables in the database prefixed by 'incid' are **data tables** and hence contain all the attribute data relating to the GIS features. The attributes have been separated into 8 tables to 'normalise' the data which reduces storage space, improves performance and provides greater flexibility.
+Tables in the database prefixed by 'incid' are **data** tables and hence contain all the attribute data relating to the GIS features. The attributes have been separated into 8 tables to 'normalise' the data which reduces storage space, improves performance and provides greater flexibility.
 
 
 .. index::
@@ -28,7 +28,7 @@ Tables in the database prefixed by 'incid' are **data tables** and hence contain
 incid
 -----
 
-This is the main data table with one record per INCID.
+This is the main data table with one record per INCID. All the other data tables relate to this table via the **INCID** field.
 
 	incid
 		Char(12) - A unique **Inc**\ remental **id**\ entifier for each logical group of features.
@@ -239,47 +239,48 @@ This table contains details of the source datasets for an INCID. There can be be
 	source_date_type
 		Char(2) - String that describes the format of the date range covering the source dataset.
 
-	.. tabularcolumns:: |L|L|L|
+		.. tabularcolumns:: |L|L|L|
 
-	.. table:: Vague date types
+		.. table:: Vague date types
 
-		+-----------+-------------------------------+---------------------------+
-		| Date Type |          Description          |          Example          |
-		+===========+===============================+===========================+
-		| D         | Single day date               | 15/10/2010                |
-		+-----------+-------------------------------+---------------------------+
-		| DD        | Day-to-date date range        | 15/10/2010 - 18/10/2010   |
-		+-----------+-------------------------------+---------------------------+
-		| D-        | Day start with no end date    | 15/10/2010 -              |
-		+-----------+-------------------------------+---------------------------+
-		| -D        | Day end with no start date    | \- 18/10/2010             |
-		+-----------+-------------------------------+---------------------------+
-		| O         | Single month date             | Oct 2010                  |
-		+-----------+-------------------------------+---------------------------+
-		| OO        | Month-to-month date range     | Oct 2010 - Nov 2010       |
-		+-----------+-------------------------------+---------------------------+
-		| O-        | Month start with no end date  | Oct 2010 -                |
-		+-----------+-------------------------------+---------------------------+
-		| -O        | Month end with no start date  | \- Nov 2010               |
-		+-----------+-------------------------------+---------------------------+
-		| Y         | Single year date              | 2010                      |
-		+-----------+-------------------------------+---------------------------+
-		| YY        | Year-to-year date range       | 2010 - 2011               |
-		+-----------+-------------------------------+---------------------------+
-		| Y-        | Year start with no end date   | 2010 -                    |
-		+-----------+-------------------------------+---------------------------+
-		| -Y        | Year end with no start date   | \- 2011                   |
-		+-----------+-------------------------------+---------------------------+
-		| P         | Single season date            | Autumn 2010               |
-		+-----------+-------------------------------+---------------------------+
-		| PP        | Season-to-season date range   | Autumn 2010 - Winter 2010 |
-		+-----------+-------------------------------+---------------------------+
-		| P-        | Season start with no end date | Autumn 2010 -             |
-		+-----------+-------------------------------+---------------------------+
-		| -P        | Season end with no start date | \- Winter 2010            |
-		+-----------+-------------------------------+---------------------------+
-		| U         | Unknown date                  | Unknown                   |
-		+-----------+-------------------------------+---------------------------+
+			+-----------+-------------------------------+---------------------------+
+			| Date Type |          Description          |          Example          |
+			+===========+===============================+===========================+
+			| D         | Single day date               | 15/10/2010                |
+			+-----------+-------------------------------+---------------------------+
+			| DD        | Day-to-date date range        | 15/10/2010 - 18/10/2010   |
+			+-----------+-------------------------------+---------------------------+
+			| D-        | Day start with no end date    | 15/10/2010 -              |
+			+-----------+-------------------------------+---------------------------+
+			| -D        | Day end with no start date    | \- 18/10/2010             |
+			+-----------+-------------------------------+---------------------------+
+			| O         | Single month date             | Oct 2010                  |
+			+-----------+-------------------------------+---------------------------+
+			| OO        | Month-to-month date range     | Oct 2010 - Nov 2010       |
+			+-----------+-------------------------------+---------------------------+
+			| O-        | Month start with no end date  | Oct 2010 -                |
+			+-----------+-------------------------------+---------------------------+
+			| -O        | Month end with no start date  | \- Nov 2010               |
+			+-----------+-------------------------------+---------------------------+
+			| Y         | Single year date              | 2010                      |
+			+-----------+-------------------------------+---------------------------+
+			| YY        | Year-to-year date range       | 2010 - 2011               |
+			+-----------+-------------------------------+---------------------------+
+			| Y-        | Year start with no end date   | 2010 -                    |
+			+-----------+-------------------------------+---------------------------+
+			| -Y        | Year end with no start date   | \- 2011                   |
+			+-----------+-------------------------------+---------------------------+
+			| P         | Single season date            | Autumn 2010               |
+			+-----------+-------------------------------+---------------------------+
+			| PP        | Season-to-season date range   | Autumn 2010 - Winter 2010 |
+			+-----------+-------------------------------+---------------------------+
+			| P-        | Season start with no end date | Autumn 2010 -             |
+			+-----------+-------------------------------+---------------------------+
+			| -P        | Season end with no start date | \- Winter 2010            |
+			+-----------+-------------------------------+---------------------------+
+			| U         | Unknown date                  | Unknown                   |
+			+-----------+-------------------------------+---------------------------+
+
 
 	source_habitat_class
 		Char(5) - Foreign key to `incid` in the 'lut_habitat_class' table representing the habitat classification of the source dataset.
@@ -309,12 +310,12 @@ This table contains details of the source datasets for an INCID. There can be be
 Lookup Tables
 =============
 
-Tables in the database prefixed by `lut_` are *lookup tables* and are used in many drop-down lists in the user interfaces to restrict choices to only valid values.
+Tables in the database prefixed by 'lut\_' are **lookup** tables and are used in many drop-down lists in the user interfaces to restrict choices to only valid values.
 
 Some of the lookup tables can be updated to tailor them to the requirements of each system but the remainder should be considered as 'system' tables that are configured centrally and shared between all HLU Tool installations.
 
-	.. note::
-		There is currently no automated method for updating these 'system' tables. However, a change request is planned to develop a new 'Database upgrade kit' in the future. See `CR42 <https://github.com/HabitatFramework/HLUTool/issues/67>`_ for details.)
+.. note::
+	There is currently no automated method for updating these 'system' tables. However, a change request is planned to develop a new 'Database upgrade kit' in the future. See `CR42 <https://github.com/HabitatFramework/HLUTool/issues/67>`_ for details.)
 
 Many lookup tables contain a 'sort_order' field that will determine the order that the values appear in any drop-down lists. **All** records in these tables must have a 'sort_order' value or they may not appear in the relevant drop-down lists.
 
@@ -337,7 +338,7 @@ lut_users
 This table contains details of all the users that have editing capability with the HLU Tool and indicates if they are also able to perform 'bulk' updates.
 
 	user_id
-		The user's *Windows* login ID. If the user logs in to a domain then the login should be entered in the format: *[Domain]\[LoginID]*. [1]_
+		The user's *Windows* login ID. If the user logs in to a domain then the login should be entered in the format: *[Domain]\\[LoginID]*. [1]_
 
 	user_name
 		The name which will be displayed in the 'By' fields of the INCID section and the History tab.
@@ -498,7 +499,7 @@ This table defines which fields are to be exported for each export format in the
 		Allows users to determine the number of child records to be exported.
 
 
-.. [2] The 'column_name' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
+.. [2] The 'field_name' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
 
 .. note::
 	GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
@@ -546,8 +547,8 @@ Data Tables
 
 	\newpage
 
-IHSLookup Tables
-----------------
+IHS Lookup Tables
+-----------------
 
 .. _figDDILT:
 
@@ -569,7 +570,7 @@ BAP Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramBAPTables.png
 	:align: center
-	:scale: 85
+	:scale: 80
 
 	Database Relationships - BAP Tables
 
@@ -585,7 +586,7 @@ Habitat Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramHabitatTables.png
 	:align: center
-	:scale: 85
+	:scale: 80
 
 	Database Relationships - Habitat Tables
 

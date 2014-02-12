@@ -12,7 +12,7 @@ The first time the GIS tool is used you will need to configure the database and 
 Database Connection
 ===================
 
-1. Double-click on the link in the start menu or the desktop icon (HLU GIS tool) to launch the application.
+1. Double-click on the link in the start menu or the desktop icon (HLU GIS Tool - Launch) to launch the application.
 
 2. Once the tool is running a 'Connection Type' dialog will be displayed as shown in the figure :ref:`figCTD`.
 
@@ -34,53 +34,49 @@ Database Connection
 Connecting to Microsoft Access
 ------------------------------
 
-1. For Microsoft Access, launch the HLU GIS Tool and select **OleDb** from the drop-down list, then click :guilabel:`OK`. A dialog will be displayed as shown in the figure :ref:`figODCD`.
+To connect the HLU Tool to a Microsoft Access database containing the HLU data:
 
-.. _figODCD:
+	1. Launch the HLU Tool and select **OleDb** from the drop-down list, then click :guilabel:`OK`. A dialog will be displayed as shown in the figure :ref:`figODCD`.
 
-.. figure:: ../images/figures/OleDbConnectionDialog.png
-	:align: center
-	:scale: 90
+	.. _figODCD:
 
-	OleDb Connection dialog
+	.. figure:: ../images/figures/OleDbConnectionDialog.png
+		:align: center
+		:scale: 90
 
-2. If you have an existing Microsoft Data Link (UDL) file, click :guilabel:`UDL File…` and browse to the appropriate directory.
+		OleDb Connection dialog
 
-3. Otherwise, click :guilabel:`New` to define a new connection. The Provider tab of the 'Data link properties' dialog will be displayed as shown in the figure :ref:`figDLPPD`.
+	2. If you have an existing Microsoft Data Link (UDL) file, click :guilabel:`UDL File…` and browse to the appropriate directory.
 
-.. _figDLPPD:
+	3. Otherwise, click :guilabel:`New` to define a new connection. The Provider tab of the 'Data link properties' dialog will be displayed as shown in the figure :ref:`figDLPPD`.
 
-.. figure:: ../images/figures/DataLinkPropertiesProviderDialog.png
-	:align: center
-	:scale: 90
+	.. _figDLPPD:
 
-	Data Link Properties Provider dialog
+	.. figure:: ../images/figures/DataLinkPropertiesProviderDialog.png
+		:align: center
+		:scale: 90
 
-4. Select the relevant OLE DB Provider:
+		Data Link Properties Provider dialog
 
-==================	=====================================================================
-Access 2000-2003:	select 'Microsoft Jet 4.0 OLE DB Provider'
-Access 2007:		select 'Microsoft Office 12.0 Access Database Engine OLE DB Provider'
-==================	=====================================================================
+	4. Select the relevant OLE DB Provider 'Microsoft Jet 4.0 OLE DB Provider'.
 
+	5. Click :guilabel:`Next >>` to display the 'Connection' tab of the 'Data Link Properties' dialog as shown in the figure :ref:`figDLPCD`.
 
-5. Click :guilabel:`Next >>` to display the 'Connection' tab of the 'Data Link Properties' dialog as shown in the figure :ref:`figDLPCD`.
+	.. _figDLPCD:
 
-.. _figDLPCD:
+	.. figure:: ../images/figures/DataLinkPropertiesConnectionDialog.png
+		:align: center
+		:scale: 90
 
-.. figure:: ../images/figures/DataLinkPropertiesConnectionDialog.png
-	:align: center
-	:scale: 90
+		Data Link Properties Connection dialog
 
-	Data Link Properties Connection dialog
+	.. |selectdb| image:: ../images/icons/SelectDatabase.png
+		:height: 16px
+		:width: 16px
 
-.. |selectdb| image:: ../images/icons/SelectDatabase.png
-	:height: 16px
-	:width: 16px
+	6. Click |selectdb| to browse to an existing database. If user names and passwords are defined for the database, untick **Blank password** and enter your user name and password. 
 
-6. Click |selectdb| to browse to an existing database. If user names and passwords are defined for the database, untick **Blank password** and enter your user name and password. 
-
-7. Click :guilabel:`OK`, then click :guilabel:`OK` on the 'OleDb Connection' dialog.
+	7. Click :guilabel:`OK`, then click :guilabel:`OK` on the 'OleDb Connection' dialog.
 
 
 .. raw:: latex
@@ -90,33 +86,35 @@ Access 2007:		select 'Microsoft Office 12.0 Access Database Engine OLE DB Provid
 Connecting to SQL Server
 ------------------------
 
-1. For Microsoft SQL Server, first attach the database using SQL Server Management Studio and configure user permissions.
+To connect the HLU Tool to a Microsoft SQL Server containing the HLU data:
 
-2. Launch the HLU GIS Tool and select **SQLServer** from the drop-down list, then click :guilabel:`OK`.
+	1. First attach the database using SQL Server Management Studio and configure user permissions.
 
-3. Select the correct instance of SQL Server from the drop-down list as shown in the figure :ref:`figSSCD`.
+	2. Launch the HLU Tool and select **SQLServer** from the drop-down list, then click :guilabel:`OK`.
 
-.. _figSSCD:
+	3. Select the correct instance of SQL Server from the drop-down list as shown in the figure :ref:`figSSCD`.
 
-.. figure:: ../images/figures/SQLServerConnectionDialog.png
-	:align: center
-	:scale: 90
+	.. _figSSCD:
 
-	SQL Server Connection dialog
+	.. figure:: ../images/figures/SQLServerConnectionDialog.png
+		:align: center
+		:scale: 90
 
-.. Note::
-	If the computer or server is listed but no services are listed e.g. P3000CA\, you can either:
+		SQL Server Connection dialog
 
-	* Select the computer or server, then press 'End' or use the :kbd:`arrow` keys to move the cursor to the end, then type the name of the database service.
-	* Exit the HLU GIS Tool, then open the SQL Server Configuration Manager. Right-click on SQL Server Browser and set the start mode as Automatic or Manual. Start the service, then re launch the HLU GIS Tool and select the database service from the list.
+	.. tip::
+		If the computer or server is listed but no services are listed e.g. P3000CA\, you can either:
 
-4. Select whether you wish to use Windows or SQL Server authentication. This will depend upon how your SQL Server database has been configured.
+		* Select the computer or server, then press :kbd:`End` or use the :kbd:`Arrow` keys to move the cursor to the end, then type the name of the database service.
+		* Exit the HLU Tool, then open the SQL Server Configuration Manager. Right-click on SQL Server Browser and set the start mode as Automatic or Manual. Start the service, then re launch the HLU Tool and select the database service from the list.
 
-5. If you are using SQL Server authentication, enter the **user name** and **password** you use to connect to SQL Server.
+	4. Select whether you wish to use Windows or SQL Server authentication. This will depend upon how your SQL Server database has been configured.
 
-6. Select the HLU database from the 'Database' drop-down list.
+	5. If you are using SQL Server authentication, enter the **user name** and **password** you use to connect to SQL Server.
 
-7. The **Default schema** defaults to 'dbo'. If you wish to use a different schema, select it from the drop-down list, then click :guilabel:`OK`.
+	6. Select the HLU database from the 'Database' drop-down list.
+
+	7. The **Default schema** defaults to 'dbo'. If you wish to use a different schema, select it from the drop-down list, then click :guilabel:`OK`.
 
 
 .. raw:: latex
@@ -130,14 +128,16 @@ To re-configure only the database connection the database configuration informat
 
 	1. In Windows, go to **Start Menu > Run…**.
 	
-	2. If you have installed the HLU GIS Tool in the default location, at the prompt type:
+	2. If you have installed the HLU Tool in the default location, at the prompt type:
 
 		``"C:\Program Files\HLU\HLU GIS Tool\" /d``
 
-		.. note::
-			If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/d**.
+
+	.. note::
+		If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/d**.
 
 	3. This will start the tool and prompt the user to enter new database connection details.
+
 
 .. tip::
 	Using the **/c** switch will reset both the database and GIS configuration information.
@@ -169,41 +169,44 @@ When the tool is first launched it will check your system to determine which GIS
 Connecting to ArcGIS/MapInfo
 ----------------------------
 
-1. A dialog will be displayed which allows you to open an existing ArcGIS map document or MapInfo workspace which contains the HLU layer as shown in the figure :ref:`figAGDSD`.
+To connect the tool to ArcGIS or MapInfo:
 
-	.. _figAGDSD:
+	1. A dialog will be displayed which allows you to open an existing ArcGIS map document or MapInfo workspace which contains the HLU layer as shown in the figure :ref:`figAGDSD`.
 
-	.. figure:: ../images/figures/ArcGISDocumentSelectionDialog.png
-		:align: center
-		:scale: 80
+		.. _figAGDSD:
 
-		Map Document selection dialog (ArcGIS)
+		.. figure:: ../images/figures/ArcGISDocumentSelectionDialog.png
+			:align: center
+			:scale: 80
 
-	.. Note:: For ArcGIS users this dialog may not be visible - hold :kbd:`Alt` and press :kbd:`Tab` on your keyboard to switch windows.
+			Map Document selection dialog (ArcGIS)
 
-2. If you have an existing map document or workspace which contains the HLU layer, browse to the file and click :guilabel:`Open`. The HLU GIS Tool will then be ready for use.
+	.. note::
+		For ArcGIS users this dialog may not be visible - hold :kbd:`Alt` and press :kbd:`Tab` on your keyboard to switch windows.
 
-3. If you do not have an existing map document or workspace, click :guilabel:`Cancel`. A dialog will then be displayed as shown in the figure :Ref:`figAGLSD` which allows you to select the HLU layer.
+	2. If you have an existing map document or workspace which contains the HLU layer, browse to the file and click :guilabel:`Open`. The HLU Tool will then be ready for use.
 
-	.. _figAGLSD:
+	3. If you do not have an existing map document or workspace, click :guilabel:`Cancel`. A dialog will then be displayed as shown in the figure :Ref:`figAGLSD` which allows you to select the HLU layer.
 
-	.. figure:: ../images/figures/ArcGISLayerSelectionDialog.png
-		:align: center
-		:scale: 80
+		.. _figAGLSD:
 
-		HLU layer selection dialog (ArcGIS)
+		.. figure:: ../images/figures/ArcGISLayerSelectionDialog.png
+			:align: center
+			:scale: 80
 
-4. Browse to the HLU layer file and click :guilabel:`Open`. You will then be prompted to select a location to save as a new map document or workspace as shown in the figure :ref:`figAGSDD`.
+			HLU layer selection dialog (ArcGIS)
 
-	.. _figAGSDD:
+	4. Browse to the HLU layer file and click :guilabel:`Open`. You will then be prompted to select a location to save as a new map document or workspace as shown in the figure :ref:`figAGSDD`.
 
-	.. figure:: ../images/figures/ArcGISSaveDocumentDialog.png
-		:align: center
-		:scale: 80
+		.. _figAGSDD:
 
-		Save New Map Document dialog (ArcGIS)
+		.. figure:: ../images/figures/ArcGISSaveDocumentDialog.png
+			:align: center
+			:scale: 80
 
-5. Browse to the location, enter a name for the map document or workspace and click :guilabel:`OK`. The HLU GIS Tool will then be ready for use.
+			Save New Map Document dialog (ArcGIS)
+
+	5. Browse to the location, enter a name for the map document or workspace and click :guilabel:`OK`. The HLU Tool will then be ready for use.
 
 .. tip::
 	The GIS connection details can also be reconfigured if necessary through the **Tools menu**.
@@ -220,14 +223,15 @@ To re-configure only the GIS connection, the GIS configuration information must 
 
 	1. In Windows, go to **Start Menu > Run…**.
 	
-	2. If you have installed the HLU GIS Tool in the default location, at the prompt type:
+	2. If you have installed the HLU Tool in the default location, at the prompt type:
 
 		``"C:\Program Files\HLU\HLU GIS Tool\" /g``
 
-		.. note::
-			If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/g**.
+	.. note::
+		If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/g**.
 
 	3. This will start the tool and prompt the user to enter new GIS connection details.
+
 
 .. tip::
 	Using the **/c** switch will reset both the database and GIS configuration information.
@@ -261,7 +265,7 @@ Tables in the database that are prefixed by 'lut\_' are **lookup tables** and so
 Configuring Users
 -----------------
 
-New users of the HLU GIS Tool can be added to the 'lut_user' table. The format of the table is shown in the figure :ref:`figDTLU`.
+New users of the HLU Tool can be added to the 'lut_user' table. The format of the table is shown in the figure :ref:`figDTLU`.
 
 .. _figDTLU:
 
@@ -385,7 +389,8 @@ The 'exports_fields' table shown in the figure :ref:`figDTEF` defines which fiel
 	Format of the exports_fields table
 
 
-.. Note:: As shown in the example in the figure :ref:`figDTEF`, geometry fields should not be included. This includes: obj, shape, perimeter, area, x, y etc. These fields will be automatically added to the exported layer.
+.. note::
+	GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
 
 
 .. seealso::

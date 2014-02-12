@@ -48,10 +48,6 @@ Software
 	* ArcGIS 10.1 or MapInfo 10.0.1 or later
 
 
-.. raw:: latex
-
-	\newpage
-
 .. _latest_release:
 
 Latest Release
@@ -69,10 +65,10 @@ The latest release of the tool can be downloaded from `GitHub <https://github.co
 
 .. _installing:
 
-Installing the HLU GIS Tool
+Installing the HLU Tool
 ===========================
 
-To install the HLU Tool `double-click` on the Setup.exe and follow the instructions. By default this will install the HLU GIS Tool into the :file:`C:\\Program Files\\HLU\\HLU GIS Tool\\` directory. The installer will also create shortcuts in the start menu and will display the ReadMe file.
+To install the HLU Tool `double-click` on the Setup.exe and follow the instructions. By default this will install the HLU Tool into the :file:`C:\\Program Files\\HLU\\HLU GIS Tool\\` directory. The installer will also create shortcuts in the start menu and will optionally display the ReadMe file.
 
 .. _enable_extension:
 

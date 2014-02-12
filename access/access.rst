@@ -25,74 +25,87 @@ Linking a new Access database
 
 The process of linking an Access database to a SQL Server database can be complex and necessitates that you know the connection settings for the target database. The following instructions describe how to link to an existing installation of the HLU Tool database running on SQL Server. It should not matter which version (i.e. SQL Server or SQL Server Express) is installed or which release, as long as it is meets the :ref:`requirements`.
 
+.. note::
+	It is also possible to link the exporter database to other relational databases, such as PostGIS, but instructions for this are not provided in this guide.
+
 .. sidebar:: Other Access versions
 
-	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
+	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access may vary.
 
-1. Make sure your SQL Server service is running and the HLU Tool database is attached.
+The following instructions describe how to link an Access database to a SQL Server database:
 
-2. Open the destination Access database in which you wish to create the linked tables.
+	1. Make sure your SQL Server service is running and the HLU Tool database is attached.
 
-3. On the 'External Data' tab, in the 'Import & Link' group, click :guilabel:`ODBC Database` as shown in :ref:`figALED`.
+	2. Open the destination Access database in which you wish to create the linked tables.
 
-	.. _figALED:
+	3. On the 'External Data' tab, in the 'Import & Link' group, click :guilabel:`ODBC Database` as shown in :ref:`figALED`.
 
-	.. figure:: ../images/figures/AccessLinkExternalDataTab.png
-		:align: center
-		:scale: 90
+		.. _figALED:
 
-		External Data tab
+		.. figure:: ../images/figures/AccessLinkExternalDataTab.png
+			:align: center
+			:scale: 90
+
+			External Data tab
 
 
-4. Select :guilabel:`Link to the data source by creating a linked table` (as shown in :ref:`figALODD`) and then click :guilabel:`OK`.
+.. raw:: latex
 
-	.. _figALODD:
+	\newpage
 
-	.. figure:: ../images/figures/AccessLinkODBCDataDialog.png
-		:align: center
-		:scale: 85
+	4. Select :guilabel:`Link to the data source by creating a linked table` (as shown in :ref:`figALODD`) and then click :guilabel:`OK`.
 
-		Get External Data - OBDC Database dialog
+		.. _figALODD:
 
-5. In the 'Select Data Source' dialog box as shown in :ref:`figALSDSD`, if the DSN file you want to use already exists, locate and select the DSN file. If you haven't yet created a DSN file for the target database skip to :ref:`create_dsn` then continue from the next step.
+		.. figure:: ../images/figures/AccessLinkODBCDataDialog.png
+			:align: center
+			:scale: 85
 
-	.. _figALSDSD:
+			Get External Data - OBDC Database dialog
 
-	.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
-		:align: center
-		:scale: 85
+.. raw:: latex
 
-		Select Data Source dialog
+	\newpage
 
-	.. note:: Creating a new .dsn file
+	5. In the 'Select Data Source' dialog box as shown in :ref:`figALSDSD`, if the DSN file you want to use already exists, locate and select the DSN file. If you haven't yet created a DSN file for the target database skip to :ref:`create_dsn` then continue from the next step.
+
+		.. _figALSDSD:
+
+		.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
+			:align: center
+			:scale: 85
+
+			Select Data Source dialog
+
+	.. note::
 		If have haven't already created a data source name (DSN) file for the HLU Tool database see :ref:`create_dsn`.
 
-6. Click :guilabel:`OK`. Access will display the 'Link Tables' dialog box as shown in :ref:`figALSLTD`.
+	6. Click :guilabel:`OK`. Access will display the 'Link Tables' dialog box as shown in :ref:`figALSLTD`.
 
-	.. _figALSLTD:
+		.. _figALSLTD:
 
-	.. figure:: ../images/figures/AccessLinkSelectTablesDialog.png
-		:align: center
-		:scale: 85
+		.. figure:: ../images/figures/AccessLinkSelectTablesDialog.png
+			:align: center
+			:scale: 85
 
-		Select Link Tables dialog
+			Select Link Tables dialog
 
-7. Under 'Tables', click each table that you want to link to, and then click :guilabel:`OK`.
+	7. Under 'Tables', click each table that you want to link to, and then click :guilabel:`OK`.
 
-.. note::
-	Many of the tables in the list are internal SQL Server tables. Do not select these - only select the HLU Tool export, data and lookup tables.
+		.. note::
+			Many of the tables in the list are internal SQL Server tables. Do not select these - only select the HLU Tool export, data and lookup tables.
 
-8. If the 'Select Unique Record Identifier' dialog box appears, Access was unable to determine which field or fields uniquely identify each row of the source data. In this case, select the field or combination of fields that is unique for each row, and then click :guilabel:`OK`. If you are not sure, check with the SQL Server database administrator.
+	8. If the 'Select Unique Record Identifier' dialog box appears, Access was unable to determine which field or fields uniquely identify each row of the source data. In this case, select the field or combination of fields that is unique for each row, and then click :guilabel:`OK`. If you are not sure, check with the SQL Server database administrator.
 
-9. If the link is successful Access will display the new linked tables in the Objects Navigation Pane as shown in :ref:`figALATD`.
+	9. If the link is successful Access will display the new linked tables in the Objects Navigation Pane as shown in :ref:`figALATD`.
 
-	.. _figALATD:
+		.. _figALATD:
 
-	.. figure:: ../images/figures/AccessLinkObjectsNavigationPane.png
-		:align: center
-		:scale: 85
+		.. figure:: ../images/figures/AccessLinkObjectsNavigationPane.png
+			:align: center
+			:scale: 85
 
-		Access Objects Navigation Pane
+			Access Objects Navigation Pane
 
 
 .. raw:: latex
@@ -107,112 +120,125 @@ The process of linking an Access database to a SQL Server database can be comple
 Creating a new DSN file
 =======================
 
-The following instructions describe how to create a new .dsn file for the HLU Tool database:
-
 .. sidebar:: Other Access versions
 
-	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
+	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access may vary.
 
-1. Click :guilabel:`New` to create a new data source name (DSN) file. The 'Create New Data Source' wizard will start.
+The following instructions describe how to create a new .dsn file for the HLU Tool database:
 
-2. Select **SQL Server** in the list of drivers (as shown in :ref:`figALSDD`) and then click :guilabel:`Next`. If you are connecting to a different database then select the relevant driver.
+	1. Click :guilabel:`New` to create a new data source name (DSN) file. The 'Create New Data Source' wizard will start.
 
-	.. _figALSDD:
+	2. Select **SQL Server** in the list of drivers (as shown in :ref:`figALSDD`) and then click :guilabel:`Next`. If you are connecting to a different database then select the relevant driver.
 
-	.. figure:: ../images/figures/AccessLinkSelectDriverDialog.png
-		:align: center
-		:scale: 85
+		.. _figALSDD:
 
-		Create New Data Source - Select Driver dialog
+		.. figure:: ../images/figures/AccessLinkSelectDriverDialog.png
+			:align: center
+			:scale: 85
 
-3. If you wish to enter the 'Server Name' and 'Database Name' at this stage click on :guilabel:`Advanced...` and enter them under the DRIVER keyword (see :ref:`figALADD` for example). Then click :guilabel:`OK` to return to the 'Create New Data Source' wizard.
+			Create New Data Source - Select Driver dialog
+
+.. raw:: latex
+
+	\newpage
+
+	3. If you wish to enter the 'Server Name' and 'Database Name' at this stage click on :guilabel:`Advanced...` and enter them under the DRIVER keyword (see :ref:`figALADD` for example). Then click :guilabel:`OK` to return to the 'Create New Data Source' wizard.
 	
-	.. _figALADD:
+		.. _figALADD:
 
-	.. figure:: ../images/figures/AccessLinkAdvancedDSNDialog.png
-		:align: center
-		:scale: 90
+		.. figure:: ../images/figures/AccessLinkAdvancedDSNDialog.png
+			:align: center
+			:scale: 90
 
-		Create New Data Source - Advanced DSN dialog
+			Create New Data Source - Advanced DSN dialog
 
 	.. note::
 		If you don't enter the 'Server Name' and 'Database Name' here you will be prompted for them later.
 
-4. Click :guilabel:`Next` and then choose a suitable file path and file name for your new DSN. Then click :guilabel:`Save`.
+	4. Click :guilabel:`Next` and then choose a suitable file path and file name for your new DSN. Then click :guilabel:`Save`.
 
-5. The file path and file name of the select DSN will be displayed (see :ref:`figALSDSD2` for example). Click :guilabel:`Next`.
+	5. The file path and file name of the select DSN will be displayed (see :ref:`figALSDSD2` for example). Click :guilabel:`Next`.
 
-	.. _figALSDSD2:
+		.. _figALSDSD2:
 
-	.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
-		:align: center
-		:scale: 85
+		.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
+			:align: center
+			:scale: 85
 
-		Select Data Source dialog
+			Select Data Source dialog
 
-6. A summary of the DSN settings will be shown (see :ref:`figALOSSD` for example). Click :guilabel:`Finish`.
+.. raw:: latex
 
-	.. _figALOSSD:
+	\newpage
 
-	.. figure:: ../images/figures/AccessLinkSummaryODBCDialog.png
-		:align: center
-		:scale: 90
+	6. A summary of the DSN settings will be shown (see :ref:`figALOSSD` for example). Click :guilabel:`Finish`.
 
-		ODBC Setup Summary dialog
+		.. _figALOSSD:
 
-7. If you didn't enter the server and database names earlier you will be prompted for them now. Enter a description for the data source and then from the list choose which server you want to connect to (see :ref:`figALSSD` for example). Then click :guilabel:`Next`.
+		.. figure:: ../images/figures/AccessLinkSummaryODBCDialog.png
+			:align: center
+			:scale: 90
 
-	.. _figALSSD:
+			ODBC Setup Summary dialog
 
-	.. figure:: ../images/figures/AccessLinkSelectServerDialog.png
-		:align: center
-		:scale: 85
+	7. If you didn't enter the server and database names earlier you will be prompted for them now. Enter a description for the data source and then from the list choose which server you want to connect to (see :ref:`figALSSD` for example). Then click :guilabel:`Next`.
 
-		Create New Data Source - Select Server dialog
+		.. _figALSSD:
+
+		.. figure:: ../images/figures/AccessLinkSelectServerDialog.png
+			:align: center
+			:scale: 85
+
+			Create New Data Source - Select Server dialog
 
 		.. tip::
 			If the server doesn't appear in the list then manually type the server name it into the Server field
 
-8.	Choose either **Windows NT authentication** or **SQL Server authentication**, as shown in see :ref:`figALAD`, depending on how the security settings have been defined in the SQL Server database then click :guilabel:`Next`. If you are not sure, check with the SQL Server database administrator.
+.. raw:: latex
 
-	.. _figALAD:
+	\newpage
 
-	.. figure:: ../images/figures/AccessLinkSQLAuthenticationDialog.png
-		:align: center
-		:scale: 85
+	8.	Choose either **Windows NT authentication** or **SQL Server authentication**, as shown in see :ref:`figALAD`, depending on how the security settings have been defined in the SQL Server database then click :guilabel:`Next`. If you are not sure, check with the SQL Server database administrator.
 
-		Create New Data Source - Authentication dialog
+		.. _figALAD:
 
-9.	Select the 'Change the default database to' checkbox and then from the list select which database to connect to (see :ref:`figALSDBD` for example). Then click :guilabel:`Next`.
+		.. figure:: ../images/figures/AccessLinkSQLAuthenticationDialog.png
+			:align: center
+			:scale: 85
 
-	.. _figALSDBD:
+			Create New Data Source - Authentication dialog
 
-	.. figure:: ../images/figures/AccessLinkSelectDatabaseDialog.png
-		:align: center
-		:scale: 85
+	9.	Select the 'Change the default database to' checkbox and then from the list select which database to connect to (see :ref:`figALSDBD` for example). Then click :guilabel:`Next`.
 
-		Create New Data Source - Select Database dialog
+		.. _figALSDBD:
 
-10.	Leave all the settings as the default values and click :guilabel:`Finish`.
+		.. figure:: ../images/figures/AccessLinkSelectDatabaseDialog.png
+			:align: center
+			:scale: 85
 
-11.	A summary of the ODBC Setup will be displayed (see :ref:`figALSD` for example). Click :guilabel:`Test Data Source ...` to ensure the settings are correct and the connection works and then click :guilabel:`OK` to close the test window.
+			Create New Data Source - Select Database dialog
 
-	.. _figALSD:
+	10.	Leave all the settings as the default values and click :guilabel:`Finish`.
 
-	.. figure:: ../images/figures/AccessLinkSummaryDialog.png
-		:align: center
-		:scale: 85
+.. raw:: latex
 
-		Create New Data Source - Summary dialog
+	\newpage
 
-12.	Click :guilabel:`OK` to save the DSN. You will then be returned to the 'Select Data Source' window to continue linking a new database (see :ref:`new_link`).
+	11.	A summary of the ODBC Setup will be displayed (see :ref:`figALSD` for example). Click :guilabel:`Test Data Source ...` to ensure the settings are correct and the connection works and then click :guilabel:`OK` to close the test window.
+
+		.. _figALSD:
+
+		.. figure:: ../images/figures/AccessLinkSummaryDialog.png
+			:align: center
+			:scale: 85
+
+			Create New Data Source - Summary dialog
+
+	12.	Click :guilabel:`OK` to save the DSN. You will then be returned to the 'Select Data Source' window to continue linking a new database (see :ref:`new_link`).
  
 
 .. note::
 	Once you have defined a DSN for your HLU Tool database you won't need to repeat steps 6 to 14 if you need to link another Access database in future.
-
-.. note::
-	It is also possible to link the exporter database to other relational databases, such as PostGIS, but instructions for this are not provided in this guide.
 
 
 .. raw:: latex
@@ -231,52 +257,58 @@ Each time you open a linked table you will see the latest data displayed in it. 
 
 .. sidebar:: Other Access versions
 
-	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access will vary depending on your version.
+	The steps in this procedure are based on using Microsoft Access 2012. Instructions for different versions of Microsoft Access may vary.
 
-1. Make sure your SQL Server service is running and the HLU Tool database is attached.
+The following instructions describe how to update the links from an Access database to a SQL Server database:
 
-2. Open the destination Access database in which you wish to create the linked tables.
+	1. Make sure your SQL Server service is running and the HLU Tool database is attached.
 
-3. On the 'Database Tools' menu click **Linked Table Manager** as shown in :ref:`figARED`.
+	2. Open the destination Access database in which you wish to create the linked tables.
 
-	.. _figARED:
+	3. On the 'Database Tools' menu click **Linked Table Manager** as shown in :ref:`figARED`.
 
-	.. figure:: ../images/figures/AccessRelinkExternalDataTab.png
-		:align: center
-		:scale: 90
+		.. _figARED:
 
-		External Data tab
+		.. figure:: ../images/figures/AccessRelinkExternalDataTab.png
+			:align: center
+			:scale: 90
 
-4. The 'Linked Table Manager' dialog will appear as shown in :ref:`figARTMD`.
+			External Data tab
 
-	.. _figARTMD:
+	4. The 'Linked Table Manager' dialog will appear as shown in :ref:`figARTMD`.
 
-	.. figure:: ../images/figures/AccessRelinkTableManagerDialog.png
-		:align: center
-		:scale: 90
+		.. _figARTMD:
 
-		Linked Table Manager dialog
+		.. figure:: ../images/figures/AccessRelinkTableManagerDialog.png
+			:align: center
+			:scale: 90
 
-5. Select the :guilabel:`Always prompt for new location` check box.
+			Linked Table Manager dialog
 
-6. Click the tables that you wish to update or click the :guilabel:`Select All` button (see :ref:`figARTMSD` for example) and then click :guilabel:`OK`.
+	5. Select the :guilabel:`Always prompt for new location` check box.
 
-	.. _figARTMSD:
+.. raw:: latex
 
-	.. figure:: ../images/figures/AccessRelinkTableManagerSelectedDialog.png
-		:align: center
-		:scale: 90
+	\newpage
 
-		Linked Table Manager selected tables
+	6. Click the tables that you wish to update or click the :guilabel:`Select All` button (see :ref:`figARTMSD` for example) and then click :guilabel:`OK`.
 
-7. If the update if successful Access will display a message to that effect as shown in :ref:`figARSD`. Otherwise Access will display an error message.
+		.. _figARTMSD:
 
-	.. _figARSD:
+		.. figure:: ../images/figures/AccessRelinkTableManagerSelectedDialog.png
+			:align: center
+			:scale: 90
 
-	.. figure:: ../images/figures/AccessRelinkSuccessDialog.png
-		:align: center
+			Linked Table Manager selected tables
 
-		Linked Table Manager Success dialog
+	7. If the update if successful Access will display a message to that effect as shown in :ref:`figARSD`. Otherwise Access will display an error message.
 
-8. Click :guilabel:`OK` to close the Linked Table Manager.
+		.. _figARSD:
+
+		.. figure:: ../images/figures/AccessRelinkSuccessDialog.png
+			:align: center
+
+			Linked Table Manager Success dialog
+
+	8. Click :guilabel:`OK` to close the Linked Table Manager.
 
