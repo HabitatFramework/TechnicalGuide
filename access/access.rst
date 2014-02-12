@@ -49,9 +49,9 @@ The following instructions describe how to link an Access database to a SQL Serv
 			External Data tab
 
 
-.. raw:: latex
+	.. raw:: latex
 
-	\newpage
+		\newpage
 
 	4. Select :guilabel:`Link to the data source by creating a linked table` (as shown in :ref:`figALODD`) and then click :guilabel:`OK`.
 
@@ -63,9 +63,9 @@ The following instructions describe how to link an Access database to a SQL Serv
 
 			Get External Data - OBDC Database dialog
 
-.. raw:: latex
+	.. raw:: latex
 
-	\newpage
+		\newpage
 
 	5. In the 'Select Data Source' dialog box as shown in :ref:`figALSDSD`, if the DSN file you want to use already exists, locate and select the DSN file. If you haven't yet created a DSN file for the target database skip to :ref:`create_dsn` then continue from the next step.
 
@@ -138,9 +138,9 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 			Create New Data Source - Select Driver dialog
 
-.. raw:: latex
+	.. raw:: latex
 
-	\newpage
+		\newpage
 
 	3. If you wish to enter the 'Server Name' and 'Database Name' at this stage click on :guilabel:`Advanced...` and enter them under the DRIVER keyword (see :ref:`figALADD` for example). Then click :guilabel:`OK` to return to the 'Create New Data Source' wizard.
 	
@@ -167,9 +167,9 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 			Select Data Source dialog
 
-.. raw:: latex
+	.. raw:: latex
 
-	\newpage
+		\newpage
 
 	6. A summary of the DSN settings will be shown (see :ref:`figALOSSD` for example). Click :guilabel:`Finish`.
 
@@ -194,9 +194,9 @@ The following instructions describe how to create a new .dsn file for the HLU To
 		.. tip::
 			If the server doesn't appear in the list then manually type the server name it into the Server field
 
-.. raw:: latex
+	.. raw:: latex
 
-	\newpage
+		\newpage
 
 	8.	Choose either **Windows NT authentication** or **SQL Server authentication**, as shown in see :ref:`figALAD`, depending on how the security settings have been defined in the SQL Server database then click :guilabel:`Next`. If you are not sure, check with the SQL Server database administrator.
 
@@ -220,9 +220,9 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	10.	Leave all the settings as the default values and click :guilabel:`Finish`.
 
-.. raw:: latex
+	.. raw:: latex
 
-	\newpage
+		\newpage
 
 	11.	A summary of the ODBC Setup will be displayed (see :ref:`figALSD` for example). Click :guilabel:`Test Data Source ...` to ensure the settings are correct and the connection works and then click :guilabel:`OK` to close the test window.
 
@@ -287,9 +287,9 @@ The following instructions describe how to update the links from an Access datab
 
 	5. Select the :guilabel:`Always prompt for new location` check box.
 
-.. raw:: latex
+	.. raw:: latex
 
-	\newpage
+		\newpage
 
 	6. Click the tables that you wish to update or click the :guilabel:`Select All` button (see :ref:`figARTMSD` for example) and then click :guilabel:`OK`.
 
