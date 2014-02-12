@@ -6,12 +6,6 @@
 Contents
 ========
 
-.. raw:: latex
-
-	\addcontentsline{toc}{chapter}{\listfigurename}
-	\listoffigures
-	\renewcommand\contentsname{Table of Contents}
-
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -24,10 +18,6 @@ Contents
    optimisation/optimisation
 
 
-.. only:: html
 
-   Index
-   =====
-
-   * :ref:`genindex`
+* :ref:`genindex`
 
