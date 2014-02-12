@@ -2,7 +2,7 @@
 Optimisation
 ************
 
-The Habitat and Land Use (HLU) GIS Tool application design has been optimised as far as possible and there are no simple technological enhancements that can be made to significantly improve performance.
+The design of the HLU Tool has been optimised as far as possible and there are no known simple technological enhancements that can be made to significantly improve performance.
 
 It is important therefore to ensure performance is optimised elsewhere wherever possible through user configuration and operation. The following suggestions show some simple approaches to improving performance.
 
@@ -18,17 +18,16 @@ GIS Layer Indexing
 ------------------
 
 Attribute indexes
-
-
+	Certain functions in the HLU Tool will perform attribute searches on the GIS layer, typically using the **INCID** and/or **TOID** fields. It is, therefore, recommended that individual attribute indexes are created on both of these fields.
 
 Spatial Indexes
-
+	ArcGIS users that frequently zoom in and out using the GIS application whilst the GIS layer is visible, when reviewing or editing using the HLU Tool, then it may be advisable to create one or more spatial indexes on the GIS layer to improve performance when ArcGIS draws the layer.
 
 
 Creation of ArcGIS Map Document or MapInfo Workspace
 ----------------------------------------------------
 
-An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for use with the HLU GIS Tool. This should be optimised to ensure maximum performance, which should include the following:
+An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for use with the HLU Tool. This should be optimised to ensure maximum performance, which should include the following:
 
 * Ensure that the .mxd or .wor file only contains one copy of the HLU layer.
 * Ensure that the .mxd or .wor is saved at a sensible view level such as 1:10,000 scale rather the full extent of the HLU dataset.
