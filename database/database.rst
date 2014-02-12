@@ -446,6 +446,9 @@ This table contains details of all the IHS Habitats that can be assigned to INCI
 Export Tables
 =============
 
+Tables in the database prefixed by 'export' are **export** tables and are used to define different formats that can be used to export data from the HLU Tool database and GIS layers to a new 'standalone' GIS layer.
+
+
 .. index::
 	single: Export Tables; Exports
 
@@ -454,7 +457,7 @@ Export Tables
 exports
 -------
 
-This table lists all the Export 'formats' that can be used when exporting data from the HLU Tool database and GIS layers to a new 'standalone' GIS layer.
+This table lists all the export 'formats' that can be used when exporting data.
 
 	export_id
 		A unique identifier used to determines which fields are selected from the 'exports_fields' table.
@@ -570,7 +573,7 @@ BAP Tables
 
 .. figure:: ../images/diagrams/DatabaseDiagramBAPTables.png
 	:align: center
-	:scale: 80
+	:scale: 75
 
 	Database Relationships - BAP Tables
 

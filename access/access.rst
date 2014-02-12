@@ -96,10 +96,14 @@ The following instructions describe how to link an Access database to a SQL Serv
 
 	7. Under 'Tables', click each table that you want to link to, and then click :guilabel:`OK`.
 
-		.. note::
-			Many of the tables in the list are internal SQL Server tables. Do not select these - only select the HLU Tool export, data and lookup tables.
+	.. note::
+		Many of the tables in the list are internal SQL Server tables. Do not select these - only select the HLU Tool export, data and lookup tables.
 
 	8. If the 'Select Unique Record Identifier' dialog box appears, Access was unable to determine which field or fields uniquely identify each row of the source data. In this case, select the field or combination of fields that is unique for each row, and then click :guilabel:`OK`. If you are not sure, check with the SQL Server database administrator.
+
+	.. raw:: latex
+
+		\newpage
 
 	9. If the link is successful Access will display the new linked tables in the Objects Navigation Pane as shown in :ref:`figALATD`.
 
@@ -156,8 +160,8 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 			Create New Data Source - Advanced DSN dialog
 
-	.. note::
-		If you don't enter the 'Server Name' and 'Database Name' here you will be prompted for them later.
+		.. note::
+			If you don't enter the 'Server Name' and 'Database Name' here you will be prompted for them later.
 
 	4. Click :guilabel:`Next` and then choose a suitable file path and file name for your new DSN. Then click :guilabel:`Save`.
 
@@ -174,10 +178,6 @@ The following instructions describe how to create a new .dsn file for the HLU To
 			:scale: 85
 
 			Select Data Source dialog
-
-	.. raw:: latex
-
-		\newpage
 
 	6. A summary of the DSN settings will be shown (see :ref:`figALOSSD` for example). Click :guilabel:`Finish`.
 
@@ -206,6 +206,10 @@ The following instructions describe how to create a new .dsn file for the HLU To
 		.. tip::
 			If the server doesn't appear in the list then manually type the server name it into the Server field
 
+	.. raw:: latex
+
+		\newpage
+
 	8.	Choose either **Windows NT authentication** or **SQL Server authentication**, as shown in see :ref:`figALAD`, depending on how the security settings have been defined in the SQL Server database then click :guilabel:`Next`. If you are not sure, check with the SQL Server database administrator.
 
 		.. _figALAD:
@@ -215,10 +219,6 @@ The following instructions describe how to create a new .dsn file for the HLU To
 			:scale: 85
 
 			Create New Data Source - Authentication dialog
-
-	.. raw:: latex
-
-		\newpage
 
 	9.	Select the 'Change the default database to' checkbox and then from the list select which database to connect to (see :ref:`figALSDBD` for example). Then click :guilabel:`Next`.
 

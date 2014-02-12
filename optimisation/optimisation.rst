@@ -61,8 +61,8 @@ It takes a significant length of time for ArcGIS or MapInfo to draw or query an 
 	* For ArcGIS users, if an ArcMap error occurs when the tool is used, check that the HLU ArcMap Extension is enabled in ArcGIS via **Tools --> Extensions**.  See :ref:`enable_extension` for more details.
 	* For ArcGIS users, we strongly recommend that the HLU layer is stored as a file geodatabase or personal geodatabase.
 
-		.. caution::
-			The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.
+	.. caution::
+		The tool will be significantly slower if the HLU layer is stored as a shapefile due to the limitations of the file format.
 
 	* For MapInfo users, ensure the Cosmetic layer is editable when digitising a polygon for a split operation. The polygon will be added to the layer much faster than if the HLU layer was used and also removes the possibility that the polygon is not deleted after the split.
 
