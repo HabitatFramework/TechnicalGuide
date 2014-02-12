@@ -175,7 +175,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
 			:align: center
-			:scale: 85
+			:scale: 80
 
 			Select Data Source dialog
 
@@ -185,7 +185,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		.. figure:: ../images/figures/AccessLinkSummaryODBCDialog.png
 			:align: center
-			:scale: 85
+			:scale: 80
 
 			ODBC Setup Summary dialog
 
@@ -231,6 +231,10 @@ The following instructions describe how to create a new .dsn file for the HLU To
 			Create New Data Source - Select Database dialog
 
 	10.	Leave all the settings as the default values and click :guilabel:`Finish`.
+
+	.. raw:: latex
+
+		\newpage
 
 	11.	A summary of the ODBC Setup will be displayed (see :ref:`figALSD` for example). Click :guilabel:`Test Data Source ...` to ensure the settings are correct and the connection works and then click :guilabel:`OK` to close the test window.
 
