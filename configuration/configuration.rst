@@ -124,13 +124,13 @@ To connect the HLU Tool to a Microsoft SQL Server containing the HLU data:
 Reconfiguring the Database Connection
 -------------------------------------
 
-To re-configure only the database connection the database configuration information must be reset. To reset the configuration:
+To re-configure only the database connection the database configuration information must be reset by starting the tool with a **/d** switch parameter. To reset the configuration:
 
 	1. In Windows, go to **Start Menu > Run…**.
 	
 	2. If you have installed the HLU Tool in the default location, at the prompt type:
 
-		``"C:\Program Files\HLU\HLU GIS Tool\" /d``
+		``"C:\Program Files\HLU\HLU GIS Tool\HluGisTool.exe" /d``
 
 
 	.. note::
@@ -140,7 +140,7 @@ To re-configure only the database connection the database configuration informat
 
 
 .. tip::
-	Using the **/c** switch will reset **both** the database and GIS configuration information.
+	Using a **/c** switch (instead of the **/d** switch above) will reset **both** the database and GIS configuration information.
 
 
 .. raw:: latex
@@ -219,13 +219,13 @@ To connect the tool to ArcGIS or MapInfo:
 Reconfiguring the GIS Connection
 --------------------------------
 
-To re-configure only the GIS connection, the GIS configuration information must be reset. To reset the configuration:
+To re-configure only the GIS connection, the GIS configuration information must be reset by starting the tool with a **/g** switch parameter. To reset the configuration:
 
 	1. In Windows, go to **Start Menu > Run…**.
 	
 	2. If you have installed the HLU Tool in the default location, at the prompt type:
 
-		``"C:\Program Files\HLU\HLU GIS Tool\" /g``
+		``"C:\Program Files\HLU\HLU GIS Tool\HluGisTool.exe" /g``
 
 	.. note::
 		If you have installed the tool in another location, enter the appropriate folder path in double quotes followed by **/g**.
@@ -234,7 +234,7 @@ To re-configure only the GIS connection, the GIS configuration information must 
 
 
 .. tip::
-	Using the **/c** switch will reset **both** the database and GIS configuration information.
+	Using a **/c** switch (instead of the **/g** switch above) will reset **both** the database and GIS configuration information.
 
 
 .. raw:: latex
@@ -265,7 +265,7 @@ Tables in the database that are prefixed by 'lut\_' are **lookup tables** and so
 Configuring Users
 -----------------
 
-New users of the HLU Tool can be added to the 'lut_user' table. The format of the table is shown in the figure :ref:`figDTLU`.
+New users of the HLU Tool must be added to the 'lut_user' table if they wish to apply any updates. The format of the table is shown in the figure :ref:`figDTLU`.
 
 .. _figDTLU:
 
@@ -365,7 +365,7 @@ Export formats can be added or removed in the 'exports' table shown in the figur
 
 .. _figDTE:
 
-.. figure:: ../images/figures/DatabaseTableExportsFields.png
+.. figure:: ../images/figures/DatabaseTableExports.png
 	:align: center
 
 	Format of the exports table

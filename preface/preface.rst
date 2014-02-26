@@ -11,7 +11,7 @@ Administrators
 --------------
 We recommend that a person within each organisation should be designated as the tool and database administrator. This person should:
 
-* Have and understanding and experience of IT systems management.
+* Have an understanding and experience of IT systems management.
 * Understand relational database structures.
 * Be an expert user of the chosen database system.
 * Have qualifications, certified training or equivalent experience in managing databases using that system.
@@ -19,7 +19,7 @@ We recommend that a person within each organisation should be designated as the 
 
 Users
 -----
-A user guide is also available at `HLUTool-UserGuide <https://readthedocs.org/projects/hlugistool-userguide/>`_ for those who will be regular users of the HLU Tool and are not concerned with how to install or configure or how to perform database administration.
+A user guide is also available at `HLUTool-UserGuide <https://readthedocs.org/projects/hlugistool-userguide/>`_ for those who will be regular users of the HLU Tool but are not concerned with how to install or configure the tool or how to perform database administration.
 
 
 Reading Guide

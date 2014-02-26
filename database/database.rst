@@ -524,7 +524,7 @@ This table defines which fields are to be exported for each export format in the
 Table Relationships
 ===================
 
-There are 37 tables in the HLU Tool relational database comprised of data tables, lookup tables and export tables. The relationships between the tables are too numerous and complex to display in a single diagram so the tables and relationships have there been separated into 7 logical groups, some of which connect and overlap with one another.
+There are 37 tables in the HLU Tool relational database comprised of data tables, lookup tables and export tables. The relationships between the tables are too numerous and complex to display in a single diagram so the tables and relationships have therefore been separated into 7 logical groups, some of which connect and overlap with one another.
 
 .. tip::
 	Bespoke relationship diagrams between the various HLU Tool tables can be created using SQL Server Management Studio.

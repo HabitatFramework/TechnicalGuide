@@ -21,7 +21,7 @@ Attribute indexes
 	Certain functions in the HLU Tool will perform attribute searches on the GIS layer, typically using the **INCID** and/or **TOID** fields. It is, therefore, recommended that individual attribute indexes are created on both of these fields.
 
 Spatial Indexes
-	ArcGIS users that frequently zoom in and out using the GIS application whilst the GIS layer is visible, when reviewing or editing using the HLU Tool, then it may be advisable to create one or more spatial indexes on the GIS layer to improve performance when ArcGIS draws the layer.
+	ArcGIS users that frequently zoom in and out using the GIS application whilst the GIS layer is visible, when reviewing or editing using the HLU Tool, then it may be advisable to create one or more spatial indexes on the GIS layer to improve performance when ArcGIS draws the layer. The choice of scales will depend upon the number, size and density of the features in the GIS layer and the preferred working practices of the users (e.g. if they zoom in and out frequently rather than panning).
 
 
 Creation of ArcGIS Map Document or MapInfo Workspace
