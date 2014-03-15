@@ -66,9 +66,12 @@ The latest release of the tool can be downloaded from `GitHub <https://github.co
 .. _installing:
 
 Installing the HLU Tool
-===========================
+=======================
 
-To install the HLU Tool `double-click` on the Setup.exe and follow the instructions. By default this will install the HLU Tool into the :file:`C:\\Program Files\\HLU\\HLU GIS Tool\\` directory. The installer will also create shortcuts in the start menu and will optionally display the ReadMe file.
+To install the HLU Tool `double-click` on the Setup.exe and follow the instructions. By default this will install the HLU Tool into the :file:`C:\\Program Files\\HLU\\HLU GIS Tool\\` directory and will optionally display the ReadMe file. The installer will also create two shortcuts in the start menu:
+
+	* **HLU GIT Tool - Launch** - this will start the tool
+	* **HLU GIT Tool - Reconfigure** - this will start the tool using the **/d** switch parameter. See :doc:`../configuration/configuration` for details of how to connect to a HLU Tool database and GIS application.
 
 .. _enable_extension:
 

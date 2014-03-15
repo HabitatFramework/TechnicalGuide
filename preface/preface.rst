@@ -29,7 +29,7 @@ This Preface explains a little about the HLU Tool, the community of people who d
 
 :doc:`../installation/installation` details the system requirements and describes how to install the HLU Tool.
 
-:doc:`../configuration/configuration` describes how to connect to HLU Tool database and GIS application.
+:doc:`../configuration/configuration` describes how to connect to a HLU Tool database and GIS application.
 
 :doc:`../access/access` provides instructions on how to link an Access front-end to a SQL Server database.
 

@@ -140,7 +140,7 @@ To re-configure only the database connection the database configuration informat
 
 
 .. tip::
-	Using a **/c** switch (instead of the **/d** switch above) will reset **both** the database and GIS configuration information.
+	As part of the installation of the tool a shortcut to 'Reconfigure' the tool will automatically be added to the Start menu (along with a shortcut to 'Launch' the tool).  This shortcut uses a **/c** switch (instead of the **/d** switch above) which will reset **both** the database and the GIS configuration information.
 
 
 .. raw:: latex
@@ -234,7 +234,7 @@ To re-configure only the GIS connection, the GIS configuration information must 
 
 
 .. tip::
-	Using a **/c** switch (instead of the **/g** switch above) will reset **both** the database and GIS configuration information.
+	As part of the installation of the tool a shortcut to 'Reconfigure' the tool will automatically be added to the Start menu (along with a shortcut to 'Launch' the tool).  This shortcut uses a **/c** switch (instead of the **/d** switch above) which will reset **both** the database and the GIS configuration information.
 
 
 .. raw:: latex
