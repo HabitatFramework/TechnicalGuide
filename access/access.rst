@@ -169,7 +169,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		\newpage
 
-	5. The file path and file name of the select DSN will be displayed (see :ref:`figALSDSD2` for example). Click :guilabel:`Next`.
+	5. The file path and file name of the select DSN will be displayed (see :ref:`figALSDSND` for example). Click :guilabel:`Next`.
 
 		.. _figALSDSND:
 

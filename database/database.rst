@@ -42,27 +42,27 @@ How the data tables relate to the fields in the user interface is demonstrated i
 			User Interface Common Fields
 
 
-		.. _figUICF:
+		.. _figUIIF:
 
-		.. figure:: figures/UserInterfaceIHSDBFields.png
+		.. figure:: figures/UserInterfaceIHSTabDBFields.png
 			:align: center
 			:scale: 90
 
 			User Interface IHS Tab Fields
 
 
-		.. _figUICF:
+		.. _figUIDF:
 
-		.. figure:: figures/UserInterfaceDetailsDBFields.png
+		.. figure:: figures/UserInterfaceDetailsTabDBFields.png
 			:align: center
 			:scale: 90
 
 			User Interface Details Tab Fields
 
 
-		.. _figUICF:
+		.. _figUISF:
 
-		.. figure:: figures/UserInterfaceSourcesDBFields.png
+		.. figure:: figures/UserInterfaceSourcesTabDBFields.png
 			:align: center
 			:scale: 90
 

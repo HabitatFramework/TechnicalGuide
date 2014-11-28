@@ -70,7 +70,7 @@ To connect the HLU Tool to a Microsoft Access database containing the HLU data:
 
 		Data Link Properties Connection dialog
 
-	.. |selectdb| image:: ../images/icons/SelectDatabase.png
+	.. |selectdb| image:: ../icons/SelectDatabase.png
 		:height: 16px
 		:width: 16px
 
