@@ -55,8 +55,8 @@ Latest Release
 
 The latest release of the tool can be downloaded from `GitHub <https://github.com/HabitatFramework/HLUTool/releases>`_. Two versions of the tool are available:
 
-	* For ArcGIS or ArcGIS/MapInfo systems (e.g. *v1.0.8*). Use when ArcGIS is installed or where ArcGIS and MapInfo are both installed.
-	* For MapInfo only systems (e.g. *v1.0.8m*). Use when only MapInfo is installed.
+	* For ArcGIS or ArcGIS/MapInfo systems (e.g. *v2.3.0*). Use when ArcGIS is installed or where ArcGIS and MapInfo are both installed.
+	* For MapInfo only systems (e.g. *v2.3.0m*). Use when only MapInfo is installed.
 
 
 .. raw:: latex
@@ -71,7 +71,7 @@ Installing the HLU Tool
 To install the HLU Tool `double-click` on the Setup.exe and follow the instructions. By default this will install the HLU Tool into the :file:`C:\\Program Files\\HLU\\HLU GIS Tool\\` directory and will optionally display the ReadMe file. The installer will also create two shortcuts in the start menu:
 
 	* **HLU GIT Tool - Launch** - this will start the tool
-	* **HLU GIT Tool - Reconfigure** - this will start the tool using the **/d** switch parameter. See :doc:`../configuration/configuration` for details of how to connect to a HLU Tool database and GIS application.
+	* **HLU GIT Tool - Reconfigure** - this will start the tool using the **/c** switch parameter. See :doc:`../configuration/configuration` for details of how to connect to a HLU Tool database and GIS application.
 
 .. _enable_extension:
 
@@ -83,7 +83,7 @@ Enable HLU Extension
 
 .. _figAGED:
 
-.. figure:: ../images/figures/ArcGisExtensionsDialog.png
+.. figure:: figures/ArcGisExtensionsDialog.png
 	:align: center
 	:scale: 80
 

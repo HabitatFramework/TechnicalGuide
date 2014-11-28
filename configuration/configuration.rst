@@ -18,7 +18,7 @@ Database Connection
 
 .. _figCTD:
 
-.. figure:: ../images/figures/ConnectionTypeDialog.png
+.. figure:: figures/ConnectionTypeDialog.png
 	:align: center
 	:scale: 90
 
@@ -40,7 +40,7 @@ To connect the HLU Tool to a Microsoft Access database containing the HLU data:
 
 	.. _figODCD:
 
-	.. figure:: ../images/figures/OleDbConnectionDialog.png
+	.. figure:: figures/OleDbConnectionDialog.png
 		:align: center
 		:scale: 90
 
@@ -52,7 +52,7 @@ To connect the HLU Tool to a Microsoft Access database containing the HLU data:
 
 	.. _figDLPPD:
 
-	.. figure:: ../images/figures/DataLinkPropertiesProviderDialog.png
+	.. figure:: figures/DataLinkPropertiesProviderDialog.png
 		:align: center
 		:scale: 90
 
@@ -64,7 +64,7 @@ To connect the HLU Tool to a Microsoft Access database containing the HLU data:
 
 	.. _figDLPCD:
 
-	.. figure:: ../images/figures/DataLinkPropertiesConnectionDialog.png
+	.. figure:: figures/DataLinkPropertiesConnectionDialog.png
 		:align: center
 		:scale: 90
 
@@ -96,7 +96,7 @@ To connect the HLU Tool to a Microsoft SQL Server containing the HLU data:
 
 	.. _figSSCD:
 
-	.. figure:: ../images/figures/SQLServerConnectionDialog.png
+	.. figure:: figures/SQLServerConnectionDialog.png
 		:align: center
 		:scale: 90
 
@@ -159,7 +159,7 @@ When the tool is first launched it will check your system to determine which GIS
 
 	.. _figSGD:
 
-	.. figure:: ../images/figures/SelectGISDialog.png
+	.. figure:: figures/SelectGISDialog.png
 		:align: center
 		:scale: 85
 
@@ -175,7 +175,7 @@ To connect the tool to ArcGIS or MapInfo:
 
 		.. _figAGDSD:
 
-		.. figure:: ../images/figures/ArcGISDocumentSelectionDialog.png
+		.. figure:: figures/ArcGISDocumentSelectionDialog.png
 			:align: center
 			:scale: 80
 
@@ -190,7 +190,7 @@ To connect the tool to ArcGIS or MapInfo:
 
 		.. _figAGLSD:
 
-		.. figure:: ../images/figures/ArcGISLayerSelectionDialog.png
+		.. figure:: figures/ArcGISLayerSelectionDialog.png
 			:align: center
 			:scale: 80
 
@@ -200,7 +200,7 @@ To connect the tool to ArcGIS or MapInfo:
 
 		.. _figAGSDD:
 
-		.. figure:: ../images/figures/ArcGISSaveDocumentDialog.png
+		.. figure:: figures/ArcGISSaveDocumentDialog.png
 			:align: center
 			:scale: 80
 
@@ -234,7 +234,7 @@ To re-configure only the GIS connection, the GIS configuration information must 
 
 
 .. tip::
-	As part of the installation of the tool a shortcut to 'Reconfigure' the tool will automatically be added to the Start menu (along with a shortcut to 'Launch' the tool).  This shortcut uses a **/c** switch (instead of the **/d** switch above) which will reset **both** the database and the GIS configuration information.
+	As part of the installation of the tool a shortcut to 'Reconfigure' the tool will automatically be added to the Start menu (along with a shortcut to 'Launch' the tool).  This shortcut uses a **/c** switch (instead of the **/g** switch above) which will reset **both** the database and the GIS configuration information.
 
 
 .. raw:: latex
@@ -256,6 +256,8 @@ Tables in the database that are prefixed by 'lut\_' are **lookup tables** and so
 .. note::
 	Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
 
+.. seealso::
+	See :ref:`lookup_tables` for more information on lookup tables.
 
 .. index::
 	single: Configuration; Users
@@ -269,7 +271,7 @@ New users of the HLU Tool must be added to the 'lut_user' table if they wish to 
 
 .. _figDTLU:
 
-.. figure:: ../images/figures/DatabaseTableLutUser.png
+.. figure:: figures/DatabaseTableLutUser.png
 	:align: center
 
 	Format of the lut_user table
@@ -297,7 +299,7 @@ Additional sources can be added to the 'lut_sources' table . The format of the t
 
 .. _figDTLS:
 
-.. figure:: ../images/figures/DatabaseTableLutSources.png
+.. figure:: figures/DatabaseTableLutSources.png
 	:align: center
 
 	Format of the lut_sources table
@@ -318,10 +320,58 @@ New processes can be added to the 'lut_process' table. The format of the table i
 
 .. _figDTLP:
 
-.. figure:: ../images/figures/DatabaseTableLutProcess.png
+.. figure:: figures/DatabaseTableLutProcess.png
 	:align: center
 
 	Format of the lut_process table
+
+
+.. index::
+	single: Configuration; Habitat Class
+
+.. _configuring_habitat_class:
+
+Configuring Habitat Classes
+---------------------------
+
+Habitat Classes can be flagged as **local** or not in the 'lut_habitat_class` table. The format of the table is shown in the figure :ref:`figDTLHC`.
+
+.. _figDTLHC:
+
+.. figure:: figures/DatabaseTableLutHabitatClass.png
+	:align: center
+
+	Format of the lut_habitat_class table
+
+
+Setting the **local** flag of a Habitat Class to 'False' (zero) in the 'lut_habitat_class' table will stop it appearing in the 'Habitat Class' drop-down list in the IHS tab of the main window and in the 'Habitat Class' drop-down list in the Sources tab. This enables entire habitat classes that are not used by the organisation to be hidden to keep the drop-down list as short as possible.
+
+.. note::
+	Only Habitat Classes that are indirectly referenced by records in the 'lut_habitat_type_ihs_habitat' translation table (by referencing one or more **code_habitat_type** values that relate to a **habitat_class_code** in the 'lut_habitat_types' table and subsequently a Habitat Class **code** in the 'lut_habitat_class' table) will appear in the 'Habitat Class' drop-down list in the IHS tab of the main window, even if the **is_local** flag in the 'lut_habitat_type' table is set to 'True' (minus one). This is because the 'lut_habitat_type_ihs_habitat' table controls the cross-reference between different Habitat Classes/Types and IHS Habitats.
+
+
+.. index::
+	single: Configuration; Habitat Type
+
+.. _configuring_habitat_type:
+
+Configuring Habitat Types
+-------------------------
+
+Habitat Types can be flagged as **local** in the 'lut_habitat_type` table. The format of the table is shown in the figure :ref:`figDTLHT`.
+
+.. _figDTLHT:
+
+.. figure:: figures/DatabaseTableLutHabitatType.png
+	:align: center
+
+	Format of the lut_habitat_type table
+
+
+Setting the **local** flag of a Habitat Type to 'False' (zero) in the 'lut_habitat_type' table will stop it appearing in the 'Habitat Type' drop-down list in the IHS tab of the main window and in the 'Habitat Type' drop-down list in the Sources tab. This enables specific habitat types that are not used by the organisation, or are not found in the local area, to be hidden to keep the drop-down list as short as possible.
+
+.. note::
+	Only Habitat Types that are directly referenced by records in the 'lut_habitat_type_ihs_habitat' translation table (by referencing one or more **code_habitat_type** values that relate to a Habitat Type **code** in the 'lut_habitat_type' table) will appear in the 'Habitat Type' drop-down list in the IHS tab of the main window, even if the **is_local** flag in the 'lut_habitat_type' table is set to 'True' (minus one). This is because the 'lut_habitat_type_ihs_habitat' table controls the cross-reference between different Habitat Classes/Types and IHS Habitats.
 
 
 .. index::
@@ -329,14 +379,14 @@ New processes can be added to the 'lut_process' table. The format of the table i
 
 .. _configuring_habitats:
 
-Configuring Habitats
---------------------
+Configuring IHS Habitats
+------------------------
 
-IHS Habitats can be flagged as **local** in the 'lut_ihs_habitat` table. The format of the table is shown in the figure :ref:`figDTLH`.
+IHS Habitats can be flagged as **local** in the 'lut_ihs_habitat` table. The format of the table is shown in the figure :ref:`figDTLIH` (some columns have been hidden).
 
-.. _figDTLH:
+.. _figDTLIH:
 
-.. figure:: ../images/figures/DatabaseTableLutIHSHabitat.png
+.. figure:: figures/DatabaseTableLutIHSHabitat.png
 	:align: center
 
 	Format of the lut_ihs_habitat table
@@ -365,16 +415,16 @@ Export formats can be added or removed in the 'exports' table shown in the figur
 
 .. _figDTE:
 
-.. figure:: ../images/figures/DatabaseTableExports.png
+.. figure:: figures/DatabaseTableExports.png
 	:align: center
 
 	Format of the exports table
 
 
-Once a new export format has been added to the 'exports' table the fields to be included in the export must be added to the 'export_fields' table.
+Once a new export format has been added to the 'exports' table the fields to be included in the export must be added to the 'exports_fields' table.
 
 .. index::
-	single: Export Tables; Export Fields
+	single: Export Tables; Exports Fields
 
 Adding fields to an export format
 ---------------------------------
@@ -383,7 +433,7 @@ The 'exports_fields' table shown in the figure :ref:`figDTEF` defines which fiel
 
 .. _figDTEF:
 
-.. figure:: ../images/figures/DatabaseTableExportsFields.png
+.. figure:: figures/DatabaseTableExportsFields.png
 	:align: center
 
 	Format of the exports_fields table

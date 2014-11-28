@@ -17,7 +17,56 @@ The database consists of 3 types of tables as follows:
 Data Tables
 ===========
 
+.. sidebar:: Key to Data Tables
+
+	1. incid
+	2. incid_ihs_matrix
+	3. incid_ihs_formation
+	4. incid_ihs_management
+	5. incid_ihs_complex
+	6. incid_bap
+	7. incid_sources
+	8. history
+
 Tables in the database prefixed by 'incid' are **data** tables and hence contain all the attribute data relating to the GIS features. The attributes have been separated into 8 tables to 'normalise' the data which reduces storage space, improves performance and provides greater flexibility.
+
+How the data tables relate to the fields in the user interface is demonstrated in the following figures:
+
+
+		.. _figUICF:
+
+		.. figure:: figures/UserInterfaceCommonDBFields.png
+			:align: center
+			:scale: 90
+
+			User Interface Common Fields
+
+
+		.. _figUICF:
+
+		.. figure:: figures/UserInterfaceIHSDBFields.png
+			:align: center
+			:scale: 90
+
+			User Interface IHS Tab Fields
+
+
+		.. _figUICF:
+
+		.. figure:: figures/UserInterfaceDetailsDBFields.png
+			:align: center
+			:scale: 90
+
+			User Interface Details Tab Fields
+
+
+		.. _figUICF:
+
+		.. figure:: figures/UserInterfaceSourcesDBFields.png
+			:align: center
+			:scale: 90
+
+			User Interface Sources Tab Fields
 
 
 .. index::
@@ -71,52 +120,23 @@ This is the main data table with one record per INCID. All the other data tables
 
 
 .. index::
-	single: Data Tables; Incid_BAP
+	single: Data Tables; Incid_IHS_Matrix
 
-.. _incid_bap_table:
+.. _incid_ihs_matrix:
 
-incid_bap
----------
+incid_ihs_matrix
+----------------
 
-This table contains details of the priority habitats and potential priority habitats for an INCID. There can be between 0 and 3 records for each INCID.
+This table contains any IHS Matrix codes recorded alongside an IHS Habitat code to refine the habitat definition for an INCID. There can be between 0 and 3 records for each INCID.
 
-	bap_id
+	matrix_id
 		Integer - A unique ID for each record.
 
 	incid
 		Char(12) - Foreign key to `incid` in the 'incid' table.
 
-	bap_habitat
-		Char(11) - Foreign key to `code` in the 'lut_habitat_type' table representing a priority habitat (or potential priority habitat).
-
-	quality_determination
-		Char(2) - Foreign key to `code` in the 'lut_bap_quality_determination' table representing the accuracy with which the priority habitat has been determined.
-
-	quality_interpretation
-		Char(2) - Foreign key to `code` in the 'lut_bap_quality_interpretation' table representing how well the priority habitat was interpreted from the source data.
-
-	interpretation_comments
-		Char(254) - A free-text field containing any comments to explain the reasoning behind the priority habitat determination and interpretation.
-
-
-.. index::
-	single: Data Tables; Incid_IHS_Complex
-
-.. _incid_ihs_complex:
-
-incid_ihs_complex
------------------
-
-This table contains any IHS Complex codes recorded alongside an IHS Habitat code to refine the habitat definition for an INCID. There can be between 0 and 2 records for each INCID.
-
-	complex_id
-		Integer - A unique ID for each record.
-
-	incid
-		Char(12) - Foreign key to `incid` in the 'incid' table.
-
-	complex
-		Char(8) - Foreign key to `code` in the 'lut_ihs_complex' table representing an IHS Complex type.
+	matrix
+		Char(8) - Foreign key to `code` in the 'lut_ihs_matrix' table representing an IHS Matrix type.
 
 
 .. index::
@@ -160,55 +180,52 @@ This table contains any IHS Management codes recorded alongside an IHS Habitat c
 
 
 .. index::
-	single: Data Tables; Incid_IHS_Matrix
+	single: Data Tables; Incid_IHS_Complex
 
-.. _incid_ihs_matrix:
+.. _incid_ihs_complex:
 
-incid_ihs_matrix
-----------------
+incid_ihs_complex
+-----------------
 
-This table contains any IHS Matrix codes recorded alongside an IHS Habitat code to refine the habitat definition for an INCID. There can be between 0 and 3 records for each INCID.
+This table contains any IHS Complex codes recorded alongside an IHS Habitat code to refine the habitat definition for an INCID. There can be between 0 and 2 records for each INCID.
 
-	matrix_id
+	complex_id
 		Integer - A unique ID for each record.
 
 	incid
 		Char(12) - Foreign key to `incid` in the 'incid' table.
 
-	matrix
-		Char(8) - Foreign key to `code` in the 'lut_ihs_matrix' table representing an IHS Matrix type.
+	complex
+		Char(8) - Foreign key to `code` in the 'lut_ihs_complex' table representing an IHS Complex type.
 
 
 .. index::
-	single: Data Tables; Incid_MM_Polygons
+	single: Data Tables; Incid_BAP
 
-.. _incid_mm_polygons:
+.. _incid_bap_table:
 
-incid_mm_polygons
------------------
+incid_bap
+---------
 
-This table is a local database copy of the attribute table for the GIS feature layer to improve performance. If the GIS features are split into separate GIS layers this table contains the attribute records for **all** the layers combined. There can be any number of records for each INCID.
+This table contains details of the priority habitats and potential priority habitats for an INCID. There can be between 0 and 3 records for each INCID.
+
+	bap_id
+		Integer - A unique ID for each record.
 
 	incid
 		Char(12) - Foreign key to `incid` in the 'incid' table.
 
-	toid
-		Char(20) - The unique Ordnance Survey **to**\ pographical **id**\ entifier of each feature.
+	bap_habitat
+		Char(11) - Foreign key to `code` in the 'lut_habitat_type' table representing a priority habitat (or potential priority habitat).
 
-	toid_fragment_id
-		Char(5) - An incremental number (prefixed with zeros) used as a unique reference for each fragment of a single TOID.
+	quality_determination
+		Char(2) - Foreign key to `code` in the 'lut_bap_quality_determination' table representing the accuracy with which the priority habitat has been determined.
 
-	ihs_category
-		Char(2) - Foreign key to `code` in the 'lut_ihs_category' table representing the first 2 characters of the IHS Habitat code.
+	quality_interpretation
+		Char(2) - Foreign key to `code` in the 'lut_bap_quality_interpretation' table representing how well the priority habitat was interpreted from the source data.
 
-	ihs_summary
-		Char(50) - A concatenation of all the IHS habitat and multiplex codes from the INCID for this feature. This field is automatically maintained by the tool.
-
-	shape_length
-		Float - A decimal value of variable precision representing the perimeter length of the feature.
-
-	shape_area
-		Float - A decimal value of variable precision representing the spatial area of the feature.
+	interpretation_comments
+		Char(254) - A free-text field containing any comments to explain the reasoning behind the priority habitat determination and interpretation.
 
 
 .. index::
@@ -298,6 +315,94 @@ This table contains details of the source datasets for an INCID. There can be be
 		Integer - Determines the (ascending) order the sources for each INCID will be displayed in the 'Sources' tab of the main window.
 
 
+.. index::
+	single: Data Tables; Incid_MM_Polygons
+
+.. _incid_mm_polygons:
+
+incid_mm_polygons
+-----------------
+
+This table is a local database **copy** of the attribute table for the GIS feature layer to improve performance. If the GIS features are split into separate GIS layers this table contains the attribute records for **all** the layers combined. There can be any number of records for each INCID, depending upon how many TOIDs and TOID fragments are associated with the INCID.
+
+	incid
+		Char(12) - Foreign key to `incid` in the 'incid' table.
+
+	toid
+		Char(20) - The unique Ordnance Survey **to**\ pographical **id**\ entifier of each feature.
+
+	toid_fragment_id
+		Char(5) - An incremental number (prefixed with zeros) used as a unique reference for each fragment of a single TOID.
+
+	ihs_category
+		Char(2) - Foreign key to `code` in the 'lut_ihs_category' table representing the first 2 characters of the IHS Habitat code.
+
+	ihs_summary
+		Char(50) - A concatenation of all the IHS habitat and multiplex codes from the INCID for this feature. This field is automatically maintained by the tool.
+
+	shape_length
+		Float - A decimal value of variable precision representing the perimeter length of the feature.
+
+	shape_area
+		Float - A decimal value of variable precision representing the spatial area of the feature.
+
+
+.. index::
+	single: Data Tables; History
+
+.. _history:
+
+history
+-------
+
+This table contains record of **every** change to **every** feature made using the HLU Tool.
+
+	history_id
+		Integer - A unique ID for each record.
+
+	incid
+		Char(12) - Foreign key to `incid` in the 'incid' table.
+
+	toid
+		Char(20) - The unique Ordnance Survey **to**\ pographical **id**\ entifier of each feature.
+
+	toid_fragment_id
+		Char(5) - An incremental number (prefixed with zeros) used as a unique reference for each fragment of a single TOID.
+
+	modified_user_id
+		Char(40) - Foreign key to `user_id` in the 'lut_user' table representing the user that modified the feature.
+
+	modified_date
+		DateTime - The date and time that the features was modified.
+
+	modified_process
+		Char(3) - Foreign key to `code` in the `lut_process` table representing the activity being undertaken when the feature was modified.
+
+	modified_reason
+		Char(3) - Foreign key to `code` in the `lut_reason` table representing the underlying explanation for the change to the feature.
+
+	modified_ihs_category
+		Char(2) - Foreign key to `code` in the 'lut_ihs_category' table representing the first 2 characters of the IHS Habitat code prior to the changes to the feature.
+
+	modified_ihs_summary
+		Char(50) - A concatenation of all the IHS habitat and multiplex codes from the INCID for this feature prior to the changes to the feature.
+
+	modified_operation
+		Char(3) - Foreign key to `code` in the `lut_operation` table representing the operation that undertaken to cause the change to the feature.
+
+	modified_incid
+		Char(12) - The incid prior to the changes to the feature. In the event of a logical split or logical merge this value will be different to the current 'incid', otherwise it will be the same as the current 'incid'.
+
+	modified_toid_fragment_id
+		Char(12) - The toid_fragment_id prior to the changes to the feature. In the event of a physical split or logical merge this value **may** be different to the current 'toid_fragment_id' otherwise it will be the same as the current 'toid_fragment_id'.
+
+	modified_length
+		Float - A decimal value of variable precision representing the perimeter length of the feature after the changes to the feature.
+
+	modified_area
+		Float - A decimal value of variable precision representing the spatial area of the feature after the changes to the feature.
+
+
 .. raw:: latex
 
 	\newpage
@@ -310,22 +415,17 @@ This table contains details of the source datasets for an INCID. There can be be
 Lookup Tables
 =============
 
-Tables in the database prefixed by 'lut\_' are **lookup** tables and are used in many drop-down lists in the user interfaces to restrict choices to only valid values.
+Tables in the database prefixed by 'lut\_' are **lookup** tables and are used in many drop-down lists in the user interfaces to restrict choices to only valid or appropriate values for the organisation.
 
-Some of the lookup tables can be updated to tailor them to the requirements of each system but the remainder should be considered as 'system' tables that are configured centrally and shared between all HLU Tool installations.
+Some of the lookup tables contain records and settings that are generic to all HLU Tool installations and hence should be considered as 'system' records (indicated by the **system_supplied** attribute set to 'True' (minus one). These records are configured centrally and updates are applied to HLU Tool installations using the HLUDbUpdater.exe tool (see :ref:`database_updater` for more details). The remaining lookup tables can be configured entirely for a given HLU Tool installation to tailor them to the specific requirements of each organisation.
 
-.. note::
-	There is currently no automated method for updating these 'system' tables. However, a change request is planned to develop a new 'Database upgrade kit' in the future. See `CR42 <https://github.com/HabitatFramework/HLUTool/issues/67>`_ for details.)
+	.. note::
 
-Many lookup tables contain a 'sort_order' field that will determine the order that the values appear in any drop-down lists. **All** records in these tables must have a 'sort_order' value or they may not appear in the relevant drop-down lists.
+		* Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
+		* Lookup table values are relevant to the **whole** database system and hence any changes will affect **all** users of that database.
+		* **All** records in tables containing a 'sort_order' attribute must have a numerical value set or they may not appear in the relevant drop-down lists.
 
-.. note::
-
-	* Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
-	* Lookup table values are relevant to the **whole** database system and hence any changes will affect **all** users of that database.
-
-
-The following lookup tables can be updated to tailor local requirements:
+The following lookup tables should be updated to tailor local requirements:
 
 .. index::
 	single: Lookup Tables; Lut_Users
@@ -346,11 +446,11 @@ This table contains details of all the users that have editing capability with t
 	bulk_update
 		Determines whether the user has permissions to run a bulk update to change attributes for all selected records. Ticking this checkbox gives the user permission to run bulk updates.
 
-	.. caution::
-		Bulk update permission should only be assigned to **expert** users and should only be used with caution as mistakes can have major affects on the data.
-
 	sort_order
 		Determines the order user names would be displayed in any relevant drop-down. This field is not currently used (as there are no drop-down lists that display users.)
+
+	.. caution::
+		Bulk update permission should only be assigned to **expert** users and should only be used with caution as mistakes can have major affects on the data.
 
 .. [1] The 'user_id' of the current user is shown in the **Tools... --> About** window.
 
@@ -389,7 +489,7 @@ This table contains details of all the source datasets that can be referenced as
 .. index::
 	single: Lookup Tables; Lut_Process
 
-.. _lut_processes:
+.. _lut_process:
 
 lut_process
 -----------
@@ -406,35 +506,114 @@ This table contains details of all the processes that can be referenced as the a
 		Determines the order processes are displayed in the 'Process' drop-down list in the main window.
 
 
-.. seealso::
-	See :ref:`configuring_processes` for more information.
+.. index::
+	single: Lookup Tables; Lut_Reason
+
+.. _lut_reason:
+
+lut_reason
+----------
+
+This table contains details of all the reasons that can be referenced as the underlying explanation for applying updates with the HLU Tool.
+
+	code
+		A unique 3 character field for each source.
+
+	description
+		A brief description or name that will appear in the 'Reason' drop-down list in the main window.
+
+	sort_order
+		Determines the order processes are displayed in the 'Reason' drop-down list in the main window.
+
+
+.. seealso:
+	See :Ref:`configuring_luts` for more information on configuring lookup tables.
 
 
 .. index::
-	single: Lookup Tables; Lut_IHS_Habitats
+	single: Lookup Tables; Sort Order
+	single: Lookup Tables; Local Flags
 
-.. _lut_ihs_habitats:
+Local Flags & Sort Orders
+-------------------------
 
-lut_ihs_habitats
-----------------
-
-This table contains details of all the IHS Habitats that can be assigned to INCIDs using the HLU Tool and indicates which habitats are considered 'local' (and hence will appear in any drop-down lists).
-
-	code
-		[Read only]. The unique 8 character field for each IHS Habitat. **Do not edit this value.**
-
-	description
-		[Read only]. The brief description or name that appears in the 'IHS Habitat' drop-down list in the main window. **Do not edit this value.**
+Regardless of whether records in a lookup table are 'system' supplied records or not, many can be configured to indicate if they are applicable to an organisation. For example, many lookup tables contain a **sort_order** field that will determine the order that the values appear in any related drop-down lists. Some tables also have a **is_local** field that can be used to 'hide' values that are not applicable to the local area or should not be used by the organisation.
 
 	is_local
-		Indicates if the IHS Habitat can be found in the local area. -1 = True (is local), 0 = False (is not local).
+		Set to 'True' (minus 1) to include in drop-down lists, or 'False' (zero) to exclude from drop-down lists.
 
 	sort_order
-		Determines the order IHS Habitats are displayed in the 'IHS Habitat' drop-down list in the main window.
+		Set to a sequential, positive numeric whole number to indicate the order records should appear in drop-down lists. Alternatively all records can be set to zero to use the default sort order for that table.
+
+	.. note::
+
+		* Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
+		* Lookup table values are relevant to the **whole** database system and hence any changes will affect **all** users of that database.
+		* **All** records in tables containing a 'sort_order' attribute must have a numerical value set or they may not appear in the relevant drop-down lists.
+
+The following lookup tables can be updated to tailor their **is_local** and/or **sort_order** values:
+
+	.. tabularcolumns:: |L|L|C|C|
+
+	.. table:: Locally configurable lookup tables
+
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		|             Table              |                                    Description                                    | is_local | sort_order |
+		+================================+===================================================================================+==========+============+
+		| lut_ihs_habitat                | Contains all the IHS Habitats that can be assigned to INCIDs using                | x        | x          |
+		|                                | the 'Habitat' field on the IHS tab of the main window.                            |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_habitat_class              | Contains all of the Habitat Classifications that can be assigned to               | x        | x          |
+		|                                | sources using the 'Habitat Class' field on the Sources tab of the main window.    |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_habitat_type               | Contains all of the Habitat Types that can be assigned to sources                 | x        | x          |
+		|                                | using the 'Habitat Type' field on the Sources tab of the main window              |          |            |
+		|                                | (for the selected 'Habitat Class').                                               |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_ihs_complex                | Contains all the IHS Complex codes that can be assigned using the 'Complex'       |          | x          |
+		|                                | fields on the IHS table of the main window.                                       |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_ihs_formation              | Contains all the IHS Formation codes that can be assigned using the 'Formation'   |          | x          |
+		|                                | fields on the IHS table of the main window.                                       |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_ihs_management             | Contains all the IHS Management codes that can be assigned using the 'Management' |          | x          |
+		|                                | fields on the IHS table of the main window.                                       |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_ihs_matrix                 | Contains all the IHS Matrix codes that can be assigned using the 'Matrix'         |          | x          |
+		|                                | fields on the IHS table of the main window.                                       |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_bap_quality_determination  | Contains the BAP determination quality types that can be assigned to Priority     |          | x          |
+		|                                | Habitats and Potential Priority Habitats on the Details tab of the main window.   |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_bap_quality_interpretation | Contains the BAP interpretation quality types that can be assigned to Priority    |          | x          |
+		|                                | Habitats and Potential Priority Habitats on the Details tab of the main window.   |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_boundary_map               | Contains the list of map types that can be assigned to the 'Boundary Map' and     |          | x          |
+		|                                | 'Digitisation Map' fields on the Details tab of the main window.                  |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_importance                 | Contains the difference levels of Importance that can be assigned to Sources      |          | x          |
+		|                                | using the 'Boundary Imp.' and 'Habitat Imp.' fields on the Sources tab of the     |          |            |
+		|                                | main window.                                                                      |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_process                    | Contains details of all the processes that can be referenced in the 'Process'     |          | x          |
+		|                                | field of the main window to indicate the activity being undertaken when using     |          |            |
+		|                                | the HLU Tool. See :ref:`lut_process` for more details.                            |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_reason                     | Contains details of all the reasons that can be referenced in the 'Reason'        |          | x          |
+		|                                | field of the main window to indicate the activity being undertaken when using     |          |            |
+		|                                | the HLU Tool. See :ref:`lut_reason` for more details.                             |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_sources                    | Contains details of all the source datasets that can be referenced as a 'Source'  |          | x          |
+		|                                | on the Sources tab of the main window. See :ref:`lut_sources` for more details.   |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+		| lut_user                       | Contains details of all the users that have editing capability with the HLU Tool  |          | x          |
+		|                                | and indicates if they are also able to perform 'bulk' updates.                    |          |            |
+		|                                | See :ref:`lut_users` for more details.                                            |          |            |
+		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
 
 
-.. seealso::
-	See :ref:`configuring_habitats` for more information.
+.. seealso:
+	See :Ref:`configuring_luts` for more information on configuring lookup tables.
 
 
 .. raw:: latex
@@ -465,10 +644,10 @@ This table lists all the export 'formats' that can be used when exporting data.
 	export_name
 		The name which will be displayed in the 'Export Format' drop-down list.
 
-Once a new export format has been added to the 'exports' table the fields to be included in the export must be added to the 'export_fields' table.
+Once a new export format has been added to the 'exports' table the fields to be included in the export must be added to the 'exports_fields' table.
 
 .. index::
-	single: Export Tables; Export Fields
+	single: Export Tables; Exports Fields
 
 .. _exports_fields:
 
@@ -493,16 +672,34 @@ This table defines which fields are to be exported for each export format in the
 		The number of the column within the source table starting from 1. The export function does not require this column to be completed.
 
 	field_name
-		The name of the column in the exported GIS layer. [2]_
+		The name of the column in the exported GIS layer. The 'field_name' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
 
 	field_ordinal
 		Sets the order of the fields in the exported GIS layer.
 
 	fields_count
-		Allows users to determine the number of child records to be exported.
+		Allows users to set the number of child records to be exported.
+
+	fields_type
+		Allows users to set the data type of the field to be exported.
+
+	fields_length
+		Allows users to set the maximum length of text fields. Text input values longer than this length will be truncated during the export without warning.
+
+	fields_format
+		Allows users to determine the format of the exported field.
+
+		.. tabularcolumns:: |L|L|L|
+
+		.. table:: Valid Export Field Formats
+
+			+--------------+-----------------+------------+
+			| Field Format |   Description   |  Example   |
+			+==============+=================+============+
+			| D            | Single day date | 15/10/2010 |
+			+--------------+-----------------+------------+
 
 
-.. [2] The 'field_name' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
 
 .. note::
 	GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
@@ -539,9 +736,9 @@ Data Tables
 
 .. _figDDDT:
 
-.. figure:: ../images/diagrams/DatabaseDiagramDataTables.png
+.. figure:: ../diagrams/DatabaseDiagramDataTables.png
 	:align: center
-	:scale: 85
+	:scale: 90
 
 	Database Relationships - Data Tables
 
@@ -555,9 +752,9 @@ IHS Lookup Tables
 
 .. _figDDILT:
 
-.. figure:: ../images/diagrams/DatabaseDiagramIHSLookupTables.png
+.. figure:: ../diagrams/DatabaseDiagramIHSLookupTables.png
 	:align: center
-	:scale: 85
+	:scale: 90
 
 	Database Relationships - IHS Lookup Tables
 
@@ -571,7 +768,7 @@ BAP Tables
 
 .. _figDDBT:
 
-.. figure:: ../images/diagrams/DatabaseDiagramBAPTables.png
+.. figure:: ../diagrams/DatabaseDiagramBAPTables.png
 	:align: center
 	:scale: 75
 
@@ -587,9 +784,9 @@ Habitat Tables
 
 .. _figDDHaT:
 
-.. figure:: ../images/diagrams/DatabaseDiagramHabitatTables.png
+.. figure:: ../diagrams/DatabaseDiagramHabitatTables.png
 	:align: center
-	:scale: 80
+	:scale: 85
 
 	Database Relationships - Habitat Tables
 
@@ -603,9 +800,9 @@ Sources Tables
 
 .. _figDDST:
 
-.. figure:: ../images/diagrams/DatabaseDiagramSourcesTables.png
+.. figure:: ../diagrams/DatabaseDiagramSourcesTables.png
 	:align: center
-	:scale: 85
+	:scale: 90
 
 	Database Relationships - Sources Tables
 
@@ -619,9 +816,9 @@ History Tables
 
 .. _figDDHiT:
 
-.. figure:: ../images/diagrams/DatabaseDiagramHistoryTables.png
+.. figure:: ../diagrams/DatabaseDiagramHistoryTables.png
 	:align: center
-	:scale: 85
+	:scale: 90
 
 	Database Relationships - History Tables
 
@@ -635,7 +832,7 @@ Other Tables
 
 .. _figDDOT:
 
-.. figure:: ../images/diagrams/DatabaseDiagramOtherTables.png
+.. figure:: ../diagrams/DatabaseDiagramOtherTables.png
 	:align: center
 	:scale: 85
 

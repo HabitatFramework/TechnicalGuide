@@ -42,7 +42,7 @@ The following instructions describe how to link an Access database to a SQL Serv
 
 		.. _figALED:
 
-		.. figure:: ../images/figures/AccessLinkExternalDataTab.png
+		.. figure:: figures/AccessLinkExternalDataTab.png
 			:align: center
 			:scale: 90
 
@@ -57,7 +57,7 @@ The following instructions describe how to link an Access database to a SQL Serv
 
 		.. _figALODD:
 
-		.. figure:: ../images/figures/AccessLinkODBCDataDialog.png
+		.. figure:: figures/AccessLinkODBCDataDialog.png
 			:align: center
 			:scale: 85
 
@@ -71,7 +71,7 @@ The following instructions describe how to link an Access database to a SQL Serv
 
 		.. _figALSDSD:
 
-		.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
+		.. figure:: figures/AccessLinkSelectDataSourceDialog.png
 			:align: center
 			:scale: 85
 
@@ -88,7 +88,7 @@ The following instructions describe how to link an Access database to a SQL Serv
 
 		.. _figALSLTD:
 
-		.. figure:: ../images/figures/AccessLinkSelectTablesDialog.png
+		.. figure:: figures/AccessLinkSelectTablesDialog.png
 			:align: center
 			:scale: 85
 
@@ -109,7 +109,7 @@ The following instructions describe how to link an Access database to a SQL Serv
 
 		.. _figALATD:
 
-		.. figure:: ../images/figures/AccessLinkObjectsNavigationPane.png
+		.. figure:: figures/AccessLinkObjectsNavigationPane.png
 			:align: center
 			:scale: 85
 
@@ -140,7 +140,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		.. _figALSDD:
 
-		.. figure:: ../images/figures/AccessLinkSelectDriverDialog.png
+		.. figure:: figures/AccessLinkSelectDriverDialog.png
 			:align: center
 			:scale: 85
 
@@ -154,7 +154,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 	
 		.. _figALADD:
 
-		.. figure:: ../images/figures/AccessLinkAdvancedDSNDialog.png
+		.. figure:: figures/AccessLinkAdvancedDSNDialog.png
 			:align: center
 			:scale: 90
 
@@ -171,9 +171,9 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 	5. The file path and file name of the select DSN will be displayed (see :ref:`figALSDSD2` for example). Click :guilabel:`Next`.
 
-		.. _figALSDSD2:
+		.. _figALSDSND:
 
-		.. figure:: ../images/figures/AccessLinkSelectDataSourceDialog.png
+		.. figure:: figures/AccessLinkSelectDSNDialog.png
 			:align: center
 			:scale: 80
 
@@ -183,7 +183,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		.. _figALOSSD:
 
-		.. figure:: ../images/figures/AccessLinkSummaryODBCDialog.png
+		.. figure:: figures/AccessLinkSummaryODBCDialog.png
 			:align: center
 			:scale: 80
 
@@ -197,7 +197,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		.. _figALSSD:
 
-		.. figure:: ../images/figures/AccessLinkSelectServerDialog.png
+		.. figure:: figures/AccessLinkSelectServerDialog.png
 			:align: center
 			:scale: 85
 
@@ -214,7 +214,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		.. _figALAD:
 
-		.. figure:: ../images/figures/AccessLinkSQLAuthenticationDialog.png
+		.. figure:: figures/AccessLinkSQLAuthenticationDialog.png
 			:align: center
 			:scale: 85
 
@@ -224,7 +224,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		.. _figALSDBD:
 
-		.. figure:: ../images/figures/AccessLinkSelectDatabaseDialog.png
+		.. figure:: figures/AccessLinkSelectDatabaseDialog.png
 			:align: center
 			:scale: 85
 
@@ -240,7 +240,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 
 		.. _figALSD:
 
-		.. figure:: ../images/figures/AccessLinkSummaryDialog.png
+		.. figure:: figures/AccessLinkSummaryDialog.png
 			:align: center
 			:scale: 85
 
@@ -277,11 +277,11 @@ The following instructions describe how to update the links from an Access datab
 
 	2. Open the destination Access database in which you wish to create the linked tables.
 
-	3. On the 'Database Tools' menu click **Linked Table Manager** as shown in :ref:`figARED`.
+	3. On the 'Database Tools' menu click :guilabel:`Linked Table Manager` as shown in :ref:`figARED`.
 
 		.. _figARED:
 
-		.. figure:: ../images/figures/AccessRelinkExternalDataTab.png
+		.. figure:: figures/AccessRelinkExternalDataTab.png
 			:align: center
 			:scale: 90
 
@@ -291,7 +291,7 @@ The following instructions describe how to update the links from an Access datab
 
 		.. _figARTMD:
 
-		.. figure:: ../images/figures/AccessRelinkTableManagerDialog.png
+		.. figure:: figures/AccessRelinkTableManagerDialog.png
 			:align: center
 			:scale: 90
 
@@ -307,7 +307,7 @@ The following instructions describe how to update the links from an Access datab
 
 		.. _figARTMSD:
 
-		.. figure:: ../images/figures/AccessRelinkTableManagerSelectedDialog.png
+		.. figure:: figures/AccessRelinkTableManagerSelectedDialog.png
 			:align: center
 			:scale: 90
 
@@ -317,7 +317,7 @@ The following instructions describe how to update the links from an Access datab
 
 		.. _figARSD:
 
-		.. figure:: ../images/figures/AccessRelinkSuccessDialog.png
+		.. figure:: figures/AccessRelinkSuccessDialog.png
 			:align: center
 
 			Linked Table Manager Success dialog
