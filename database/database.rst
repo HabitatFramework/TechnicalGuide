@@ -17,6 +17,8 @@ The database consists of 3 types of tables as follows:
 Data Tables
 ===========
 
+Tables in the database prefixed by 'incid' are **data** tables and hence contain all the attribute data relating to the GIS features. The attributes have been separated into 8 tables to 'normalise' the data which reduces storage space, improves performance and provides greater flexibility.
+
 .. sidebar:: Key to Data Tables
 
 	1. incid
@@ -27,8 +29,6 @@ Data Tables
 	6. incid_bap
 	7. incid_sources
 	8. history
-
-Tables in the database prefixed by 'incid' are **data** tables and hence contain all the attribute data relating to the GIS features. The attributes have been separated into 8 tables to 'normalise' the data which reduces storage space, improves performance and provides greater flexibility.
 
 How the data tables relate to the fields in the user interface is demonstrated in the following figures:
 
@@ -67,6 +67,11 @@ How the data tables relate to the fields in the user interface is demonstrated i
 			:scale: 90
 
 			User Interface Sources Tab Fields
+
+
+.. raw:: latex
+
+	\newpage
 
 
 .. index::
@@ -553,63 +558,50 @@ Regardless of whether records in a lookup table are 'system' supplied records or
 
 The following lookup tables can be updated to tailor their **is_local** and/or **sort_order** values:
 
-	.. tabularcolumns:: |L|L|C|C|
+	lut_ihs_habitat
+		Contains all the IHS Habitats that can be assigned to INCIDs using the 'Habitat' field on the IHS tab of the main window.
 
-	.. table:: Locally configurable lookup tables
+	lut_habitat_class
+		Contains all of the Habitat Classifications that can be assigned to sources using the 'Habitat Class' field on the Sources tab of the main window.
 
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		|             Table              |                                    Description                                    | is_local | sort_order |
-		+================================+===================================================================================+==========+============+
-		| lut_ihs_habitat                | Contains all the IHS Habitats that can be assigned to INCIDs using                | x        | x          |
-		|                                | the 'Habitat' field on the IHS tab of the main window.                            |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_habitat_class              | Contains all of the Habitat Classifications that can be assigned to               | x        | x          |
-		|                                | sources using the 'Habitat Class' field on the Sources tab of the main window.    |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_habitat_type               | Contains all of the Habitat Types that can be assigned to sources                 | x        | x          |
-		|                                | using the 'Habitat Type' field on the Sources tab of the main window              |          |            |
-		|                                | (for the selected 'Habitat Class').                                               |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_ihs_complex                | Contains all the IHS Complex codes that can be assigned using the 'Complex'       |          | x          |
-		|                                | fields on the IHS table of the main window.                                       |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_ihs_formation              | Contains all the IHS Formation codes that can be assigned using the 'Formation'   |          | x          |
-		|                                | fields on the IHS table of the main window.                                       |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_ihs_management             | Contains all the IHS Management codes that can be assigned using the 'Management' |          | x          |
-		|                                | fields on the IHS table of the main window.                                       |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_ihs_matrix                 | Contains all the IHS Matrix codes that can be assigned using the 'Matrix'         |          | x          |
-		|                                | fields on the IHS table of the main window.                                       |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_bap_quality_determination  | Contains the BAP determination quality types that can be assigned to Priority     |          | x          |
-		|                                | Habitats and Potential Priority Habitats on the Details tab of the main window.   |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_bap_quality_interpretation | Contains the BAP interpretation quality types that can be assigned to Priority    |          | x          |
-		|                                | Habitats and Potential Priority Habitats on the Details tab of the main window.   |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_boundary_map               | Contains the list of map types that can be assigned to the 'Boundary Map' and     |          | x          |
-		|                                | 'Digitisation Map' fields on the Details tab of the main window.                  |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_importance                 | Contains the difference levels of Importance that can be assigned to Sources      |          | x          |
-		|                                | using the 'Boundary Imp.' and 'Habitat Imp.' fields on the Sources tab of the     |          |            |
-		|                                | main window.                                                                      |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_process                    | Contains details of all the processes that can be referenced in the 'Process'     |          | x          |
-		|                                | field of the main window to indicate the activity being undertaken when using     |          |            |
-		|                                | the HLU Tool. See :ref:`lut_process` for more details.                            |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_reason                     | Contains details of all the reasons that can be referenced in the 'Reason'        |          | x          |
-		|                                | field of the main window to indicate the activity being undertaken when using     |          |            |
-		|                                | the HLU Tool. See :ref:`lut_reason` for more details.                             |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_sources                    | Contains details of all the source datasets that can be referenced as a 'Source'  |          | x          |
-		|                                | on the Sources tab of the main window. See :ref:`lut_sources` for more details.   |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
-		| lut_user                       | Contains details of all the users that have editing capability with the HLU Tool  |          | x          |
-		|                                | and indicates if they are also able to perform 'bulk' updates.                    |          |            |
-		|                                | See :ref:`lut_users` for more details.                                            |          |            |
-		+--------------------------------+-----------------------------------------------------------------------------------+----------+------------+
+	lut_habitat_type
+		Contains all of the Habitat Types that can be assigned to sources using the 'Habitat Type' field on the Sources tab of the main window (for the selected 'Habitat Class').
+
+	lut_ihs_complex
+		Contains all the IHS Complex codes that can be assigned using the 'Complex' fields on the IHS table of the main window. **[sort_order only]**
+
+	lut_ihs_formation
+		Contains all the IHS Formation codes that can be assigned using the 'Formation' fields on the IHS table of the main window. **[sort_order only]**
+
+	lut_ihs_management
+		Contains all the IHS Management codes that can be assigned using the 'Management' fields on the IHS table of the main window. **[sort_order only]**
+		
+	lut_ihs_matrix
+		Contains all the IHS Matrix codes that can be assigned using the 'Matrix' fields on the IHS table of the main window. **[sort_order only]**
+	
+	lut_bap_quality_determination
+		Contains the BAP determination quality types that can be assigned to Priority Habitats and Potential Priority Habitats on the Details tab of the main window. **[sort_order only]**
+	
+	lut_bap_quality_interpretation
+		Contains the BAP interpretation quality types that can be assigned to Priority Habitats and Potential Priority Habitats on the Details tab of the main window. **[sort_order only]**
+	
+	lut_boundary_map
+		Contains the list of map types that can be assigned to the 'Boundary Map' and 'Digitisation Map' fields on the Details tab of the main window. **[sort_order only]**
+	
+	lut_importance
+		Contains the difference levels of Importance that can be assigned to Sources using the 'Boundary Imp.' and 'Habitat Imp.' fields on the Sources tab of the main window. **[sort_order only]**
+	
+	lut_process
+		Contains details of all the processes that can be referenced in the 'Process' field of the main window to indicate the activity being undertaken when using the HLU Tool. See :ref:`lut_process` for more details. **[sort_order only]**
+	
+	lut_reason
+		Contains details of all the reasons that can be referenced in the 'Reason' field of the main window to indicate the activity being undertaken when using the HLU Tool. See :ref:`lut_reason` for more details. **[sort_order only]**
+	
+	lut_sources
+		Contains details of all the source datasets that can be referenced as a 'Source' on the Sources tab of the main window. See :ref:`lut_sources` for more details. **[sort_order only]**
+	
+	lut_user
+		Contains details of all the users that have editing capability with the HLU Tool and indicates if they are also able to perform 'bulk' updates. See :ref:`lut_users` for more details. **[sort_order only]**
 
 
 .. seealso:
@@ -683,6 +675,26 @@ This table defines which fields are to be exported for each export format in the
 	fields_type
 		Allows users to set the data type of the field to be exported.
 
+		.. tabularcolumns:: |C|L|
+
+		.. table:: Valid Export Field Types
+
+			+------------+-------------------+------------------------------------------------------------+
+			| Field Type | Field Description |                          Comment                           |
+			+============+===================+============================================================+
+			|          3 | Integer           | Standard numbers with no decimal places.                   |
+			+------------+-------------------+------------------------------------------------------------+
+			|          6 | Single            | Short number with decimal places.                          |
+			+------------+-------------------+------------------------------------------------------------+
+			|          7 | Double            | Long number with decimal places.                           |
+			+------------+-------------------+------------------------------------------------------------+
+			|          8 | Date/Time         | Date & Time stamp.                                         |
+			+------------+-------------------+------------------------------------------------------------+
+			|         10 | Text              | Text field up to 254 characters long.                      |
+			+------------+-------------------+------------------------------------------------------------+
+			|         99 | AutoNumber        | Integer field that automatically increments with each row. |
+			+------------+-------------------+------------------------------------------------------------+
+
 	fields_length
 		Allows users to set the maximum length of text fields. Text input values longer than this length will be truncated during the export without warning.
 
@@ -696,7 +708,7 @@ This table defines which fields are to be exported for each export format in the
 			+--------------+-----------------+------------+
 			| Field Format |   Description   |  Example   |
 			+==============+=================+============+
-			| D            | Single day date | 15/10/2010 |
+			| Code         | Single day date | 15/10/2010 |
 			+--------------+-----------------+------------+
 
 
@@ -738,7 +750,7 @@ Data Tables
 
 .. figure:: ../diagrams/DatabaseDiagramDataTables.png
 	:align: center
-	:scale: 90
+	:scale: 85
 
 	Database Relationships - Data Tables
 
@@ -754,7 +766,7 @@ IHS Lookup Tables
 
 .. figure:: ../diagrams/DatabaseDiagramIHSLookupTables.png
 	:align: center
-	:scale: 90
+	:scale: 85
 
 	Database Relationships - IHS Lookup Tables
 
@@ -786,7 +798,7 @@ Habitat Tables
 
 .. figure:: ../diagrams/DatabaseDiagramHabitatTables.png
 	:align: center
-	:scale: 85
+	:scale: 80
 
 	Database Relationships - Habitat Tables
 
@@ -834,7 +846,7 @@ Other Tables
 
 .. figure:: ../diagrams/DatabaseDiagramOtherTables.png
 	:align: center
-	:scale: 85
+	:scale: 90
 
 	Database Relationships - Other Tables
 

@@ -250,7 +250,7 @@ Tables in the database that are prefixed by 'lut\_' are **lookup tables** and so
 
 	* Adding new users to enable edit capability.
 	* Adding new sources as reference datasets.
-	* Hiding 'non-local' habitats.
+	* Hiding 'non-local' habitats, habitat classes and habitat types.
 	* Changing the order that the values appear in drop-down lists.
 
 .. note::
