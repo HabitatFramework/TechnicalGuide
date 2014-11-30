@@ -675,7 +675,7 @@ This table defines which fields are to be exported for each export format in the
 	fields_type
 		Allows users to set the data type of the field to be exported.
 
-		.. tabularcolumns:: |C|L|
+		.. tabularcolumns:: |C|L|L|
 
 		.. table:: Valid Export Field Types
 
@@ -688,7 +688,7 @@ This table defines which fields are to be exported for each export format in the
 			+------------+-------------------+------------------------------------------------------------+
 			|          7 | Double            | Long number with decimal places.                           |
 			+------------+-------------------+------------------------------------------------------------+
-			|          8 | Date/Time         | Date & Time stamp.                                         |
+			|          8 | Date/Time         | Date and Time stamp.                                       |
 			+------------+-------------------+------------------------------------------------------------+
 			|         10 | Text              | Text field up to 254 characters long.                      |
 			+------------+-------------------+------------------------------------------------------------+
@@ -705,11 +705,15 @@ This table defines which fields are to be exported for each export format in the
 
 		.. table:: Valid Export Field Formats
 
-			+--------------+-----------------+------------+
-			| Field Format |   Description   |  Example   |
-			+==============+=================+============+
-			| Code         | Single day date | 15/10/2010 |
-			+--------------+-----------------+------------+
+			+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+			|   Field Format  |                                       Description                                       |                               Example                                |
+			+=================+=========================================================================================+======================================================================+
+			| Code (or blank) | Outputs only the raw 'code' value of the specified field.                               | 'GA0' for 'ihs_habitat' field in the 'incid' table.                  |
+			+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+			| Lookup          | Outputs the 'description' field value from the relevant lookup table.                   | 'Acid Grassland' from 'description' in the 'lut_ihs_habitats' table. |
+			+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+			| Both            | Outputs a concatenation of both the 'code' and 'description' values separated by ' : '. | 'GA0 : Acid Grassland' for 'ihs_habitat' field in the 'incid' table. |
+			+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
 
 
 
