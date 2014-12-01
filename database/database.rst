@@ -648,6 +648,10 @@ exports_fields
 
 This table defines which fields are to be exported for each export format in the 'exports' table. It also defines what the export fields will be called, the order they will appear in the new GIS layer and the number of occurrences of each field (where fields can appear in multiple table records.)
 
+.. note::
+	* GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
+	* Fields already in the active GIS layer (e.g. toid, toid_fragment_id, ihs_category, ihs_summary) are automatically included in the exported layer and hence should not be added to the exports_fields table.
+
 	export_field_id
 		A unique identifier for the field.
 
@@ -666,13 +670,16 @@ This table defines which fields are to be exported for each export format in the
 	field_name
 		The name of the column in the exported GIS layer. The 'field_name' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
 
+.. caution::
+	When exporting to an ArcGIS shapefile field names must be less than 10 characters or they will be truncated or renamed by ArcGIS.
+
 	field_ordinal
 		Sets the order of the fields in the exported GIS layer.
 
-	fields_count
-		Allows users to set the number of child records to be exported.
+	field_count
+		Allows users to set the number of child records to be exported. Fields from the incid table do not support field_count values as there is only ever one incid record for an incid.
 
-	fields_type
+	field_type
 		Allows users to set the data type of the field to be exported.
 
 		.. tabularcolumns:: |C|L|L|
@@ -695,30 +702,14 @@ This table defines which fields are to be exported for each export format in the
 			|         99 | AutoNumber        | Integer field that automatically increments with each row. |
 			+------------+-------------------+------------------------------------------------------------+
 
-	fields_length
+	field_length
 		Allows users to set the maximum length of text fields. Text input values longer than this length will be truncated during the export without warning.
 
-	fields_format
-		Allows users to determine the format of the exported field.
-
-		.. tabularcolumns:: |L|L|L|
-
-		.. table:: Valid Export Field Formats
-
-			+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-			|   Field Format  |                                       Description                                       |                               Example                                |
-			+=================+=========================================================================================+======================================================================+
-			| Code (or blank) | Outputs only the raw 'code' value of the specified field.                               | 'GA0' for 'ihs_habitat' field in the 'incid' table.                  |
-			+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-			| Lookup          | Outputs the 'description' field value from the relevant lookup table.                   | 'Acid Grassland' from 'description' in the 'lut_ihs_habitats' table. |
-			+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-			| Both            | Outputs a concatenation of both the 'code' and 'description' values separated by ' : '. | 'GA0 : Acid Grassland' for 'ihs_habitat' field in the 'incid' table. |
-			+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-
-
-
-.. note::
-	GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
+		.. note::
+			field_length is only used where the field_type is '10' (text), otherwise it is ignored.
+	
+	field_format
+		Allows users to determine the format of the exported field. See :ref:`export_field_formats` for more details on which export fields can be formatted and how to format them.
 
 
 .. seealso::

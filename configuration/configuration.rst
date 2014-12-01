@@ -446,3 +446,139 @@ The 'exports_fields' table shown in the figure :ref:`figDTEF` defines which fiel
 .. seealso::
 	See :ref:`export_tables` for more information.
 
+
+.. index::
+	single: Export Tables; Field Formats
+
+.. _export_field_formats:
+
+Field Formats
+-------------
+
+The format of some export fields can be modified in the output file.
+
+**Lookup related fields**
+
+The format of all fields that relate to a lookup 'lut_' table record can be modified using the following formats:
+
+	.. tabularcolumns:: |L|L|L|
+
+	.. table:: Valid Export Field Formats for fields with related lookup tables
+
+		+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+		|   Field Format  |                                       Description                                       |                               Example                                |
+		+=================+=========================================================================================+======================================================================+
+		| Code (or blank) | Outputs only the raw 'code' value of the specified field.                               | 'GA0' for 'ihs_habitat' field in the 'incid' table.                  |
+		+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+		| Lookup          | Outputs the 'description' field value from the relevant lookup table.                   | 'Acid Grassland' from 'description' in the 'lut_ihs_habitats' table. |
+		+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+		| Both            | Outputs a concatenation of both the 'code' and 'description' values separated by ' : '. | 'GA0 : Acid Grassland' for 'ihs_habitat' field in the 'incid' table. |
+		+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+
+.. note::
+	* The above 'field_format' values (i.e. 'Code,' 'Lookup' and 'Both') are **case sensitive**.
+	* The 'field_type' must be '10' (text) for the specified field.
+	* The 'field_length' must be long enough to contain the specified output format (up to 254 chars) or it will be truncated.
+
+**Source date fields**
+
+The format of the 'source_date_start' and 'source_date_end' fields in the 'incid_sources' table can be modified using the following field formats:
+
+	.. tabularcolumns:: |L|L|L|
+
+	.. table:: Valid Export Field Formats for source date fields
+
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		| Field Format |                                 Description                                 |                       Example                        |
+		+==============+=============================================================================+======================================================+
+		| blank        | Outputs the specified start **or** end date in the 'vague' format entered.  | 'Jul 2008' for start date or 'Nov 2009' for end date |
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		| 'v'          | Outputs **both** the start **and** end dates in the 'vague' format entered. | 'Jul 2008 - Nov 2009'.                               |
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		| 'dd/MM/yyyy' | Outputs the specified start or end date in the specified format.            | '01/07/2008' or '01/11/2009'.                        |
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		| 'mmm yyyy'   | Outputs the specified start or end date in the specified format.            | 'Jul 2008' or 'Nov 2009'.                            |
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		| 'yyyy'       | Outputs the specified start or end date in the specified format.            | '2008' or '2009'.                                    |
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		| 'D'          | Outputs the specified start or end date in the vague date type format.      | '01/07/2008' or '01/11/2009'.                        |
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		| 'O'          | Outputs the specified start or end date in the vague date type format.      | 'Jul 2008' or 'Nov 2009'.                            |
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		| 'Y'          | Outputs the specified start or end date in the vague date type format.      | '2008' or '2009'.                                    |
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		| 'P'          | Outputs the specified start or end date in the vague date type format.      | 'Summer 2008' or 'Autumn 2009'.                      |
+		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+
+.. note::
+	* The above 'field_format' values are **case sensitive**.
+	* The 'field format' value 'v' can be used with wither the 'source_date_start' or 'source_date_end' fields.
+	* The 'field_type' must be '10' (text) for the specified field.
+	* The 'field_length' must be long enough to contain the specified output format (up to 254 chars) or it will be truncated.
+
+.. caution::
+	* When using the field format **'dd/MM/yyyy'** the month portion **'MM'** must be in capitals (lower case 'mm' means 'minutes' not 'Months').
+	* Because of the way Source dates are stored in the database, dates entered as a single date (e.g. '01/07/2008' or '2008') rather than a date range (e.g. '01/07/2008 - 30/11/2009' or '- 2008') will always have a 'source_date_end' of 'Unknown' or blank (depending on the chosen output format).
+	* Vague dates (e.g. 'Jul 2008' or '2008') are stored based on the first day of the relevant period, so if output in a more precise format (e.g. entered as '2008' but output as 'mmm yyyy') the day and/or month output will be the first day/month of the relevant period.
+
+
+**Date field specifiers**
+
+The following table describes the valid date and time format specifiers.
+
+	.. tabularcolumns:: ||L|
+
+	.. table:: Valid date and time format specifiers
+
+		+-----------+------------------------------------------------+
+		| Specifier |                  Description                   |
+		+===========+================================================+
+		| "d"       | The day of the month, from 1 through 31.       |
+		+-----------+------------------------------------------------+
+		| "dd"      | The day of the month, from 01 through 31.      |
+		+-----------+------------------------------------------------+
+		| "ddd"     | The abbreviated name of the day of the week.   |
+		+-----------+------------------------------------------------+
+		| "dddd"    | The full name of the day of the week.          |
+		+-----------+------------------------------------------------+
+		| "h"       | The hour, using a 12-hour clock from 1 to 12.  |
+		+-----------+------------------------------------------------+
+		| "hh"      | The hour, using a 12-hour clock from 01 to 12. |
+		+-----------+------------------------------------------------+
+		| "H"       | The hour, using a 24-hour clock from 0 to 23.  |
+		+-----------+------------------------------------------------+
+		| "HH"      | The hour, using a 24-hour clock from 00 to 23. |
+		+-----------+------------------------------------------------+
+		| "m"       | The minute, from 0 through 59.                 |
+		+-----------+------------------------------------------------+
+		| "mm"      | The minute, from 00 through 59.                |
+		+-----------+------------------------------------------------+
+		| "M"       | The month, from 1 through 12.                  |
+		+-----------+------------------------------------------------+
+		| "MM"      | The month, from 01 through 12.                 |
+		+-----------+------------------------------------------------+
+		| "MMM"     | The abbreviated name of the month.             |
+		+-----------+------------------------------------------------+
+		| "MMMM"    | The full name of the month.                    |
+		+-----------+------------------------------------------------+
+		| "s"       | The second, from 0 through 59.                 |
+		+-----------+------------------------------------------------+
+		| "ss"      | The second, from 00 through 59.                |
+		+-----------+------------------------------------------------+
+		| "t"       | The first character of the AM/PM designator.   |
+		+-----------+------------------------------------------------+
+		| "tt"      | The AM/PM designator.                          |
+		+-----------+------------------------------------------------+
+		| "y"       | The year, from 0 to 99.                        |
+		+-----------+------------------------------------------------+
+		| "yy"      | The year, from 00 to 99.                       |
+		+-----------+------------------------------------------------+
+		| "yyyy"    | The year as a four-digit number.               |
+		+-----------+------------------------------------------------+
+		| ":"       | The time separator.                            |
+		+-----------+------------------------------------------------+
+		| "/"       | The date separator.                            |
+		+-----------+------------------------------------------------+
+		| space     | Date or time spacing character.                |
+		+-----------+------------------------------------------------+
+
