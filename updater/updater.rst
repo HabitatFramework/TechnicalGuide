@@ -1,8 +1,27 @@
 ****************
-Database Updates
+Database Updater
 ****************
 
 In order to apply structural and data changes to the HLU tool database you will need to use the HLU Tool Database Updater **HLUDbUpdater.exe**. The HLU Tool Database Updater provides an automated mechanism of applying changes to a target HLU Tool relational database. It will process one or more script files and execute all the SQL commands in the files.
+
+
+.. _database_updater_source_code:
+
+Source Code
+-----------
+The source code for this program is open source and can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater>.
+
+.. _database_updater_latest_release:
+
+Latest Release
+--------------
+The latest release of this program can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/releases>.
+
+.. _database_updater_latest_scripts:
+
+Latest Scripts
+--------------
+The latest scripts for this program can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/archive/scripts.zip>.
 
 
 System Requirements
@@ -50,26 +69,4 @@ To run the program:
 	
 .. tip::
 	If you have more than one target HLU tool database, copy the script files from the 'Scripts/Archive' folder back into the'Scripts' folder and run the program again - connecting to the next database to be updated.
-
-
-Components
-==========
-
-.. _database_updater_source_code:
-
-Source Code
------------
-The source code for this program is open source and can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater>.
-
-.. _database_updater_latest_release:
-
-Latest Release
---------------
-The latest release of this program can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/releases>.
-
-.. _database_updater_latest_scripts:
-
-Latest Scripts
---------------
-The latest scripts for this program can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/archive/scripts.zip>.
 

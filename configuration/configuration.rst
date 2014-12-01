@@ -246,7 +246,7 @@ To re-configure only the GIS connection, the GIS configuration information must 
 Configuring Lookup Tables
 =========================
 
-Tables in the database that are prefixed by 'lut' are **lookup tables** and some of these can be tailored to the requirements of each organisation. Examples of configuration include:
+Tables in the database that are prefixed by 'lut\_' are **lookup tables** and some of these can be tailored to the requirements of each organisation. Examples of configuration include:
 
 	* Adding new users to enable edit capability.
 	* Adding new sources as reference datasets.
@@ -458,22 +458,21 @@ Field Formats
 The format of some export fields can be modified in the output file.
 
 **Lookup related fields**
-
 The format of all fields that relate to a lookup 'lut\_' table record can be modified using the following formats:
 
 	.. tabularcolumns:: |L|L|L|
 
 	.. table:: Valid Export Field Formats for fields with related lookup tables
 
-		+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-		|   Field Format  |                                       Description                                       |                               Example                                |
-		+=================+=========================================================================================+======================================================================+
-		| Code (or blank) | Outputs only the raw 'code' value of the specified field.                               | 'GA0' for 'ihs_habitat' field in the 'incid' table.                  |
-		+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-		| Lookup          | Outputs the 'description' field value from the relevant lookup table.                   | 'Acid Grassland' from 'description' in the 'lut_ihs_habitats' table. |
-		+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-		| Both            | Outputs a concatenation of both the 'code' and 'description' values separated by ' : '. | 'GA0 : Acid Grassland' for 'ihs_habitat' field in the 'incid' table. |
-		+-----------------+-----------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+		+-----------------+--------------------------------------------------------------------------------+-------------------------+
+		|   Field Format  |                                  Description                                   |         Example         |
+		+=================+================================================================================+=========================+
+		| Code (or blank) | Outputs **only** the raw 'code' value of the specified field.                  | 'GA0'.                  |
+		+-----------------+--------------------------------------------------------------------------------+-------------------------+
+		| Lookup          | Outputs **only** the 'description' field value from the relevant lookup table. | 'Acid Grassland'.       |
+		+-----------------+--------------------------------------------------------------------------------+-------------------------+
+		| Both            | Outputs **both** the 'code' **and** 'description' values separated by ' : '.   | 'GA0 : Acid Grassland'. |
+		+-----------------+--------------------------------------------------------------------------------+-------------------------+
 
 .. note::
 	* The above 'field_format' values (i.e. 'Code,' 'Lookup' and 'Both') are **case sensitive**.
@@ -481,34 +480,33 @@ The format of all fields that relate to a lookup 'lut\_' table record can be mod
 	* The 'field_length' must be long enough to contain the specified output format (up to 254 chars) or it will be truncated.
 
 **Source date fields**
-
 The format of the 'source_date_start' and 'source_date_end' fields in the 'incid_sources' table can be modified using the following field formats:
 
 	.. tabularcolumns:: |L|L|L|
 
 	.. table:: Valid Export Field Formats for source date fields
 
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-		| Field Format |                                 Description                                 |                       Example                        |
-		+==============+=============================================================================+======================================================+
-		| blank        | Outputs the specified start **or** end date in the 'vague' format entered.  | 'Jul 2008' for start date or 'Nov 2009' for end date |
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-		| 'v'          | Outputs **both** the start **and** end dates in the 'vague' format entered. | 'Jul 2008 - Nov 2009'.                               |
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-		| 'dd/MM/yyyy' | Outputs the specified start or end date in the specified format.            | '01/07/2008' or '01/11/2009'.                        |
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-		| 'mmm yyyy'   | Outputs the specified start or end date in the specified format.            | 'Jul 2008' or 'Nov 2009'.                            |
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-		| 'yyyy'       | Outputs the specified start or end date in the specified format.            | '2008' or '2009'.                                    |
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-		| 'D'          | Outputs the specified start or end date in the vague date type format.      | '01/07/2008' or '01/11/2009'.                        |
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-		| 'O'          | Outputs the specified start or end date in the vague date type format.      | 'Jul 2008' or 'Nov 2009'.                            |
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-		| 'Y'          | Outputs the specified start or end date in the vague date type format.      | '2008' or '2009'.                                    |
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
-		| 'P'          | Outputs the specified start or end date in the vague date type format.      | 'Summer 2008' or 'Autumn 2009'.                      |
-		+--------------+-----------------------------------------------------------------------------+------------------------------------------------------+
+		+--------------+---------------------------------------------------------------------+---------------------------------+
+		| Field Format |                             Description                             |             Example             |
+		+==============+=====================================================================+=================================+
+		| blank        | Outputs the start **or** end date in the format entered.            | 'Jul 2008' or 'Nov 2009'        |
+		+--------------+---------------------------------------------------------------------+---------------------------------+
+		| 'v'          | Outputs **both** the start **and** end dates in the format entered. | 'Jul 2008 - Nov 2009'.          |
+		+--------------+---------------------------------------------------------------------+---------------------------------+
+		| 'dd/MM/yyyy' | Outputs the start or end date as 'day/month/year'.                  | '01/07/2008' or '01/11/2009'.   |
+		+--------------+---------------------------------------------------------------------+---------------------------------+
+		| 'mmm yyyy'   | Outputs the start or end date as 'month year'.                      | 'Jul 2008' or 'Nov 2009'.       |
+		+--------------+---------------------------------------------------------------------+---------------------------------+
+		| 'yyyy'       | Outputs the start or end date as 'year' only.                       | '2008' or '2009'.               |
+		+--------------+---------------------------------------------------------------------+---------------------------------+
+		| 'D'          | Outputs the start or end date in the vague 'day' format.            | '01/07/2008' or '01/11/2009'.   |
+		+--------------+---------------------------------------------------------------------+---------------------------------+
+		| 'O'          | Outputs the start or end date in the vague 'month year' format.     | 'Jul 2008' or 'Nov 2009'.       |
+		+--------------+---------------------------------------------------------------------+---------------------------------+
+		| 'Y'          | Outputs the start or end date in the vague 'year' format.           | '2008' or '2009'.               |
+		+--------------+---------------------------------------------------------------------+---------------------------------+
+		| 'P'          | Outputs the start or end date in the vague 'season year' format.    | 'Summer 2008' or 'Autumn 2009'. |
+		+--------------+---------------------------------------------------------------------+---------------------------------+
 
 .. note::
 	* The above 'field_format' values are **case sensitive**.
@@ -523,7 +521,6 @@ The format of the 'source_date_start' and 'source_date_end' fields in the 'incid
 
 
 **Date field specifiers**
-
 The following table describes the valid date and time format specifiers.
 
 	.. tabularcolumns:: |L|L|

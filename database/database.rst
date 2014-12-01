@@ -646,11 +646,11 @@ Once a new export format has been added to the 'exports' table the fields to be 
 exports_fields
 --------------
 
-This table defines which fields are to be exported for each export format in the 'exports' table. It also defines what the export fields will be called, the order they will appear in the new GIS layer and the number of occurrences of each field (where fields can appear in multiple table records.)
+	.. sidebar::
+		* GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
+		* Fields already in the active GIS layer (e.g. toid, toid_fragment_id, ihs_category, ihs_summary) are automatically included in the exported layer and hence should not be added to the exports_fields table.
 
-.. note::
-	* GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
-	* Fields already in the active GIS layer (e.g. toid, toid_fragment_id, ihs_category, ihs_summary) are automatically included in the exported layer and hence should not be added to the exports_fields table.
+This table defines which fields are to be exported for each export format in the 'exports' table. It also defines what the export fields will be called, the order they will appear in the new GIS layer and the number of occurrences of each field (where fields can appear in multiple table records.)
 
 	export_field_id
 		A unique identifier for the field.
@@ -670,8 +670,8 @@ This table defines which fields are to be exported for each export format in the
 	field_name
 		The name of the column in the exported GIS layer. The 'field_name' must be a valid ArcGIS/MapInfo column name (i.e. containing no spaces or special characters.)
 
-.. caution::
-	When exporting to an ArcGIS shapefile field names must be less than 10 characters or they will be truncated or renamed by ArcGIS.
+	.. caution::
+		When exporting to an ArcGIS shapefile field names must be less than 10 characters or they will be truncated or renamed by ArcGIS.
 
 	field_ordinal
 		Sets the order of the fields in the exported GIS layer.
@@ -689,7 +689,7 @@ This table defines which fields are to be exported for each export format in the
 			+------------+-------------------+------------------------------------------------------------+
 			| Field Type | Field Description |                          Comment                           |
 			+============+===================+============================================================+
-			|          3 | Integer           | Standard numbers with no decimal places.                   |
+			|          3 | Integer           | Standard number with no decimal places.                    |
 			+------------+-------------------+------------------------------------------------------------+
 			|          6 | Single            | Short number with decimal places.                          |
 			+------------+-------------------+------------------------------------------------------------+
