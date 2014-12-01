@@ -11,17 +11,17 @@ In order to apply structural and data changes to the HLU tool database you will 
 .. _database_updater_source_code:
 
 **Source Code**
-The source code for this program is open source and can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater>.
+	The source code for this program is open source and can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater>.
 
 .. _database_updater_latest_release:
 
 **Latest Release**
-The latest release of this program can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/releases>.
+	The latest release of this program can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/releases>.
 
 .. _database_updater_latest_scripts:
 
 **Latest Scripts**
-The latest scripts for this program can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/archive/scripts.zip>.
+	The latest scripts for this program can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/archive/scripts.zip>.
 
 
 .. index::
