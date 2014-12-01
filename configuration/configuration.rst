@@ -246,7 +246,7 @@ To re-configure only the GIS connection, the GIS configuration information must 
 Configuring Lookup Tables
 =========================
 
-Tables in the database that are prefixed by 'lut\_' are **lookup tables** and some of these can be tailored to the requirements of each organisation. Examples of configuration include:
+Tables in the database that are prefixed by 'lut' are **lookup tables** and some of these can be tailored to the requirements of each organisation. Examples of configuration include:
 
 	* Adding new users to enable edit capability.
 	* Adding new sources as reference datasets.
@@ -459,7 +459,7 @@ The format of some export fields can be modified in the output file.
 
 **Lookup related fields**
 
-The format of all fields that relate to a lookup 'lut_' table record can be modified using the following formats:
+The format of all fields that relate to a lookup 'lut\_' table record can be modified using the following formats:
 
 	.. tabularcolumns:: |L|L|L|
 
@@ -526,7 +526,7 @@ The format of the 'source_date_start' and 'source_date_end' fields in the 'incid
 
 The following table describes the valid date and time format specifiers.
 
-	.. tabularcolumns:: ||L|
+	.. tabularcolumns:: |L|L|
 
 	.. table:: Valid date and time format specifiers
 
