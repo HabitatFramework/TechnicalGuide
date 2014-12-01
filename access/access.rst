@@ -1,4 +1,3 @@
-
 ****************************
 Linking Access to SQL Server
 ****************************
@@ -16,7 +15,7 @@ Many users will be more familiar with Access and linking Access to SQL Server in
 	\newpage
 
 .. index::
-	single: Linking to SQL
+	single: Linking Access to SQL
 
 .. _new_link:
 
@@ -121,7 +120,7 @@ The following instructions describe how to link an Access database to a SQL Serv
 	\newpage
 
 .. index::
-	single: Linking to SQL; Creating a DSN
+	single: Linking Access to SQL; Creating a DSN
 
 .. _create_dsn:
 
@@ -258,7 +257,7 @@ The following instructions describe how to create a new .dsn file for the HLU To
 	\newpage
 
 .. index::
-	single: Linking to SQL; Updating Linked Tables
+	single: Linking Access to SQL; Updating Linked Tables
 
 .. _update_link:
 

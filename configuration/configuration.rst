@@ -402,6 +402,7 @@ IHS Habitats can be flagged as **local** in the 'lut_ihs_habitat` table. The for
 
 .. index::
 	single: Configuration; Exports
+	single: Exports; Export Formats
 
 .. _configuring_exports:
 
@@ -423,8 +424,9 @@ Export formats can be added or removed in the 'exports' table shown in the figur
 
 Once a new export format has been added to the 'exports' table the fields to be included in the export must be added to the 'exports_fields' table.
 
+
 .. index::
-	single: Export Tables; Exports Fields
+	single: Exports; Export Fields
 
 Adding fields to an export format
 ---------------------------------
@@ -448,7 +450,7 @@ The 'exports_fields' table shown in the figure :ref:`figDTEF` defines which fiel
 
 
 .. index::
-	single: Export Tables; Field Formats
+	single: Exports; Field Formats
 
 .. _export_field_formats:
 

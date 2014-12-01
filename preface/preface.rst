@@ -35,6 +35,8 @@ This Preface explains a little about the HLU Tool, the community of people who d
 
 :doc:`../database/database` outlines the database structure and how to adapt the data for local requirements.
 
+:doc:`../updater/updater` describes the mechanism for apply updates to the database structure and contents.
+
 :doc:`../optimisation/optimisation` introduces tips for optimising the performance of the tool.
 
 

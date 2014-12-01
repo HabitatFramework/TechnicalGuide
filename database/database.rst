@@ -465,7 +465,7 @@ This table contains details of all the users that have editing capability with t
 
 
 .. index::
-	single: Lookup Tables Lut_Sources
+	single: Lookup Tables; Lut_Sources
 
 .. _lut_sources:
 
@@ -621,7 +621,7 @@ Tables in the database prefixed by 'export' are **export** tables and are used t
 
 
 .. index::
-	single: Export Tables; Exports
+	single: Export Tables; exports
 
 .. _exports:
 
@@ -639,7 +639,7 @@ This table lists all the export 'formats' that can be used when exporting data.
 Once a new export format has been added to the 'exports' table the fields to be included in the export must be added to the 'exports_fields' table.
 
 .. index::
-	single: Export Tables; Exports Fields
+	single: Export Tables; exports_fields
 
 .. _exports_fields:
 

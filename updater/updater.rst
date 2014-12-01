@@ -2,6 +2,9 @@
 Database Updater
 ****************
 
+.. index::
+	single: Database Updater
+
 In order to apply structural and data changes to the HLU tool database you will need to use the HLU Tool Database Updater **HLUDbUpdater.exe**. The HLU Tool Database Updater provides an automated mechanism of applying changes to a target HLU Tool relational database. It will process one or more script files and execute all the SQL commands in the files.
 
 
@@ -24,6 +27,9 @@ Latest Scripts
 The latest scripts for this program can be downloaded from <https://github.com/HabitatFramework/HLUTool-DatabaseUpdater/archive/scripts.zip>.
 
 
+.. index::
+	single: Database Updater; Requirements
+
 System Requirements
 ===================
 
@@ -45,9 +51,7 @@ Software
 
 
 .. index::
-	single: Database Updates
-
-.. _database_updater:
+	single: Database Updater; Instructions
 
 Instructions
 ============
