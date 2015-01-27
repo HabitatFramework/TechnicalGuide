@@ -646,7 +646,8 @@ Once a new export format has been added to the 'exports' table the fields to be 
 exports_fields
 --------------
 
-.. sidebar::
+.. sidebar:: Excluded Fields
+
 	* GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
 	* Fields already in the active GIS layer (e.g. toid, toid_fragment_id, ihs_category, ihs_summary) are automatically included in the exported layer and hence should not be added to the exports_fields table.
 
