@@ -2,8 +2,6 @@
 Preface
 *******
 
-.. sectionauthor:: Andy Foy <andy@andyfoyconsulting.co.uk>
-
 The most up to date version of this documentation can be found in **html** and **PDF** form on `ReadTheDocs <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 Recommended Knowledge
@@ -41,7 +39,7 @@ This Preface explains a little about the HLU Tool, the community of people who d
 
 :doc:`../optimisation/optimisation` introduces tips for optimising the performance of the tool.
 
-:doc:`../license/license` contains a copy of the GNU Free Documentation License v1.3 covering this guide.
+:doc:`../appendix/appendix` contains a copy of the GNU Free Documentation License v1.3 covering this guide.
 
 
 .. index::

@@ -3,6 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+::
+
+   Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software
+   Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts.  A copy of the license is included in the section entitled :doc:`../license/license`.
+
+.. raw:: latex
+
+   \newpage
+
 Contents
 ========
 
@@ -23,7 +32,7 @@ Contents
    database/database
    updater/updater
    optimisation/optimisation
-   license/license
+   appendix/appendix
 
 
 .. only:: html
@@ -34,19 +43,7 @@ Contents
    * :ref:`genindex`
 
 
-.. raw:: latex
+.. only:: html
 
-   \newpage
-
-::
-
-   Permission is granted to copy, distribute and/or modify this
-   document under the terms of the GNU Free Documentation License,
-   Version 1.3 or any later version published by the Free Software
-   Foundation; with no Invariant Sections, no Front-Cover Texts and
-   no Back-Cover Texts.  A copy of the license is included in the
-   section entitled :doc:`../license/license`.
-
-:Author:
-   Andy Foy [`Andy Foy Consulting <https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile>`_]
+   **Author:** Andy Foy [`Andy Foy Consulting <http://uk.linkedin.com/in/andyfoyconsulting>`_]
 
