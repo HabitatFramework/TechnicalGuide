@@ -2,12 +2,12 @@
 Linking Access to SQL Server
 ****************************
 
-If your HLU Tool is configured to use SQL Server but some users don't have access to SQL Server's Management Studio (SSMS), or aren't familiar with using SSMS, then one solution is to create an Access database front-end and link it to the HLU Tool database in SQL Server.
+Using SQL Server as the relational database system for the HLU Tool will provide performance, reliability and volume benefits over Microsoft Access. But if some of the users don't have authority to use SQL Server's Management Studio (SSMS), or aren't familiar with using SSMS, then one solution is to create an Access database front-end and link it to the HLU Tool database in SQL Server.
 
-Many users will be more familiar with Access and linking Access to SQL Server in this way allows users to view and edit the HLU Tool data without any risk of altering the database structure. Using Access as a front-end to the database in this way allows users to create and share Access queries, forms and reports specific to their needs.
+Many users will be more familiar with Access, so linking Access to SQL Server in this way allows users to view and edit the HLU Tool data without needing authority to use SSMS and without any risk of altering the database structure or settings. Using Access as a front-end to the database in this way also allows users to create and share Access queries, forms and reports specific to their needs.
 
 .. note::
-	Database administrators need to ensure that users of the Access database have the necessary permissions to view, add and edit the target SQL Server database.
+	Database administrators need to ensure that users of the Access database have the necessary permissions to view, add and edit the data tables on the target SQL Server database.
 
 
 .. raw:: latex
