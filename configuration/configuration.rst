@@ -24,9 +24,7 @@ The first time the GIS tool is used you will need to configure the database and 
 Database Connection
 ===================
 
-.. sidebar:: Which Database to use?
-
-	In principle the HLU Tool will support connections with multiple relational database systems including SQL Server, Oracle, PostgreSQL and Microsoft Access, although the connections with PostgreSQL and Oracle have not been tested. It is recommended that the database system used is SQL Server because it provides performance, reliability and volume benefits over Microsoft Access. Because PostgreSQL and Oracle use a client/server, as does SQL Server, they will provide similar benefits over Microsoft Access but this has not been tested with the HLU Tool.
+In principle the HLU Tool will support connections with multiple relational database systems including SQL Server, Oracle, PostgreSQL and Microsoft Access, although the connections with PostgreSQL and Oracle have not been tested. It is recommended that the database system used is SQL Server because it provides performance, reliability and volume benefits over Microsoft Access. Because PostgreSQL and Oracle use a client/server, as does SQL Server, they will provide similar benefits over Microsoft Access but this has not been tested with the HLU Tool.
 
 To configure the database connection:
 
@@ -83,8 +81,8 @@ To connect the HLU Tool to a Microsoft Access database containing the HLU data:
 	4. Select the relevant OLE DB Provider.
 	   
 		.. tip::
-			* For **.MDB** database types choose **'Microsoft Jet 4.0 OLE DB Provider'**.
-			* For **.ACCDB** database types choose **'Microsoft Office 12.0 Access Database Engine OLE DB Provider'**.
+			* For **.MDB** databases choose **'Microsoft Jet 4.0 OLE DB Provider'**.
+			* For **.ACCDB** databases choose **'Microsoft Office 12.0 Access Database Engine OLE DB Provider'**.
 
 
 	5. Click :guilabel:`Next >>` to display the 'Connection' tab of the 'Data Link Properties' dialog as shown in the figure :ref:`figDLPCD`.

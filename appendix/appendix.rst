@@ -1,6 +1,6 @@
-*******
-License
-*******
+********
+Appendix
+********
 
 GNU Free Documentation License
 ==============================
