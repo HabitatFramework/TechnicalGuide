@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'HLUGISTool'
-copyright = u'2011 HBIC, 2013-14 TVERC, 2014 SxBRC'
+copyright = u'2011 HBIC, 2013-14 TVERC, 2014-15 SxBRC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -119,7 +119,7 @@ html_theme = 'default'
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_short_title = 'HLU Tool Technical Guide'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -215,10 +215,10 @@ latex_logo = 'icons/Logo.png'
 #latex_use_parts = False
 
 # If true, show page references after internal links.
-#latex_show_pagerefs = False
+latex_show_pagerefs = True
 
 # If true, show URL addresses after external links.
-#latex_show_urls = False
+latex_show_urls = True
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
