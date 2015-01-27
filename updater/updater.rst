@@ -55,8 +55,8 @@ The program does not need to be installed - it can be run as a standalone progra
 
 To run the program:
 
-	* Download and unpack the latest .zip release file (see :ref:`database_updater_latest_release`).
-	* Download the latest scripts from GitHub (see :ref:`database_updater_latest_scripts`).
+	* Download and unpack the latest .zip release file (see :ref:`Latest Release <database_updater_latest_release>`).
+	* Download the latest scripts from GitHub (see :ref:`Latest Scripts <database_updater_latest_scripts>`).
 	* Ensure that any scripts to be processed are placed in the 'Scripts' folder directly under the program path.
 	* Double-click the program to start it.
 	* Click :guilabel:`Connect` to connect to the target database to be updated.

@@ -4,16 +4,15 @@ Configuration
 
 The first time the GIS tool is used you will need to configure the database and GIS connection details.  Configuration settings are user specific so every user will have to set the database and GIS connection details before they can use the tool.
 
-.. tip::
-	The connection details, together will all the other user options configurable through the tool's 'Options' user interface, are stored in a **user.config** file within the user's windows profile.
+The connection details, together will all the other user options configurable through the tool's 'Options' user interface, are stored in a **user.config** file within the user's windows profile.
 
-	In Windows 7 the user.config file can be found in:
+In Windows 7 the user.config file can be found in:
 
-		``C:\Users\*<username>*\AppData\Roaming\HLU\*<appname>_<eid>_<hash>*\*<version>*\user.config``
+``C:\Users\<username>\AppData\Roaming\HLU\<appname>_<eid>_<hash>\<ver>``
 
-	For example:
+For example:
 
-		``C:\Users\Andy\AppData\Roaming\HLU\HluGisTool.exe_Url_lm5wjls4ajbe40rbxsgduz3nv1mqy1n0\2.3.3.0``
+``C:\Users\Andy\AppData\Roaming\HLU\HluGisTool.exe_Url_lm5wjls4ajbe40rbxsgduz3nv1mqy1n0\2.3.3.0``
 
 
 .. index::
@@ -24,7 +23,9 @@ The first time the GIS tool is used you will need to configure the database and 
 Database Connection
 ===================
 
-In principle the HLU Tool will support connections with multiple relational database systems including SQL Server, Oracle, PostgreSQL and Microsoft Access, although the connections with PostgreSQL and Oracle have not been tested. It is recommended that the database system used is SQL Server because it provides performance, reliability and volume benefits over Microsoft Access. Because PostgreSQL and Oracle use a client/server, as does SQL Server, they will provide similar benefits over Microsoft Access but this has not been tested with the HLU Tool.
+In principle the HLU Tool will support connections with multiple relational database systems including SQL Server, Oracle, PostgreSQL and Microsoft Access, although the connections with PostgreSQL and Oracle have not been tested.
+
+It is recommended that the database system used is SQL Server because it provides performance, reliability and volume benefits over Microsoft Access. Because PostgreSQL and Oracle use a client/server, as does SQL Server, they will provide similar benefits over Microsoft Access but this has not been tested with the HLU Tool.
 
 To configure the database connection:
 

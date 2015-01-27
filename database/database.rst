@@ -422,7 +422,7 @@ Lookup Tables
 
 Tables in the database prefixed by 'lut\_' are **lookup** tables and are used in many drop-down lists in the user interfaces to restrict choices to only valid or appropriate values for the organisation.
 
-Some of the lookup tables contain records and settings that are generic to all HLU Tool installations and hence should be considered as 'system' records (indicated by the **system_supplied** attribute set to 'True' (minus one). These records are configured centrally and updates are applied to HLU Tool installations using the HLUDbUpdater.exe tool (see :ref:`database_updater` for more details). The remaining lookup tables can be configured entirely for a given HLU Tool installation to tailor them to the specific requirements of each organisation.
+Some of the lookup tables contain records and settings that are generic to all HLU Tool installations and hence should be considered as 'system' records (indicated by the **system_supplied** attribute set to 'True' (minus one). These records are configured centrally and updates are applied to HLU Tool installations using the HLUDbUpdater.exe tool (see :doc:`../updater/updater` for more details). The remaining lookup tables can be configured entirely for a given HLU Tool installation to tailor them to the specific requirements of each organisation.
 
 	.. note::
 
@@ -646,9 +646,9 @@ Once a new export format has been added to the 'exports' table the fields to be 
 exports_fields
 --------------
 
-	.. sidebar::
-		* GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
-		* Fields already in the active GIS layer (e.g. toid, toid_fragment_id, ihs_category, ihs_summary) are automatically included in the exported layer and hence should not be added to the exports_fields table.
+.. sidebar::
+	* GIS controlled fields such as obj, shape, perimeter, area, x, y, etc. should not be included. These fields will be automatically added to the exported layer.
+	* Fields already in the active GIS layer (e.g. toid, toid_fragment_id, ihs_category, ihs_summary) are automatically included in the exported layer and hence should not be added to the exports_fields table.
 
 This table defines which fields are to be exported for each export format in the 'exports' table. It also defines what the export fields will be called, the order they will appear in the new GIS layer and the number of occurrences of each field (where fields can appear in multiple table records.)
 
