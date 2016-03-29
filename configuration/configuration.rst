@@ -276,11 +276,12 @@ Tables in the database that are prefixed by 'lut\_' are **lookup tables** and so
 
 	* Adding new users to enable edit capability.
 	* Adding new sources as reference datasets.
+	* Adding new legacy habitats.
 	* Hiding 'non-local' habitats, habitat classes and habitat types.
 	* Changing the order that the values appear in drop-down lists.
 
 .. note::
-	Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes to take effect.
+	Changes to the lookup tables won't take effect for HLU Tool instances that are running. The HLU Tool will need to be closed and re-started before any lookup table changes take effect.
 
 .. seealso::
 	See :ref:`lookup_tables` for more information on lookup tables.
@@ -420,6 +421,30 @@ IHS Habitats can be flagged as **local** in the 'lut_ihs_habitat` table. The for
 
 .. note::
 	Only IHS Habitats flagged as **local** will appear in the 'IHS Habitat' drop-down list in the main window. This enables habitats that are not found in the local area to be hidden to avoid being selected in error (e.g. coastal habitats in land-locked counties.)
+
+
+
+.. index::
+	single: Configuration; Legacy Habitat
+
+.. _configuring_legacy_habitat:
+
+Configuring Legacy Habitat
+--------------------------
+
+Legacy habitats can be configured in the 'lut_legacy_habitat` table. The format of the table is shown in the figure :ref:`figDTLLH`.
+
+.. _figDTLLH:
+
+.. figure:: figures/DatabaseTableLutLegacyHabitat.png
+	:align: center
+
+	Format of the lut_legacy_habitat table
+
+
+.. note::
+	Existing legacy habitat records cannot be removed from the 'lut_legacy_habitat' table if they are referenced by any of the data records (i.e. if they have been used in any incid data records). This is because data integrity must be retained.
+
 
 
 .. raw:: latex
