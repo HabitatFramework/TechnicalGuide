@@ -314,6 +314,10 @@ New users of the HLU Tool must be added to the 'lut_user' table if they wish to 
 	Bulk update permission should only be assigned to **expert** users and should only be used with caution as mistakes can have major affects on the data.
 
 
+.. raw:: latex
+
+	\newpage
+
 .. index::
 	single: Configuration; Sources
 
@@ -335,6 +339,11 @@ Additional sources can be added to the 'lut_sources' table . The format of the t
 .. note::
 	Existing source records cannot be removed from the 'lut_sources' table if they are referenced by any of the data records (i.e. if they have been used in any incid data records). This is because data integrity must be retained.
 
+
+.. raw:: latex
+
+	\newpage
+
 .. index::
 	single: Configuration; Processes
 
@@ -352,6 +361,10 @@ New processes can be added to the 'lut_process' table. The format of the table i
 
 	Format of the lut_process table
 
+
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Configuration; Habitat Class
@@ -371,11 +384,15 @@ Habitat Classes can be flagged as **local** or not in the 'lut_habitat_class` ta
 	Format of the lut_habitat_class table
 
 
-Setting the **local** flag of a Habitat Class to 'False' (zero) in the 'lut_habitat_class' table will stop it appearing in the 'Habitat Class' drop-down list in the IHS tab of the main window and in the 'Habitat Class' drop-down list in the Sources tab. This enables entire habitat classes that are not used by the organisation to be hidden to keep the drop-down list as short as possible.
+Setting the **local** flag of a Habitat Class to 'False' (zero) in the 'lut_habitat_class' table will stop it appearing in the 'Habitat Class' drop-down list in the Habitats tab of the main window and in the 'Habitat Class' drop-down list in the Sources tab. This enables entire habitat classes that are not used by the organisation to be hidden to keep the drop-down list as short as possible.
 
 .. note::
-	Only Habitat Classes that are indirectly referenced by records in the 'lut_habitat_type_ihs_habitat' translation table (by referencing one or more **code_habitat_type** values that relate to a **habitat_class_code** in the 'lut_habitat_types' table and subsequently a Habitat Class **code** in the 'lut_habitat_class' table) will appear in the 'Habitat Class' drop-down list in the IHS tab of the main window, even if the **is_local** flag in the 'lut_habitat_type' table is set to 'True' (minus one). This is because the 'lut_habitat_type_ihs_habitat' table controls the cross-reference between different Habitat Classes/Types and IHS Habitats.
+	Only Habitat Classes that are indirectly referenced by records in the 'lut_habitat_type_ihs_habitat' translation table (by referencing one or more **code_habitat_type** values that relate to a **habitat_class_code** in the 'lut_habitat_types' table and subsequently a Habitat Class **code** in the 'lut_habitat_class' table) will appear in the 'Habitat Class' drop-down list in the Habitats tab of the main window, even if the **is_local** flag in the 'lut_habitat_type' table is set to 'True' (minus one). This is because the 'lut_habitat_type_ihs_habitat' table controls the cross-reference between different Habitat Classes/Types and IHS Habitats.
 
+
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Configuration; Habitat Type
@@ -395,11 +412,15 @@ Habitat Types can be flagged as **local** in the 'lut_habitat_type` table. The f
 	Format of the lut_habitat_type table
 
 
-Setting the **local** flag of a Habitat Type to 'False' (zero) in the 'lut_habitat_type' table will stop it appearing in the 'Habitat Type' drop-down list in the IHS tab of the main window and in the 'Habitat Type' drop-down list in the Sources tab. This enables specific habitat types that are not used by the organisation, or are not found in the local area, to be hidden to keep the drop-down list as short as possible.
+Setting the **local** flag of a Habitat Type to 'False' (zero) in the 'lut_habitat_type' table will stop it appearing in the 'Habitat Type' drop-down list in the Habitats tab of the main window and in the 'Habitat Type' drop-down list in the Sources tab. This enables specific habitat types that are not used by the organisation, or are not found in the local area, to be hidden to keep the drop-down list as short as possible.
 
 .. note::
-	Only Habitat Types that are directly referenced by records in the 'lut_habitat_type_ihs_habitat' translation table (by referencing one or more **code_habitat_type** values that relate to a Habitat Type **code** in the 'lut_habitat_type' table) will appear in the 'Habitat Type' drop-down list in the IHS tab of the main window, even if the **is_local** flag in the 'lut_habitat_type' table is set to 'True' (minus one). This is because the 'lut_habitat_type_ihs_habitat' table controls the cross-reference between different Habitat Classes/Types and IHS Habitats.
+	Only Habitat Types that are directly referenced by records in the 'lut_habitat_type_ihs_habitat' translation table (by referencing one or more **code_habitat_type** values that relate to a Habitat Type **code** in the 'lut_habitat_type' table) will appear in the 'Habitat Type' drop-down list in the Habitats tab of the main window, even if the **is_local** flag in the 'lut_habitat_type' table is set to 'True' (minus one). This is because the 'lut_habitat_type_ihs_habitat' table controls the cross-reference between different Habitat Classes/Types and IHS Habitats.
 
+
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Configuration; IHS Habitats
@@ -423,6 +444,9 @@ IHS Habitats can be flagged as **local** in the 'lut_ihs_habitat` table. The for
 	Only IHS Habitats flagged as **local** will appear in the 'IHS Habitat' drop-down list in the main window. This enables habitats that are not found in the local area to be hidden to avoid being selected in error (e.g. coastal habitats in land-locked counties.)
 
 
+.. raw:: latex
+
+	\newpage
 
 .. index::
 	single: Configuration; Legacy Habitat
@@ -444,7 +468,6 @@ Legacy habitats can be configured in the 'lut_legacy_habitat` table. The format 
 
 .. note::
 	Existing legacy habitat records cannot be removed from the 'lut_legacy_habitat' table if they are referenced by any of the data records (i.e. if they have been used in any incid data records). This is because data integrity must be retained.
-
 
 
 .. raw:: latex

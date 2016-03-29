@@ -44,11 +44,11 @@ How the data tables relate to the fields in the user interface is demonstrated i
 
 		.. _figUIIF:
 
-		.. figure:: figures/UserInterfaceIHSTabDBFields.png
+		.. figure:: figures/UserInterfaceHabitatsTabDBFields.png
 			:align: center
 			:scale: 90
 
-			User Interface IHS Tab Fields
+			User Interface Habitats Tab Fields
 
 
 		.. _figUIDF:
@@ -88,7 +88,7 @@ This is the main data table with one record per INCID. All the other data tables
 		Char(12) - A unique **Inc**\ remental **id**\ entifier for each logical group of features.
 
 	legacy_habitat
-		Char(50) - The primary pre-IHS habitat code carried over from the 'legacy' habitat data.
+		Char(50) - Foreign key to `code` in the 'lut_legacy_habitat' table representing the legacy Habitat for the INCID.
 
 	site_ref
 		Char(16) - A free-text field containing a reference for the location of the feature.
@@ -492,6 +492,30 @@ This table contains details of all the source datasets that can be referenced as
 
 
 .. index::
+	single: Lookup Tables; Lut_Legacy_Habitat
+
+.. _lut_legacy_habitat:
+
+lut_legacy_habitat
+------------------
+
+This table contains details of all the legacy habitats that can be referenced as a by an INCID.
+
+	code
+		A unique 50 character field for each legacy habitat.
+
+	description
+		A brief description or name that will appear in the 'Legacy Habitat' drop-down list in the main window.
+
+	sort_order
+		Determines the order legacy habitats are displayed in the 'Legacy Habitat' drop-down list in the main window.
+
+
+.. seealso::
+	See :ref:`configuring_legacy_habitat` for more information.
+
+
+.. index::
 	single: Lookup Tables; Lut_Process
 
 .. _lut_process:
@@ -559,7 +583,7 @@ Regardless of whether records in a lookup table are 'system' supplied records or
 The following lookup tables can be updated to tailor their **is_local** and/or **sort_order** values:
 
 	lut_ihs_habitat
-		Contains all the IHS Habitats that can be assigned to INCIDs using the 'Habitat' field on the IHS tab of the main window.
+		Contains all the IHS Habitats that can be assigned to INCIDs using the 'Habitat' field on the Habitats tab of the main window.
 
 	lut_habitat_class
 		Contains all of the Habitat Classifications that can be assigned to sources using the 'Habitat Class' field on the Sources tab of the main window.
@@ -568,16 +592,16 @@ The following lookup tables can be updated to tailor their **is_local** and/or *
 		Contains all of the Habitat Types that can be assigned to sources using the 'Habitat Type' field on the Sources tab of the main window (for the selected 'Habitat Class').
 
 	lut_ihs_complex
-		Contains all the IHS Complex codes that can be assigned using the 'Complex' fields on the IHS table of the main window. **[sort_order only]**
+		Contains all the IHS Complex codes that can be assigned using the 'Complex' fields on the Habitats tab of the main window. **[sort_order only]**
 
 	lut_ihs_formation
-		Contains all the IHS Formation codes that can be assigned using the 'Formation' fields on the IHS table of the main window. **[sort_order only]**
+		Contains all the IHS Formation codes that can be assigned using the 'Formation' fields on the Habitats tab of the main window. **[sort_order only]**
 
 	lut_ihs_management
-		Contains all the IHS Management codes that can be assigned using the 'Management' fields on the IHS table of the main window. **[sort_order only]**
+		Contains all the IHS Management codes that can be assigned using the 'Management' fields on the Habitats tab of the main window. **[sort_order only]**
 		
 	lut_ihs_matrix
-		Contains all the IHS Matrix codes that can be assigned using the 'Matrix' fields on the IHS table of the main window. **[sort_order only]**
+		Contains all the IHS Matrix codes that can be assigned using the 'Matrix' fields on the Habitats tab of the main window. **[sort_order only]**
 	
 	lut_bap_quality_determination
 		Contains the BAP determination quality types that can be assigned to Priority Habitats and Potential Priority Habitats on the Details tab of the main window. **[sort_order only]**
@@ -590,6 +614,9 @@ The following lookup tables can be updated to tailor their **is_local** and/or *
 	
 	lut_importance
 		Contains the difference levels of Importance that can be assigned to Sources using the 'Boundary Imp.' and 'Habitat Imp.' fields on the Sources tab of the main window. **[sort_order only]**
+	
+	lut_legacy_habitat
+		Contains the list of legacy habitats that can be assigned to the 'Legacy Habitat' field on the Habitats tab of the main window. **[sort_order only]**
 	
 	lut_process
 		Contains details of all the processes that can be referenced in the 'Process' field of the main window to indicate the activity being undertaken when using the HLU Tool. See :ref:`lut_process` for more details. **[sort_order only]**
@@ -845,5 +872,4 @@ Other Tables
 	:scale: 90
 
 	Database Relationships - Other Tables
-
 
