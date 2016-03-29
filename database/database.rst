@@ -512,7 +512,7 @@ This table contains details of all the legacy habitats that can be referenced as
 
 
 .. seealso::
-	See :ref:`configuring_legacy_habitat` for more information.
+	See :ref:`configuring_legacy_habitats` for more information.
 
 
 .. index::

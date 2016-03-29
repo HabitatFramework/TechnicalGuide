@@ -449,12 +449,12 @@ IHS Habitats can be flagged as **local** in the 'lut_ihs_habitat` table. The for
 	\newpage
 
 .. index::
-	single: Configuration; Legacy Habitat
+	single: Configuration; Legacy Habitats
 
-.. _configuring_legacy_habitat:
+.. _configuring_legacy_habitats:
 
-Configuring Legacy Habitat
---------------------------
+Configuring Legacy Habitats
+---------------------------
 
 Legacy habitats can be configured in the 'lut_legacy_habitat` table. The format of the table is shown in the figure :ref:`figDTLLH`.
 
