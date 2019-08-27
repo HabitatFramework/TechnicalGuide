@@ -799,7 +799,7 @@ This table defines which fields are to be exported for each export format in the
 Table Relationships
 ===================
 
-There are 37 tables in the HLU Tool relational database comprised of data tables, lookup tables and export tables. The relationships between the tables are too numerous and complex to display in a single diagram so the tables and relationships have therefore been separated into 7 logical groups, some of which connect and overlap with one another.
+There are 43 tables in the HLU Tool relational database comprised of data tables, lookup tables and export tables. The relationships between the tables are too numerous and complex to display in a single diagram so the tables and relationships have therefore been separated into 7 logical groups, some of which connect and overlap with one another.
 
 .. tip::
 	Bespoke relationship diagrams between the various HLU Tool tables can be created using SQL Server Management Studio.
@@ -832,7 +832,7 @@ IHS Lookup Tables
 
 .. figure:: ../diagrams/DatabaseDiagramIHSLookupTables.png
 	:align: center
-	:scale: 85
+	:scale: 80
 
 	Database Relationships - IHS Lookup Tables
 
@@ -841,8 +841,8 @@ IHS Lookup Tables
 
 	\newpage
 
-BAP Tables
-----------
+Priority Habitat Tables
+-----------------------
 
 .. _figDDBT:
 
@@ -850,7 +850,7 @@ BAP Tables
 	:align: center
 	:scale: 75
 
-	Database Relationships - BAP Tables
+	Database Relationships - Priority Habitat Tables
 
 
 .. raw:: latex
@@ -905,6 +905,22 @@ History Tables
 
 	\newpage
 
+OS MasterMap Update Tables
+--------------------------
+
+.. _figDDOT:
+
+.. figure:: ../diagrams/DatabaseDiagramOSMMUpdateTables.png
+	:align: center
+	:scale: 85
+
+	Database Relationships - OS MasterMap Update Tables
+
+
+.. raw:: latex
+
+	\newpage
+
 Other Tables
 ------------
 
@@ -912,7 +928,7 @@ Other Tables
 
 .. figure:: ../diagrams/DatabaseDiagramOtherTables.png
 	:align: center
-	:scale: 90
+	:scale: 85
 
 	Database Relationships - Other Tables
 
