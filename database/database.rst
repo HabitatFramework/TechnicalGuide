@@ -422,7 +422,7 @@ Lookup Tables
 
 Tables in the database prefixed by 'lut\_' are **lookup** tables and are used in many drop-down lists in the user interfaces to restrict choices to only valid or appropriate values for the organisation.
 
-Some of the lookup tables contain records and settings that are generic to all HLU Tool installations and hence should be considered as 'system' records (indicated by the **system_supplied** attribute set to 'True' (minus one). These records are configured centrally and updates are applied to HLU Tool installations using the HLUDbUpdater.exe tool (see :doc:`../updater/updater` for more details). The remaining lookup tables can be configured entirely for a given HLU Tool installation to tailor them to the specific requirements of each organisation.
+Some of the lookup tables contain records and settings that are generic to all HLU Tool installations and hence should be considered as 'system' records (indicated by the **system_supplied** attribute set to 'True' (minus one). These records are configured centrally and updates are applied to HLU Tool installations using the HLUDbUpdater.exe tool (see :doc:`../updater/updater` for more details). The remaining lookup tables can be configured for a given HLU Tool installation to tailor them to the specific requirements of each organisation.
 
 	.. note::
 
@@ -430,10 +430,13 @@ Some of the lookup tables contain records and settings that are generic to all H
 		* Lookup table values are relevant to the **whole** database system and hence any changes will affect **all** users of that database.
 		* **All** records in tables containing a 'sort_order' attribute must have a numerical value set or they may not appear in the relevant drop-down lists.
 
-The following lookup tables should be updated to tailor local requirements:
+.. seealso::
+	See :Ref:`configuring_luts` for more information on configuring lookup tables.
+
+The following lookup tables can be updated to tailor local requirements:
 
 .. index::
-	single: Lookup Tables; Lut_Users
+	single: Lookup Tables; lut_Users
 
 .. _lut_users:
 
@@ -465,7 +468,7 @@ This table contains details of all the users that have editing capability with t
 
 
 .. index::
-	single: Lookup Tables; Lut_Sources
+	single: Lookup Tables; lut_sources
 
 .. _lut_sources:
 
@@ -492,7 +495,7 @@ This table contains details of all the source datasets that can be referenced as
 
 
 .. index::
-	single: Lookup Tables; Lut_Legacy_Habitat
+	single: Lookup Tables; lut_legacy_habitat
 
 .. _lut_legacy_habitat:
 
@@ -516,7 +519,7 @@ This table contains details of all the legacy habitats that can be referenced as
 
 
 .. index::
-	single: Lookup Tables; Lut_Process
+	single: Lookup Tables; lut_process
 
 .. _lut_process:
 
@@ -536,7 +539,7 @@ This table contains details of all the processes that can be referenced as the a
 
 
 .. index::
-	single: Lookup Tables; Lut_Reason
+	single: Lookup Tables; lut_reason
 
 .. _lut_reason:
 
@@ -555,8 +558,45 @@ This table contains details of all the reasons that can be referenced as the und
 		Determines the order processes are displayed in the 'Reason' drop-down list in the main window.
 
 
-.. seealso:
-	See :Ref:`configuring_luts` for more information on configuring lookup tables.
+.. index::
+	single: Lookup Tables; lut_osmm_ihs_xref
+
+.. _lut_osmm_ihs_xref:
+
+lut_osmm_ihs_xref
+-----------------
+
+This table contains a cross-reference between all the OS MasterMap feature types and the IHS habitat and multiplex codes. It is used when reviewing and bulk applying proposed OSMM Updates.
+
+	osmm_xref_id
+		A unique ID for each cross-reference. This field is referenced by the incid_osmm_update table.
+
+	make
+		An OS MasterMap attribute. Where known it indicates whether the real-world nature of the feature is man-made, natural or both (multiple), otherwise the value is unclassified or unknown.
+
+	desc_group
+		An OS MasterMap attribute. The primary classification of a feature assigned to one or more of 21 groups, most of which are categories of real-world topographic objects, such as path, building or natural environment.
+
+	desc_term
+		An OS MasterMap attribute. If present gives further classification information about a feature typically specifying the natural land cover types present.
+
+	theme
+		An OS MasterMap attribute. The theme(s) that the feature belongs to.
+
+	feat_code
+		An OS MasterMap attribute. A numerical feature code (a five-digit integer) assigned to each feature.
+
+	ihs_habitat to ihs_complex2
+		The IHS habitat and multiplex codes corresponding to the unique collection of above OS MasterMap attributes.
+
+	ihs_summary
+		The consolidated summary of the above IHS habitat and multiplex codes.
+
+	manmade
+		Indicates if the OS MasterMap feature is considered man-made or not. The classification 'man-made' may also include natural features where OS MasterMap is always considered to be accurate (such as rivers, lakes, ponds, road/rail verges, etc.)
+
+	comments
+		Any user comments relating to the cross-referencing.
 
 
 .. index::
@@ -618,6 +658,9 @@ The following lookup tables can be updated to tailor their **is_local** and/or *
 	lut_legacy_habitat
 		Contains the list of legacy habitats that can be assigned to the 'Legacy Habitat' field on the Habitats tab of the main window. **[sort_order only]**
 	
+	lut_osmm_ihs_xref
+		Contains a cross-reference between all the OS MasterMap feature types and the IHS habitat and multiplex codes. **[is_local only]**
+
 	lut_process
 		Contains details of all the processes that can be referenced in the 'Process' field of the main window to indicate the activity being undertaken when using the HLU Tool. See :ref:`lut_process` for more details. **[sort_order only]**
 	

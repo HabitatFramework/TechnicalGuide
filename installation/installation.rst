@@ -40,15 +40,15 @@ Software
 
 	* .NET framework 3.5 Service Pack 1
 	* Microsoft Access 2000
+	* Microsoft SQL Server 2008 Express
 	* ArcGIS 10.1 or MapInfo 8.0
 
 **Recommended software specification:**
 
 	* .NET framework 3.5 Service Pack 1
 	* Microsoft Access 2000 or later
-	* Microsoft SQL Server 2008 R2 Express, OR
-	* Microsoft SQL Server 2008 R2 Service Pack 2 or later
-	* ArcGIS 10.1 or MapInfo 10.0.1 or later
+	* Microsoft SQL Server 2016 Express or Microsoft SQL Server 2016 or later
+	* ArcGIS 10.1 and later or MapInfo 8.0 and later (32bit versions only)
 
 
 .. _latest_release:
@@ -58,8 +58,8 @@ Latest Release
 
 The latest release of the tool can be downloaded from `GitHub <https://github.com/HabitatFramework/HLUTool/releases>`_. Two versions of the tool are available:
 
-	* For ArcGIS or ArcGIS/MapInfo systems (e.g. *v2.3.0*). Use when ArcGIS is installed or when ArcGIS and MapInfo are both installed.
-	* For MapInfo only systems (e.g. *v2.3.0m*). Use when **only** MapInfo is installed.
+	* For ArcGIS or ArcGIS/MapInfo systems (e.g. *v3.0.0*). Use when ArcGIS is installed or when ArcGIS and MapInfo are both installed.
+	* For MapInfo only systems (e.g. *v3.0.0m*). Use when **only** MapInfo is installed.
 
 
 .. raw:: latex
@@ -76,8 +76,8 @@ Installing the HLU Tool
 
 To install the HLU Tool `double-click` on the Setup.exe and follow the instructions. By default this will install the HLU Tool into the :file:`C:\\Program Files\\HLU\\HLU GIS Tool\\` directory and will optionally display the ReadMe file. The installer will also create two shortcuts in the start menu:
 
-	* **HLU GIT Tool - Launch** - this will start the tool
-	* **HLU GIT Tool - Reconfigure** - this will start the tool using the **/c** switch parameter. See :doc:`../configuration/configuration` for details of how to connect to a HLU Tool database and GIS application.
+	* **HLU Tool - Launch** - this will start the tool
+	* **HLU Tool - Reconfigure** - this will start the tool using the **/c** switch parameter. See :doc:`../configuration/configuration` for details of how to connect to a HLU Tool database and GIS application.
 
 .. _enable_extension:
 

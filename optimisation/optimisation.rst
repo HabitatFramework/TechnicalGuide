@@ -29,9 +29,9 @@ Creation of ArcGIS Map Document or MapInfo Workspace
 
 An ArcGIS Map Document (.mxd) or MapInfo Workspace (.wor) must be created for use with the HLU Tool. This should be optimised to ensure maximum performance, which should include the following:
 
-	* Ensure that the .mxd or .wor file only contains one copy of the HLU layer.
-	* Ensure that the .mxd or .wor is saved at a sensible view level such as 1:10,000 scale rather the full extent of the HLU dataset.
-	* Add zoom layering to datasets so that detailed datasets such as the HLU layer and aerial photography are not displayed at smaller scales. Recommended maximum extents are shown in the table below):
+	* Ensure that the .mxd or .wor file only contains one copy of the HLU layer (or one copy of each HLU Layer if split into separate layers).
+	* Ensure that the .mxd or .wor is saved at a sensible zoom level such as 1:10,000 scale rather the full extent of the HLU dataset (to save time when opening).
+	* Add zoom layering to datasets so that detailed datasets such as the HLU layer and aerial photography are not displayed at smaller scales than necessary. Recommended maximum extents are shown in the table below):
 
 	.. tabularcolumns:: |L|C|C|
 

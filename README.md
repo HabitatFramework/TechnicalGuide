@@ -1,4 +1,4 @@
 TechnicalGuide
 ==============
 
-Technical Guide for the HLU GIS Tool.
+Technical Guide for the HLU Tool.

@@ -2,7 +2,7 @@
 Preface
 *******
 
-The most up to date version of this documentation can be found in **html** and **PDF** form on `ReadTheDocs <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
+The most up to date version of this documentation can be found in **HTML** and **PDF** form on ReadTheDocs at `readthedocs.org/projects/hlutool-technicalguide <https://readthedocs.org/projects/hlutool-technicalguide/>`_.
 
 Recommended Knowledge
 =====================
@@ -19,7 +19,7 @@ We recommend that a person within each organisation should be designated as the 
 
 Users
 -----
-A user guide is also available at `HLUTool-UserGuide <https://readthedocs.org/projects/hlugistool-userguide/>`_ for those who will be regular users of the HLU Tool but are not concerned with how to install or configure the tool or how to perform database administration.
+A user guide is also available on ReadTheDocs at `readthedocs.org/projects/hlutool-userguide <https://readthedocs.org/projects/hlutool-userguide/>`_ for those who will be regular users of the HLU Tool but are not concerned with how to install or configure the tool or how to perform database administration.
 
 
 Reading Guide
@@ -52,7 +52,7 @@ The code for the HLU Tool is 'open source' and is released under `GNU General Pu
 
 This guide is released under `GNU Free Documentation License (FDL) v1.3 <http://www.gnu.org/licenses/fdl.html>`_. Permission is granted to copy, distribute and/or modify this document under the terms of the license.
 
-Please remember, however, that the tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefully received. Enquiries can be made via the `ALERC forum <http://forum.lrcs.org.uk/viewforum.php?id=24>`_.
+Please remember, however, that the HLU Tool cost a lot of money to develop and still requires further development and ongoing support. Hence any contributions towards costs would be gratefully received. Enquiries can be made via the Knowledge Hub at `khub.net/group/association-of-local-environmental-records-centres <https://khub.net/group/association-of-local-environmental-records-centres>`_.
 
 
 .. index::
@@ -63,10 +63,17 @@ Useful links
 
 Related community links:
 
-* `Users <http://forum.lrcs.org.uk/viewforum.php?id=24>`_ - Announcements, bug reports, user Q&A and feature discussions.
-* `Administrators <https://github.com/HabitatFramework/HLUTool/releases>`_ - Release notes and installers for ArcGIS and MapInfo systems.
-* `Developers <https://github.com/HabitatFramework/HLUTool>`_ - Tool source code.
-* `Issues <https://github.com/HabitatFramework/HLUTool/issues>`_ - Known issues and existing change requests.
+Users
+	For announcements, bug reports, user Q&A and feature discussions see `khub.net/group/association-of-local-environmental-records-centres/group-forum <https://khub.net/group/association-of-local-environmental-records-centres/group-forum>`_
+
+Administrators
+	For release notes and installers for ArcGIS and MapInfo systems see `github.com/HabitatFramework/HLUTool/releases <https://github.com/HabitatFramework/HLUTool/releases>`_
+
+Developers
+	For the source code for the HLU Tool see `github.com/HabitatFramework/HLUTool <https://github.com/HabitatFramework/HLUTool>`_
+
+Issues
+	For details of any known issues and proposed change requests see `github.com/HabitatFramework/HLUTool/issues <https://github.com/HabitatFramework/HLUTool/issues>`_
 
 
 .. index::
@@ -75,8 +82,12 @@ Related community links:
 Acknowledgements
 ================
 
-Many thanks are due to all the LRCs in the south-east of England and their staff who have, and continue to, fund and contribute to the HLU Tool.  It takes a small army of developers, testers and users to build a truly useful tool (especially users who care enough to test new releases, report bugs and discuss feature requests).
+Many thanks are due to all the LERCs in the south-east of England and their staff who have, and continue to, fund and contribute to the HLU Tool.  It takes a small army of developers, testers and users to build a truly useful tool.
 
+
+.. raw:: latex
+
+	\newpage
 
 Conventions used in this manual
 ===============================

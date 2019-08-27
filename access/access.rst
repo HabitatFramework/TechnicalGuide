@@ -7,7 +7,7 @@ Using SQL Server as the relational database system for the HLU Tool will provide
 Many users will be more familiar with Access, so linking Access to SQL Server in this way allows users to view and edit the HLU Tool data without needing authority to use SSMS and without any risk of altering the database structure or settings. Using Access as a front-end to the database in this way also allows users to create and share Access queries, forms and reports specific to their needs.
 
 .. note::
-	Database administrators need to ensure that users of the Access database have the necessary permissions to view, add and edit the data tables on the target SQL Server database.
+	Database administrators need to ensure that users of the Access database have the necessary permissions to view and edit the data tables on the target SQL Server database.
 
 
 .. raw:: latex

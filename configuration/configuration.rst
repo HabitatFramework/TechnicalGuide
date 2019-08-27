@@ -475,6 +475,32 @@ Legacy habitats can be configured in the 'lut_legacy_habitat` table. The format 
 	\newpage
 
 .. index::
+	single: Configuration; OSMM to IHS cross-reference
+
+.. _configuring_osmm_ihx_xref:
+
+Configuring OSMM to IHS cross-reference
+---------------------------------------
+
+The OS MasterMap to IHS cross-reference can be configured in the 'lut_osmm_ihs_xref` table. The format of the table is shown in the figure :ref:`figDTLOIX`.
+
+.. _figDTLOIX:
+
+.. figure:: figures/DatabaseTableLutOSMMIHSXRef.png
+	:align: center
+
+	Format of the lut_osmm_ihs_xref table
+
+
+.. note::
+	Existing OS MasterMap to IHS cross-reference records cannot be removed from the 'lut_osmm_ihs_xref' table (as they will be referenced by one or more of the data records (i.e. if they will have been used in the **incid_osmm_updates** table). This is because data integrity must be retained.
+
+
+.. raw:: latex
+
+	\newpage
+
+.. index::
 	single: Configuration; Exports
 	single: Exports; Export Formats
 
