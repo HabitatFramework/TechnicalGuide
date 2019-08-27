@@ -7,7 +7,7 @@ GNU Free Documentation License
 
 .. raw:: latex
 
-    The full GNU Free Documentation License can be viewed at `www.gnu.org/licenses/fdl-1.3.en.html <https://www.gnu.org/licenses/fdl-1.3.en.html>`_
+The full GNU Free Documentation License can be viewed at `www.gnu.org/licenses/fdl-1.3.en.html <https://www.gnu.org/licenses/fdl-1.3.en.html>`_
 
 .. only:: html
 
@@ -16,7 +16,7 @@ GNU Free Documentation License
     
     
      Copyright (C) 2000, 2001, 2002, 2007, 2008 Free Software Foundation, Inc.
-         <http://fsf.org/>
+     <http://fsf.org/>
      Everyone is permitted to copy and distribute verbatim copies
      of this license document, but changing it is not allowed.
     

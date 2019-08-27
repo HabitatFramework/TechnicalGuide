@@ -907,7 +907,7 @@ History Tables
 OS MasterMap Update Tables
 --------------------------
 
-.. _figDDOT:
+.. _figDDOUT:
 
 .. figure:: ../diagrams/DatabaseDiagramOSMMUpdateTables.png
 	:align: center
