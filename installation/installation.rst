@@ -95,5 +95,5 @@ Enable HLU Extension
 
 	ArcMap Extensions dialog
 
-Tick the box next to 'HLU ArcGIS Extension' as shown in the figure :Ref:`figAGED` then click :guilabel:`Close` and exit ArcMap.
+Tick the box next to 'HLU ArcMap Extension' as shown in the figure :Ref:`figAGED` then click :guilabel:`Close` and exit ArcMap.
 

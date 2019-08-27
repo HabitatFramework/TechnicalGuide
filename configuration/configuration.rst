@@ -6,13 +6,13 @@ The first time the GIS tool is used you will need to configure the database and 
 
 The connection details, together will all the other user options configurable through the tool's 'Options' user interface, are stored in a **user.config** file within the user's windows profile.
 
-In Windows 7 the user.config file can be found in:
+In Windows 10 the user.config file can be found in:
 
 ``C:\Users\<username>\AppData\Roaming\HLU\<appname>_<eid>_<hash>\<ver>``
 
 For example:
 
-``C:\Users\Andy\AppData\Roaming\HLU\HluGisTool.exe_Url_lm5wjls4ajbe40rbxsgduz3nv1mqy1n0\2.3.3.0``
+``C:\Users\Andy\AppData\Roaming\HLU\HluGisTool.exe_Url_lm5wjls4ajbe40rbxsgduz3nv1mqy1n0\3.0.0.0``
 
 
 .. index::
@@ -508,6 +508,8 @@ The OS MasterMap to IHS cross-reference can be configured in the 'lut_osmm_ihs_x
 
 Configuring Exports
 ===================
+
+Export formats must be pre-configured before they can be used in HLU Tool.
 
 Adding export formats
 ---------------------

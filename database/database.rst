@@ -689,6 +689,9 @@ Export Tables
 
 Tables in the database prefixed by 'export' are **export** tables and are used to define different formats that can be used to export data from the HLU Tool database and GIS layers to a new 'standalone' GIS layer.
 
+.. seealso::
+	See :ref:`configuring_exports` for more information.
+
 
 .. index::
 	single: Export Tables; exports
@@ -783,10 +786,6 @@ This table defines which fields are to be exported for each export format in the
 		Allows users to determine the format of the exported field. See :ref:`export_field_formats` for more details on which export fields can be formatted and how to format them.
 
 
-.. seealso::
-	See :ref:`configuring_exports` for more information.
-
-
 .. raw:: latex
 
 	\newpage
@@ -864,7 +863,7 @@ Habitat Tables
 
 .. figure:: ../diagrams/DatabaseDiagramHabitatTables.png
 	:align: center
-	:scale: 80
+	:scale: 85
 
 	Database Relationships - Habitat Tables
 
