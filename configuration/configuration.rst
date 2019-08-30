@@ -486,7 +486,7 @@ The OS MasterMap to IHS cross-reference can be configured in the 'lut_osmm_ihs_x
 
 .. _figDTLOIX:
 
-.. figure:: figures/DatabaseTableLutOSMMIHSXRef.png
+.. figure:: figures/DatabaseTableLutOSMMIHSXref.png
 	:align: center
 
 	Format of the lut_osmm_ihs_xref table
