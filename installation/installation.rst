@@ -20,14 +20,14 @@ Hardware
 **Minimum specification:**
 
 	* 3 GHz Pentium PC
-	* 2 Gb RAM
+	* 4 Gb RAM
 	* 3 Gb available hard disk space
 
 **Recommended specification:**
 
 	* 3 GHz Dual Core PC
-	* 3 Gb RAM
-	* 10 Gb available hard disk space
+	* 8 Gb RAM
+	* 20 Gb available hard disk space
 
 .. Tip::
 	For increased performance a multiple core PC with as much RAM as possible is recommended.
@@ -45,8 +45,8 @@ Software
 
 **Recommended software specification:**
 
-	* .NET framework 3.5 Service Pack 1
-	* Microsoft Access 2000 or later
+	* .NET framework 4.5 or above
+	* Microsoft Access 2016 or later
 	* Microsoft SQL Server 2016 Express or Microsoft SQL Server 2016 or later
 	* ArcGIS 10.1 and later or MapInfo 8.0 and later (32bit versions only)
 
@@ -58,8 +58,8 @@ Latest Release
 
 The latest release of the tool can be downloaded from `GitHub <https://github.com/HabitatFramework/HLUTool/releases>`_. Two versions of the tool are available:
 
-	* For ArcGIS or ArcGIS/MapInfo systems (e.g. *v3.0.0*). Use when ArcGIS is installed or when ArcGIS and MapInfo are both installed.
-	* For MapInfo only systems (e.g. *v3.0.0m*). Use when **only** MapInfo is installed.
+	* For ArcGIS or ArcGIS/MapInfo systems (e.g. *v3.1.1*). Use when ArcGIS is installed or when ArcGIS and MapInfo are both installed.
+	* For MapInfo only systems (e.g. *v3.1.1m*). Use when **only** MapInfo is installed.
 
 
 .. raw:: latex

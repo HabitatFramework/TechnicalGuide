@@ -798,7 +798,7 @@ This table defines which fields are to be exported for each export format in the
 Table Relationships
 ===================
 
-There are 43 tables in the HLU Tool relational database comprised of data tables, lookup tables and export tables. The relationships between the tables are too numerous and complex to display in a single diagram so the tables and relationships have therefore been separated into 7 logical groups, some of which connect and overlap with one another.
+There are 52 tables in the HLU Tool relational database comprised of data tables, lookup tables and export tables. The relationships between the tables are too numerous and complex to display in a single diagram so the tables and relationships have therefore been separated into 7 logical groups, some of which connect and overlap with one another.
 
 .. tip::
 	Bespoke relationship diagrams between the various HLU Tool tables can be created using SQL Server Management Studio.
@@ -845,7 +845,7 @@ Priority Habitat Tables
 
 .. _figDDBT:
 
-.. figure:: ../diagrams/DatabaseDiagramBAPTables.png
+.. figure:: ../diagrams/DatabaseDiagramBAPHabitatTables.png
 	:align: center
 	:scale: 75
 
@@ -866,6 +866,22 @@ Habitat Tables
 	:scale: 85
 
 	Database Relationships - Habitat Tables
+
+
+.. raw:: latex
+
+	\newpage
+
+Habitat Type Tables
+--------------------
+
+.. _figDDHaT:
+
+.. figure:: ../diagrams/DatabaseDiagramHabitatTypeTables.png
+	:align: center
+	:scale: 85
+
+	Database Relationships - Habitat Type Tables
 
 
 .. raw:: latex
