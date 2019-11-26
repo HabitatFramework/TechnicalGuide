@@ -847,7 +847,7 @@ Priority Habitat Tables
 
 .. figure:: ../diagrams/DatabaseDiagramBAPHabitatTables.png
 	:align: center
-	:scale: 75
+	:scale: 70
 
 	Database Relationships - Priority Habitat Tables
 
