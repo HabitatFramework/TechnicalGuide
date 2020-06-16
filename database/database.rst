@@ -28,7 +28,8 @@ Tables in the database prefixed by 'incid' are **data** tables and hence contain
 	5. incid_ihs_complex
 	6. incid_bap
 	7. incid_sources
-	8. history
+	8. incid_osmm_updates
+	9. history
 
 How the data tables relate to the fields in the user interface is demonstrated in the following figures:
 
@@ -42,13 +43,13 @@ How the data tables relate to the fields in the user interface is demonstrated i
 			User Interface Common Fields
 
 
-		.. _figUIIF:
+		.. _figUIOF:
 
-		.. figure:: figures/UserInterfaceHabitatsTabDBFields.png
+		.. figure:: figures/UserInterfaceOSMMUpdatesDBFields.png
 			:align: center
 			:scale: 90
 
-			User Interface Habitats Tab Fields
+			User Interface OSMM Updates Fields
 
 
 		.. _figUIDF:
@@ -67,6 +68,24 @@ How the data tables relate to the fields in the user interface is demonstrated i
 			:scale: 90
 
 			User Interface Sources Tab Fields
+
+
+		.. _figUIIF:
+
+		.. figure:: figures/UserInterfaceHabitatsTabDBFields.png
+			:align: center
+			:scale: 90
+
+			User Interface Habitats Tab Fields
+
+
+		.. _figUIHF:
+
+		.. figure:: figures/UserInterfaceHistoryTabDBFields.png
+			:align: center
+			:scale: 90
+
+			User Interface History Tab Fields
 
 
 .. raw:: latex
@@ -321,35 +340,47 @@ This table contains details of the source datasets for an INCID. There can be be
 
 
 .. index::
-	single: Data Tables; Incid_MM_Polygons
+	single: Data Tables; Incid_OSMM_Update
 
-.. _incid_mm_polygons:
+.. _incid_osmm_update_table:
 
-incid_mm_polygons
+incid_osmm_update
 -----------------
 
-This table is a local database **copy** of the attribute table for the GIS feature layer to improve performance. If the GIS features are split into separate GIS layers this table contains the attribute records for **all** the layers combined. There can be any number of records for each INCID, depending upon how many TOIDs and TOID fragments are associated with the INCID.
+This table contains details of any proposed Ordnance Survey MasterMap (OSMM) updates for an INCID. There will only be OSMM update records if the habitat framework has been externally processed to integrate more recent OSMM data. Any proposed updates based on the new OSMM data will be loaded into this table.
+
+	incid_osmm_update_id
+		Integer - A unique ID for each proposed update.
 
 	incid
 		Char(12) - Foreign key to `incid` in the 'incid' table.
 
-	toid
-		Char(20) - The unique Ordnance Survey **to**\ pographical **id**\ entifier of each feature.
+	osmm_xref_id
+		Integer - Foreign key to `osmm_xref_id` in the 'lut_osmm_ihs_xref' table representing a unique set of OS MasterMap attributes.
 
-	toid_fragment_id
-		Char(5) - An incremental number (prefixed with zeros) used as a unique reference for each fragment of a single TOID.
+	spatial_flag
+		Char(1) - Indicates whether part of the new feature has been changed compared to the original framework.
 
-	ihs_category
-		Char(2) - Foreign key to `code` in the 'lut_ihs_category' table representing the first 2 characters of the IHS Habitat code.
+	process_flag
+		Integer - Indicates which step in the external OSMM Update process the proposed update was determined.
 
-	ihs_summary
-		Char(50) - A concatenation of all the IHS habitat and multiplex codes from the INCID for this feature. This field is automatically maintained by the tool.
+	change_flag
+		Char(1) - Indicate whether the proposed habitat category is the same as the original habitat category and whether it is a higher or lower level in the habitat hierarchy.
 
-	shape_length
-		Float - A decimal value of variable precision representing the perimeter length of the feature.
+	status
+		Integer - Indicates the current status of the proposed OSMM Update (proposed, pending, applied, ignored or rejected).
 
-	shape_area
-		Float - A decimal value of variable precision representing the spatial area of the feature.
+	created_date
+		DateTime - The date and time that the proposed update was first created (when the framework was externally processed to integrate more recent OSMM data).
+
+	created_user_id
+		Char(40) - Foreign key to `user_id` in the 'lut_user' table representing the user that created the proposed update.
+
+	last_modified_date
+		DateTime - The date and time that the proposed update was last modified.
+
+	last_modified_user_id
+		Char(40) - Foreign key to `user_id` in the 'lut_user' table representing the user that last modified the proposed update by skipping, accepting, rejecting or ignoring it.
 
 
 .. index::
@@ -406,6 +437,38 @@ This table contains record of **every** change to **every** feature made using t
 
 	modified_area
 		Float - A decimal value of variable precision representing the spatial area of the feature after the changes to the feature.
+
+
+.. index::
+	single: Data Tables; Incid_MM_Polygons
+
+.. _incid_mm_polygons:
+
+incid_mm_polygons
+-----------------
+
+This table is a local database **copy** of the attribute table for the GIS feature layer to improve performance. If the GIS features are split into separate GIS layers this table contains the attribute records for **all** the layers combined. There can be any number of records for each INCID, depending upon how many TOIDs and TOID fragments are associated with the INCID.
+
+	incid
+		Char(12) - Foreign key to `incid` in the 'incid' table.
+
+	toid
+		Char(20) - The unique Ordnance Survey **to**\ pographical **id**\ entifier of each feature.
+
+	toid_fragment_id
+		Char(5) - An incremental number (prefixed with zeros) used as a unique reference for each fragment of a single TOID.
+
+	ihs_category
+		Char(2) - Foreign key to `code` in the 'lut_ihs_category' table representing the first 2 characters of the IHS Habitat code.
+
+	ihs_summary
+		Char(50) - A concatenation of all the IHS habitat and multiplex codes from the INCID for this feature. This field is automatically maintained by the tool.
+
+	shape_length
+		Float - A decimal value of variable precision representing the perimeter length of the feature.
+
+	shape_area
+		Float - A decimal value of variable precision representing the spatial area of the feature.
 
 
 .. raw:: latex

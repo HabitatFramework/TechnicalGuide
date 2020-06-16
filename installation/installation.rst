@@ -58,8 +58,8 @@ Latest Release
 
 The latest release of the tool can be downloaded from `GitHub <https://github.com/HabitatFramework/HLUTool/releases>`_. Two versions of the tool are available:
 
-	* For ArcGIS or ArcGIS/MapInfo systems (e.g. *v3.1.1*). Use when ArcGIS is installed or when ArcGIS and MapInfo are both installed.
-	* For MapInfo only systems (e.g. *v3.1.1m*). Use when **only** MapInfo is installed.
+	* For ArcGIS or ArcGIS/MapInfo systems (e.g. *v3.1.3*). Use when ArcGIS is installed or when ArcGIS and MapInfo are both installed.
+	* For MapInfo only systems (e.g. *v3.1.3m*). Use when **only** MapInfo is installed.
 
 
 .. raw:: latex

@@ -12,7 +12,7 @@ In Windows 10 the user.config file can be found in:
 
 For example:
 
-``C:\Users\Andy\AppData\Roaming\HLU\HluGisTool.exe_Url_lm5wjls4ajbe40rbxsgduz3nv1mqy1n0\3.0.0.0``
+``C:\Users\Andy\AppData\Roaming\HLU\HluGisTool.exe_Url_lm5wjls4ajbe40rbxsgduz3nv1mqy1n0\3.1.3.0``
 
 
 .. index::
