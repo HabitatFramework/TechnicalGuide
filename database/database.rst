@@ -30,26 +30,27 @@ Tables in the database prefixed by 'incid' are **data** tables and hence contain
 	7. incid_sources
 	8. incid_osmm_updates
 	9. history
+	10. incid_mm_polygons
 
 How the data tables relate to the fields in the user interface is demonstrated in the following figures:
 
 
 		.. _figUICF:
 
-		.. figure:: figures/UserInterfaceCommonDBFields.png
+		.. figure:: figures/UserInterfaceIncidDBFields.png
 			:align: center
 			:scale: 90
 
-			User Interface Common Fields
+			User Interface INCID Fields
 
 
-		.. _figUIOF:
+		.. _figUIIF:
 
-		.. figure:: figures/UserInterfaceOSMMUpdatesDBFields.png
+		.. figure:: figures/UserInterfaceHabitatsTabDBFields.png
 			:align: center
 			:scale: 90
 
-			User Interface OSMM Updates Fields
+			User Interface Habitats Tab Fields
 
 
 		.. _figUIDF:
@@ -70,13 +71,13 @@ How the data tables relate to the fields in the user interface is demonstrated i
 			User Interface Sources Tab Fields
 
 
-		.. _figUIIF:
+		.. _figUIOF:
 
-		.. figure:: figures/UserInterfaceHabitatsTabDBFields.png
+		.. figure:: figures/UserInterfaceOSMMUpdatesDBFields.png
 			:align: center
 			:scale: 90
 
-			User Interface Habitats Tab Fields
+			User Interface OSMM Updates Fields
 
 
 		.. _figUIHF:
