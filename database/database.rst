@@ -939,7 +939,7 @@ Habitat Tables
 Habitat Type Tables
 --------------------
 
-.. _figDDHaT:
+.. _figDDHaTT:
 
 .. figure:: ../diagrams/DatabaseDiagramHabitatTypeTables.png
 	:align: center
